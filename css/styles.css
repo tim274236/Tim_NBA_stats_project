@@ -1,0 +1,563 @@
+/* ============================================================
+   styles.css — NBA Shot Chart Explorer
+
+   Layout: top bar + 3-column layout (sidebar | court | stats)
+   Everything is styled to be clean, readable, beginner-friendly.
+   ============================================================ */
+
+/* --- RESET & BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    min-height: 100vh;
+}
+
+/* --- TOP BAR --- */
+.top-bar {
+    background-color: #16213e;
+    padding: 16px 24px;
+    border-bottom: 2px solid #e94560;
+    text-align: center;
+}
+
+.back-link {
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8892a8;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #e94560;
+}
+
+.top-bar {
+    position: relative;
+}
+
+.app-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.app-subtitle {
+    font-size: 14px;
+    color: #8892a8;
+    margin-top: 4px;
+}
+
+/* --- MAIN LAYOUT (3 columns) --- */
+.app-layout {
+    display: flex;
+    gap: 0;
+    min-height: calc(100vh - 80px);
+}
+
+/* --- COLLAPSE BUTTONS --- */
+/* Positioned at vertical center of panels, on the outer edge (border side) */
+.collapse-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 48px;
+    background-color: #0f3460;
+    border: 1px solid #2a2a4a;
+    color: #8892a8;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: background-color 0.2s, color 0.2s;
+    padding: 0;
+    line-height: 1;
+}
+
+.collapse-btn:hover {
+    background-color: #e94560;
+    color: #ffffff;
+}
+
+/* Left sidebar: button sits on the right edge, outside the panel */
+.collapse-btn-left {
+    right: -24px;
+    border-radius: 0 6px 6px 0;
+    border-left: none;
+}
+
+/* Right stats panel: button sits on the left edge, outside the panel */
+.collapse-btn-right {
+    left: -24px;
+    border-radius: 6px 0 0 6px;
+    border-right: none;
+}
+
+/* --- SIDEBAR (left) --- */
+.sidebar {
+    width: 260px;
+    min-width: 260px;
+    background-color: #16213e;
+    padding: 20px 16px;
+    border-right: 1px solid #2a2a4a;
+    overflow: visible;
+    position: relative;
+    transition: width 0.3s ease, min-width 0.3s ease, padding 0.3s ease;
+}
+
+.sidebar.collapsed {
+    width: 44px;
+    min-width: 44px;
+    padding: 20px 8px;
+}
+
+.sidebar.collapsed .sidebar-inner {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.sidebar-inner {
+    transition: opacity 0.2s ease;
+    overflow-y: auto;
+    max-height: calc(100vh - 120px);
+}
+
+.sidebar-section {
+    margin-bottom: 24px;
+}
+
+.section-label {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #e94560;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+/* --- SEARCH INPUT --- */
+.search-wrapper {
+    position: relative;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid #2a2a4a;
+    border-radius: 6px;
+    background-color: #0f3460;
+    color: #ffffff;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.search-input::placeholder {
+    color: #5a6a8a;
+}
+
+.search-input:focus {
+    border-color: #e94560;
+}
+
+/* --- SEARCH DROPDOWN (autocomplete) --- */
+.search-dropdown {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #0f3460;
+    border: 1px solid #2a2a4a;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 100;
+    display: none;  /* Hidden by default, shown by search.js */
+}
+
+.search-dropdown li {
+    padding: 8px 12px;
+    font-size: 13px;
+    cursor: pointer;
+    border-bottom: 1px solid #1a2a4a;
+}
+
+.search-dropdown li:hover,
+.search-dropdown li.active {
+    background-color: #e94560;
+    color: #ffffff;
+}
+
+.search-dropdown li .team-name {
+    font-size: 11px;
+    color: #8892a8;
+    margin-left: 6px;
+}
+
+.search-dropdown li:hover .team-name,
+.search-dropdown li.active .team-name {
+    color: #ffcccc;
+}
+
+/* --- SELECTED PLAYERS DISPLAY (toggle tags) --- */
+.selected-player {
+    margin-top: 10px;
+    display: none;  /* Hidden until a player is selected */
+}
+
+.player-tag {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    margin-bottom: 6px;
+    background-color: #0f3460;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.player-tag-name {
+    color: #ffffff;
+    font-weight: 600;
+    flex: 1;
+}
+
+.player-tag .player-team {
+    font-weight: 400;
+    font-size: 11px;
+    color: #8892a8;
+}
+
+.player-tag-remove {
+    background: none;
+    border: none;
+    color: #8892a8;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0 2px;
+    line-height: 1;
+}
+
+.player-tag-remove:hover {
+    color: #e94560;
+}
+
+/* Shot count in search dropdown */
+.search-dropdown .shot-count {
+    font-size: 10px;
+    color: #5a6a8a;
+}
+
+/* Active player highlight in search dropdown */
+.search-dropdown .active-player {
+    color: #4ecca3;
+}
+
+/* --- FILTERS --- */
+.filter-group {
+    margin-bottom: 16px;
+}
+
+.filter-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #c0c8d8;
+    margin-bottom: 6px;
+}
+
+.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 10px;
+}
+
+.filter-options label {
+    font-size: 12px;
+    color: #a0a8b8;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.filter-options input[type="radio"] {
+    accent-color: #e94560;
+}
+
+.filter-select {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 13px;
+    border: 1px solid #2a2a4a;
+    border-radius: 6px;
+    background-color: #0f3460;
+    color: #ffffff;
+    outline: none;
+    cursor: pointer;
+}
+
+.filter-select:focus {
+    border-color: #e94560;
+}
+
+/* --- COURT CONTAINER (center) --- */
+.court-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 24px;
+    position: relative;
+    background-color: #1a1a2e;
+}
+
+#court {
+    width: 100%;
+    max-width: 550px;
+}
+
+/* The SVG itself — make it fill its container */
+.court-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- TOOLTIP (shows on shot hover) --- */
+.tooltip {
+    position: absolute;
+    background-color: #16213e;
+    border: 1px solid #e94560;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 12px;
+    color: #e0e0e0;
+    pointer-events: none;   /* So it doesn't interfere with mouse events */
+    opacity: 0;             /* Hidden by default */
+    transition: opacity 0.15s;
+    z-index: 200;
+    white-space: nowrap;
+}
+
+.tooltip.visible {
+    opacity: 1;
+}
+
+.tooltip .tip-label {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.tooltip .tip-made {
+    color: #4ecca3;
+}
+
+.tooltip .tip-missed {
+    color: #e94560;
+}
+
+/* --- STATS PANEL (right) --- */
+.stats-panel {
+    width: 280px;
+    min-width: 280px;
+    background-color: #16213e;
+    padding: 20px 16px;
+    border-left: 1px solid #2a2a4a;
+    overflow: visible;
+    position: relative;
+    transition: width 0.3s ease, min-width 0.3s ease, padding 0.3s ease;
+}
+
+.stats-panel.collapsed {
+    width: 44px;
+    min-width: 44px;
+    padding: 20px 8px;
+}
+
+.stats-panel.collapsed .stats-inner {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.stats-inner {
+    transition: opacity 0.2s ease;
+    overflow-y: auto;
+    max-height: calc(100vh - 120px);
+}
+
+.stats-content {
+    margin-top: 8px;
+}
+
+/* --- STATS SECTIONS --- */
+.stats-section {
+    margin-top: 4px;
+}
+
+.stats-placeholder {
+    font-size: 13px;
+    color: #5a6a8a;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+/* Stats rows (will be generated by app.js) */
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #2a2a4a;
+    font-size: 13px;
+}
+
+.stat-row:last-child {
+    border-bottom: none;
+}
+
+.stat-label {
+    color: #8892a8;
+}
+
+.stat-value {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.stat-value.good {
+    color: #4ecca3;
+}
+
+.stat-value.avg {
+    color: #f0c040;
+}
+
+.stat-value.poor {
+    color: #e94560;
+}
+
+/* Section divider within stats */
+.stats-divider {
+    height: 1px;
+    background-color: #2a2a4a;
+    margin: 12px 0;
+}
+
+.stats-section-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #e94560;
+    letter-spacing: 1px;
+    margin: 12px 0 6px 0;
+}
+
+/* --- GAME LOG TABLE --- */
+.gamelog-content {
+    margin-top: 4px;
+}
+
+.gamelog-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+}
+
+.gamelog-table th {
+    text-align: left;
+    padding: 5px 4px;
+    color: #8892a8;
+    font-weight: 600;
+    border-bottom: 1px solid #2a2a4a;
+    font-size: 10px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.gamelog-table td {
+    padding: 5px 4px;
+    color: #c0c8d8;
+    border-bottom: 1px solid #1a2a3e;
+    white-space: nowrap;
+}
+
+.gamelog-table tr:hover td {
+    background-color: #0f3460;
+}
+
+.gamelog-table .game-date {
+    color: #8892a8;
+    font-size: 10px;
+}
+
+.gamelog-table .game-opponent {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* --- SHOOTING SPLITS TABLE --- */
+.splits-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+}
+
+.splits-table th {
+    text-align: left;
+    padding: 5px 4px;
+    color: #8892a8;
+    font-weight: 600;
+    border-bottom: 1px solid #2a2a4a;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.splits-table td {
+    padding: 5px 4px;
+    color: #c0c8d8;
+    border-bottom: 1px solid #1a2a3e;
+}
+
+.splits-table .zone-name {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 11px;
+}
+
+/* --- RESPONSIVE --- */
+/* On smaller screens, stack the layout vertically */
+@media (max-width: 900px) {
+    .app-layout {
+        flex-direction: column;
+    }
+
+    .sidebar,
+    .stats-panel {
+        width: 100%;
+        min-width: unset;
+        border-right: none;
+        border-left: none;
+        border-bottom: 1px solid #2a2a4a;
+    }
+
+    .court-container {
+        padding: 16px;
+    }
+}

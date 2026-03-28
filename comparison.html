@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Shooting Comparison — NBA Shot Chart Explorer</title>
+
+    <!-- D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/comparison.css">
+</head>
+<body>
+
+    <!-- ============ TOP BAR ============ -->
+    <header class="top-bar">
+        <a href="index.html" class="back-link">&larr; Home</a>
+        <h1 class="app-title">Player Shooting Comparison</h1>
+        <p class="app-subtitle">Compare up to 4 players side-by-side</p>
+    </header>
+
+    <!-- ============ CONTROLS BAR ============ -->
+    <section class="controls-bar">
+        <div class="controls-inner">
+
+            <!-- Player Search -->
+            <div class="control-group search-group">
+                <label for="player-search" class="control-label">Add Player</label>
+                <div class="search-wrapper">
+                    <input
+                        type="text"
+                        id="player-search"
+                        class="search-input"
+                        placeholder="Search by name..."
+                        autocomplete="off"
+                    >
+                    <ul id="search-results" class="search-dropdown"></ul>
+                </div>
+            </div>
+
+            <!-- Selected Players Tags -->
+            <div class="control-group tags-group">
+                <div id="selected-players" class="player-tags"></div>
+            </div>
+
+            <!-- Filters -->
+            <div class="control-group filter-group">
+                <label class="control-label">Result</label>
+                <div class="filter-options">
+                    <label><input type="radio" name="result" value="all" checked> All</label>
+                    <label><input type="radio" name="result" value="made"> Made</label>
+                    <label><input type="radio" name="result" value="missed"> Missed</label>
+                </div>
+            </div>
+
+            <div class="control-group filter-group">
+                <label class="control-label">Type</label>
+                <div class="filter-options">
+                    <label><input type="radio" name="shottype" value="all" checked> All</label>
+                    <label><input type="radio" name="shottype" value="2PT Field Goal"> 2PT</label>
+                    <label><input type="radio" name="shottype" value="3PT Field Goal"> 3PT</label>
+                </div>
+            </div>
+
+            <div class="control-group filter-group">
+                <label class="control-label">Quarter</label>
+                <div class="filter-options">
+                    <label><input type="radio" name="quarter" value="all" checked> All</label>
+                    <label><input type="radio" name="quarter" value="1"> Q1</label>
+                    <label><input type="radio" name="quarter" value="2"> Q2</label>
+                    <label><input type="radio" name="quarter" value="3"> Q3</label>
+                    <label><input type="radio" name="quarter" value="4"> Q4</label>
+                    <label><input type="radio" name="quarter" value="5"> OT</label>
+                </div>
+            </div>
+
+            <div class="control-group filter-group">
+                <label class="control-label">Zone</label>
+                <select id="zone-filter" class="filter-select">
+                    <option value="all">All Zones</option>
+                    <option value="Restricted Area">Restricted Area</option>
+                    <option value="In The Paint (Non-RA)">Paint (Non-RA)</option>
+                    <option value="Mid-Range">Mid-Range</option>
+                    <option value="Above the Break 3">Above Break 3</option>
+                    <option value="Left Corner 3">Left Corner 3</option>
+                    <option value="Right Corner 3">Right Corner 3</option>
+                    <option value="Backcourt">Backcourt</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ COMPARISON GRID (2x2) ============ -->
+    <main class="comparison-main">
+        <div id="comparison-grid" class="comparison-grid players-0">
+
+            <!-- Slot 1 -->
+            <div class="court-panel" id="panel-0">
+                <div class="panel-header" id="panel-header-0">
+                    <span class="panel-player-name">Select a player</span>
+                </div>
+                <div class="panel-court" id="court-0"></div>
+                <div class="panel-stats" id="panel-stats-0"></div>
+            </div>
+
+            <!-- Slot 2 -->
+            <div class="court-panel" id="panel-1">
+                <div class="panel-header" id="panel-header-1">
+                    <span class="panel-player-name">Select a player</span>
+                </div>
+                <div class="panel-court" id="court-1"></div>
+                <div class="panel-stats" id="panel-stats-1"></div>
+            </div>
+
+            <!-- Slot 3 -->
+            <div class="court-panel" id="panel-2">
+                <div class="panel-header" id="panel-header-2">
+                    <span class="panel-player-name">Select a player</span>
+                </div>
+                <div class="panel-court" id="court-2"></div>
+                <div class="panel-stats" id="panel-stats-2"></div>
+            </div>
+
+            <!-- Slot 4 -->
+            <div class="court-panel" id="panel-3">
+                <div class="panel-header" id="panel-header-3">
+                    <span class="panel-player-name">Select a player</span>
+                </div>
+                <div class="panel-court" id="court-3"></div>
+                <div class="panel-stats" id="panel-stats-3"></div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Tooltip (shared, positioned absolutely) -->
+    <div id="tooltip" class="tooltip"></div>
+
+    <!-- ============ SCRIPTS ============ -->
+    <script src="js/court.js"></script>
+    <script src="js/comparison.js"></script>
+
+</body>
+</html>

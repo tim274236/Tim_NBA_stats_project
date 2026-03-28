@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Shot Chart Explorer</title>
+
+    <!-- D3.js — the visualization library (loaded from CDN, no install needed) -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- Our styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ============ TOP BAR ============ -->
+    <header class="top-bar">
+        <a href="index.html" class="back-link">&larr; Home</a>
+        <h1 class="app-title">NBA Shot Chart Explorer</h1>
+        <p class="app-subtitle">Search a player. See every shot.</p>
+    </header>
+
+    <!-- ============ MAIN LAYOUT ============ -->
+    <main class="app-layout">
+
+        <!-- --- LEFT SIDEBAR: Search + Filters --- -->
+        <aside class="sidebar" id="sidebar">
+            <!-- Collapse button for sidebar -->
+            <button class="collapse-btn collapse-btn-left" id="sidebar-toggle" title="Collapse sidebar">&#9664;</button>
+
+            <div class="sidebar-inner" id="sidebar-inner">
+            <!-- Player Search -->
+            <div class="sidebar-section">
+                <label for="player-search" class="section-label">Search Player</label>
+                <div class="search-wrapper">
+                    <input
+                        type="text"
+                        id="player-search"
+                        class="search-input"
+                        placeholder="e.g. Stephen Curry"
+                        autocomplete="off"
+                    >
+                    <!-- Autocomplete dropdown will be injected here by search.js -->
+                    <ul id="search-results" class="search-dropdown"></ul>
+                </div>
+                <!-- Shows the currently selected player -->
+                <div id="selected-player" class="selected-player"></div>
+            </div>
+
+            <!-- Filters (will be wired up in Section 3) -->
+            <div class="sidebar-section">
+                <p class="section-label">Filters</p>
+
+                <!-- Shot Result -->
+                <div class="filter-group">
+                    <label class="filter-label">Shot Result</label>
+                    <div class="filter-options">
+                        <label><input type="radio" name="result" value="all" checked> All</label>
+                        <label><input type="radio" name="result" value="made"> Made</label>
+                        <label><input type="radio" name="result" value="missed"> Missed</label>
+                    </div>
+                </div>
+
+                <!-- Shot Type -->
+                <div class="filter-group">
+                    <label class="filter-label">Shot Type</label>
+                    <div class="filter-options">
+                        <label><input type="radio" name="shottype" value="all" checked> All</label>
+                        <label><input type="radio" name="shottype" value="2PT Field Goal"> 2PT</label>
+                        <label><input type="radio" name="shottype" value="3PT Field Goal"> 3PT</label>
+                    </div>
+                </div>
+
+                <!-- Quarter -->
+                <div class="filter-group">
+                    <label class="filter-label">Quarter</label>
+                    <div class="filter-options">
+                        <label><input type="radio" name="quarter" value="all" checked> All</label>
+                        <label><input type="radio" name="quarter" value="1"> Q1</label>
+                        <label><input type="radio" name="quarter" value="2"> Q2</label>
+                        <label><input type="radio" name="quarter" value="3"> Q3</label>
+                        <label><input type="radio" name="quarter" value="4"> Q4</label>
+                        <label><input type="radio" name="quarter" value="5"> OT</label>
+                    </div>
+                </div>
+
+                <!-- Shot Zone -->
+                <div class="filter-group">
+                    <label class="filter-label">Zone</label>
+                    <select id="zone-filter" class="filter-select">
+                        <option value="all">All Zones</option>
+                        <option value="Restricted Area">Restricted Area</option>
+                        <option value="In The Paint (Non-RA)">Paint (Non-RA)</option>
+                        <option value="Mid-Range">Mid-Range</option>
+                        <option value="Above the Break 3">Above Break 3</option>
+                        <option value="Left Corner 3">Left Corner 3</option>
+                        <option value="Right Corner 3">Right Corner 3</option>
+                        <option value="Backcourt">Backcourt</option>
+                    </select>
+                </div>
+            </div>
+            </div><!-- end .sidebar-inner -->
+        </aside>
+
+        <!-- --- CENTER: The Court --- -->
+        <section class="court-container">
+            <!-- The court SVG will be drawn inside this div by court.js -->
+            <div id="court"></div>
+
+            <!-- Tooltip (hidden by default, shown on shot hover) -->
+            <div id="tooltip" class="tooltip"></div>
+        </section>
+
+        <!-- --- RIGHT PANEL: Player Stats, Game Log, Shooting Splits --- -->
+        <aside class="stats-panel" id="stats-panel">
+            <!-- Collapse button for stats panel -->
+            <button class="collapse-btn collapse-btn-right" id="stats-toggle" title="Collapse stats">&#9654;</button>
+
+            <div class="stats-inner" id="stats-inner">
+
+                <!-- Overall Shooting Stats -->
+                <p class="section-label">Shooting Stats</p>
+                <div id="stats-content" class="stats-content">
+                    <p class="stats-placeholder">Search for a player to see their shooting stats</p>
+                </div>
+
+                <!-- Shooting Splits by Zone -->
+                <div id="splits-section" class="stats-section" style="display:none;">
+                    <p class="stats-section-title">Shooting Splits</p>
+                    <div id="splits-content" class="stats-content"></div>
+                </div>
+
+                <!-- Recent Game Log -->
+                <div id="gamelog-section" class="stats-section" style="display:none;">
+                    <p class="stats-section-title">Recent Games</p>
+                    <div id="gamelog-content" class="gamelog-content"></div>
+                </div>
+
+            </div><!-- end .stats-inner -->
+        </aside>
+
+    </main>
+
+    <!-- ============ SCRIPTS ============ -->
+    <!-- Load order matters: court first, then shots, search, filters, then app ties it all together -->
+    <script src="js/court.js"></script>
+    <script src="js/shots.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
