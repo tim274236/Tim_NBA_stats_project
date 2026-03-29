@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Shot Analysis — NBA Shot Chart Explorer</title>
+
+    <!-- D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/team-analysis.css">
+</head>
+<body>
+
+    <!-- ============ TOP BAR ============ -->
+    <header class="top-bar">
+        <a href="index.html" class="back-link">&larr; Home</a>
+        <h1 class="app-title">Team Shot Analysis</h1>
+        <p class="app-subtitle">Select a team to explore their shooting data</p>
+    </header>
+
+    <!-- ============ TEAM SELECTOR BAR ============ -->
+    <section class="team-bar">
+        <div class="team-bar-inner" id="team-bar">
+            <!-- Team buttons injected by JS -->
+        </div>
+    </section>
+
+    <!-- ============ GAME SELECTOR ============ -->
+    <section class="game-selector-bar" id="game-selector-bar" style="display:none;">
+        <div class="game-selector-inner">
+            <label class="selector-label">Games</label>
+            <select id="game-select" class="game-select" multiple>
+                <!-- Options injected by JS -->
+            </select>
+            <button id="select-all-games" class="game-btn">All Games</button>
+            <button id="select-recent-10" class="game-btn">Last 10</button>
+            <button id="select-recent-20" class="game-btn">Last 20</button>
+            <span id="game-count-label" class="game-count-label"></span>
+        </div>
+    </section>
+
+    <!-- ============ MAIN CONTENT ============ -->
+    <main class="main-content" id="main-content">
+
+        <!-- Empty state -->
+        <div id="empty-state" class="empty-state">
+            <p class="empty-icon">&#9917;</p>
+            <p>Select a team above to view their shooting data</p>
+        </div>
+
+        <!-- Dashboard (hidden until team selected) -->
+        <div id="dashboard" class="dashboard" style="display:none;">
+
+            <!-- LEFT: Shot Chart -->
+            <div class="court-section">
+                <div id="team-court"></div>
+            </div>
+
+            <!-- RIGHT: Stats Panel -->
+            <aside class="stats-panel" id="stats-panel">
+                <p class="stats-title" id="stats-team-name"></p>
+
+                <div class="stat-card">
+                    <div class="stat-card-label">Offensive Rating</div>
+                    <div class="stat-card-value" id="stat-ortg">—</div>
+                    <div class="stat-card-desc">Points per 100 possessions</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card-label">True Shooting %</div>
+                    <div class="stat-card-value" id="stat-ts">—</div>
+                    <div class="stat-card-desc">Efficiency including FTs &amp; 3s</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card-label">Effective FG%</div>
+                    <div class="stat-card-value" id="stat-efg">—</div>
+                    <div class="stat-card-desc">(FGM + 0.5 &times; 3PM) / FGA</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card-label">Points Per Game</div>
+                    <div class="stat-card-value" id="stat-ppg">—</div>
+                    <div class="stat-card-desc">Average points scored</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card-label">3-Point Attempt Rate</div>
+                    <div class="stat-card-value" id="stat-3par">—</div>
+                    <div class="stat-card-desc">3PA as % of total FGA</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card-label">3PA per Game</div>
+                    <div class="stat-card-value" id="stat-3papg">—</div>
+                    <div class="stat-card-desc">Average 3-pointers attempted</div>
+                </div>
+
+                <div class="stat-card record-card">
+                    <div class="stat-card-label">Record (Selected)</div>
+                    <div class="stat-card-value" id="stat-record">—</div>
+                    <div class="stat-card-desc">W-L in selected games</div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Tooltip -->
+    <div id="tooltip" class="tooltip"></div>
+
+    <!-- ============ SCRIPTS ============ -->
+    <script src="js/court.js"></script>
+    <script src="js/team-analysis.js"></script>
+
+</body>
+</html>
