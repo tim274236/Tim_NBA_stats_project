@@ -21,23 +21,42 @@
     </header>
 
     <!-- ============ TEAM SELECTOR BAR ============ -->
-    <section class="team-bar">
-        <div class="team-bar-inner" id="team-bar">
-            <!-- Team buttons injected by JS -->
+    <section class="team-bar" id="team-bar-section">
+        <button class="collapse-toggle" id="team-bar-toggle">
+            <span class="collapse-label">Teams</span>
+            <span class="collapse-arrow" id="team-bar-arrow">&#9650;</span>
+        </button>
+        <div class="collapsible-content" id="team-bar-content">
+            <div class="team-bar-inner" id="team-bar">
+                <!-- Team buttons injected by JS -->
+            </div>
         </div>
     </section>
 
     <!-- ============ GAME SELECTOR ============ -->
     <section class="game-selector-bar" id="game-selector-bar" style="display:none;">
-        <div class="game-selector-inner">
-            <label class="selector-label">Games</label>
-            <select id="game-select" class="game-select" multiple>
-                <!-- Options injected by JS -->
-            </select>
-            <button id="select-all-games" class="game-btn">All Games</button>
-            <button id="select-recent-10" class="game-btn">Last 10</button>
-            <button id="select-recent-20" class="game-btn">Last 20</button>
-            <span id="game-count-label" class="game-count-label"></span>
+        <button class="collapse-toggle" id="game-bar-toggle">
+            <span class="collapse-label">Games</span>
+            <span class="collapse-arrow" id="game-bar-arrow">&#9650;</span>
+        </button>
+        <div class="collapsible-content" id="game-bar-content">
+            <div class="game-selector-inner">
+                <div class="game-selector-row">
+                    <label class="selector-label">Season</label>
+                    <select id="season-select" class="season-select">
+                        <option value="2024-25" selected>2024-25</option>
+                    </select>
+                </div>
+                <select id="game-select" class="game-select" multiple>
+                    <!-- Options injected by JS -->
+                </select>
+                <div class="game-selector-row">
+                    <button id="select-all-games" class="game-btn">All Games</button>
+                    <button id="select-recent-10" class="game-btn">Last 10</button>
+                    <button id="select-recent-20" class="game-btn">Last 20</button>
+                    <span id="game-count-label" class="game-count-label"></span>
+                </div>
+            </div>
         </div>
     </section>
 

@@ -129,6 +129,50 @@ body {
     margin-right: 8px;
 }
 
+/* --- COLLAPSE TOGGLE --- */
+.collapse-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #8892a8;
+    transition: color 0.2s;
+}
+
+.collapse-toggle:hover {
+    color: #e94560;
+}
+
+.collapse-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.collapse-arrow {
+    font-size: 10px;
+    transition: transform 0.2s;
+}
+
+.collapsible-content {
+    max-height: 500px;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
+}
+
+.collapsible-content.collapsed {
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 /* --- GAME SELECTOR BAR --- */
 .game-selector-bar {
     background-color: #121d36;
@@ -138,10 +182,17 @@ body {
 
 .game-selector-inner {
     display: flex;
-    align-items: center;
-    gap: 12px;
+    flex-direction: column;
+    gap: 8px;
     max-width: 1400px;
     margin: 0 auto;
+    padding: 0 16px 10px;
+}
+
+.game-selector-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     flex-wrap: wrap;
 }
 
@@ -153,10 +204,26 @@ body {
     letter-spacing: 1px;
 }
 
+.season-select {
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid #2a2a4a;
+    border-radius: 6px;
+    background-color: #0f3460;
+    color: #ffffff;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.season-select:focus {
+    border-color: #e94560;
+}
+
 .game-select {
-    flex: 1;
-    min-width: 300px;
-    max-width: 600px;
+    width: 100%;
+    max-width: 100%;
     height: 80px;
     padding: 4px;
     font-size: 12px;

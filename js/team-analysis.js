@@ -10,7 +10,8 @@
 // STATE
 // ============================================================
 
-const SEASON = "2024-25";
+var currentSeason = "2024-25";
+const AVAILABLE_SEASONS = ["2024-25"]; // Add more as data is pulled
 const MADE_COLOR = "#4ecca3";
 const MISSED_COLOR = "#e94560";
 
@@ -58,6 +59,19 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("game-select").addEventListener("change", function () {
         readSelectedGames();
         applyGameFilter();
+    });
+
+    // Collapse toggles
+    setupCollapseToggle("team-bar-toggle", "team-bar-content", "team-bar-arrow");
+    setupCollapseToggle("game-bar-toggle", "game-bar-content", "game-bar-arrow");
+
+    // Season selector
+    buildSeasonSelector();
+    document.getElementById("season-select").addEventListener("change", function () {
+        currentSeason = this.value;
+        if (selectedTeam) {
+            loadTeamData(selectedTeam);
+        }
     });
 
     console.log("Team analysis page ready.");
@@ -129,8 +143,8 @@ function selectTeam(team) {
 // ============================================================
 
 function loadTeamData(team) {
-    var shotsUrl = "data/team-shots/" + SEASON + "/" + team.id + ".json";
-    var statsUrl = "data/team-stats/" + SEASON + "/" + team.id + ".json";
+    var shotsUrl = "data/team-shots/" + currentSeason + "/" + team.id + ".json";
+    var statsUrl = "data/team-stats/" + currentSeason + "/" + team.id + ".json";
 
     // Load both in parallel
     Promise.all([
@@ -415,4 +429,39 @@ function pctClass(val, lowThresh, highThresh) {
     if (val >= lowThresh) return "avg";
     if (val > 0) return "poor";
     return "";
+}
+
+
+// ============================================================
+// COLLAPSE TOGGLES
+// ============================================================
+
+function setupCollapseToggle(toggleId, contentId, arrowId) {
+    var toggle = document.getElementById(toggleId);
+    var content = document.getElementById(contentId);
+    var arrow = document.getElementById(arrowId);
+
+    toggle.addEventListener("click", function () {
+        var isCollapsed = content.classList.toggle("collapsed");
+        arrow.innerHTML = isCollapsed ? "&#9660;" : "&#9650;";
+        toggle.classList.toggle("is-collapsed", isCollapsed);
+    });
+}
+
+
+// ============================================================
+// SEASON SELECTOR
+// ============================================================
+
+function buildSeasonSelector() {
+    var select = document.getElementById("season-select");
+    select.innerHTML = "";
+
+    AVAILABLE_SEASONS.forEach(function (season) {
+        var option = document.createElement("option");
+        option.value = season;
+        option.textContent = season;
+        if (season === currentSeason) option.selected = true;
+        select.appendChild(option);
+    });
 }
