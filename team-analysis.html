@@ -44,7 +44,7 @@
                 <div class="game-selector-row">
                     <label class="selector-label">Season</label>
                     <select id="season-select" class="season-select">
-                        <option value="2024-25" selected>2024-25</option>
+                        <!-- Options built by JS -->
                     </select>
                 </div>
                 <select id="game-select" class="game-select" multiple>
@@ -83,44 +83,98 @@
                 <div id="team-court"></div>
             </div>
 
-            <!-- RIGHT: Stats Panel -->
-            <aside class="stats-panel" id="stats-panel">
+            <!-- RIGHT: Stats Columns -->
+            <div class="stats-columns" id="stats-panel">
                 <p class="stats-title" id="stats-team-name"></p>
 
-                <div class="stat-card">
-                    <div class="stat-card-label">Offensive Rating</div>
-                    <div class="stat-card-value" id="stat-ortg">—</div>
-                    <div class="stat-card-desc">Points per 100 possessions</div>
-                </div>
+                <div class="stats-two-col">
+                    <!-- Offensive Stats Column -->
+                    <div class="stats-col">
+                        <div class="stats-col-header">Offense</div>
 
-                <div class="stat-card">
-                    <div class="stat-card-label">True Shooting %</div>
-                    <div class="stat-card-value" id="stat-ts">—</div>
-                    <div class="stat-card-desc">Efficiency including FTs &amp; 3s</div>
-                </div>
+                        <div class="stat-card">
+                            <div class="stat-card-label">Off Rating</div>
+                            <div class="stat-card-value" id="stat-ortg">—</div>
+                            <div class="stat-card-desc">Pts per 100 poss</div>
+                        </div>
 
-                <div class="stat-card">
-                    <div class="stat-card-label">Effective FG%</div>
-                    <div class="stat-card-value" id="stat-efg">—</div>
-                    <div class="stat-card-desc">(FGM + 0.5 &times; 3PM) / FGA</div>
-                </div>
+                        <div class="stat-card">
+                            <div class="stat-card-label">True Shooting %</div>
+                            <div class="stat-card-value" id="stat-ts">—</div>
+                            <div class="stat-card-desc">Efficiency incl FTs &amp; 3s</div>
+                        </div>
 
-                <div class="stat-card">
-                    <div class="stat-card-label">Points Per Game</div>
-                    <div class="stat-card-value" id="stat-ppg">—</div>
-                    <div class="stat-card-desc">Average points scored</div>
-                </div>
+                        <div class="stat-card">
+                            <div class="stat-card-label">Effective FG%</div>
+                            <div class="stat-card-value" id="stat-efg">—</div>
+                            <div class="stat-card-desc">(FGM + 0.5 &times; 3PM) / FGA</div>
+                        </div>
 
-                <div class="stat-card">
-                    <div class="stat-card-label">3-Point Attempt Rate</div>
-                    <div class="stat-card-value" id="stat-3par">—</div>
-                    <div class="stat-card-desc">3PA as % of total FGA</div>
-                </div>
+                        <div class="stat-card">
+                            <div class="stat-card-label">PPG</div>
+                            <div class="stat-card-value" id="stat-ppg">—</div>
+                            <div class="stat-card-desc">Points per game</div>
+                        </div>
 
-                <div class="stat-card">
-                    <div class="stat-card-label">3PA per Game</div>
-                    <div class="stat-card-value" id="stat-3papg">—</div>
-                    <div class="stat-card-desc">Average 3-pointers attempted</div>
+                        <div class="stat-card">
+                            <div class="stat-card-label">3PT Rate</div>
+                            <div class="stat-card-value" id="stat-3par">—</div>
+                            <div class="stat-card-desc">3PA as % of FGA</div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-card-label">AST / Game</div>
+                            <div class="stat-card-value" id="stat-ast">—</div>
+                            <div class="stat-card-desc">Assists per game</div>
+                        </div>
+                    </div>
+
+                    <!-- Defensive Stats Column -->
+                    <div class="stats-col">
+                        <div class="stats-col-header">Defense</div>
+
+                        <div class="stat-card">
+                            <div class="stat-card-label">Def Rating</div>
+                            <div class="stat-card-value" id="stat-drtg">—</div>
+                            <div class="stat-card-desc">Opp pts per 100 poss</div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-card-label">STL / Game</div>
+                            <div class="stat-card-value" id="stat-stl">—</div>
+                            <div class="stat-card-desc">Steals per game</div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-card-label">BLK / Game</div>
+                            <div class="stat-card-value" id="stat-blk">—</div>
+                            <div class="stat-card-desc">Blocks per game</div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-card-label">DREB / Game</div>
+                            <div class="stat-card-value" id="stat-dreb">—</div>
+                            <div class="stat-card-desc">Defensive rebounds</div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-card-label">REB / Game</div>
+                            <div class="stat-card-value" id="stat-reb">—</div>
+                            <div class="stat-card-desc">Total rebounds</div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-card-label">TOV / Game</div>
+                            <div class="stat-card-value" id="stat-tov">—</div>
+                            <div class="stat-card-desc">Turnovers per game</div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-card-label">3PA / Game</div>
+                            <div class="stat-card-value" id="stat-3papg">—</div>
+                            <div class="stat-card-desc">3-pointers attempted</div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="stat-card record-card">
@@ -128,7 +182,7 @@
                     <div class="stat-card-value" id="stat-record">—</div>
                     <div class="stat-card-desc">W-L in selected games</div>
                 </div>
-            </aside>
+            </div>
         </div>
     </main>
 

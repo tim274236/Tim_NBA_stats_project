@@ -10,8 +10,8 @@
 // STATE
 // ============================================================
 
-var currentSeason = "2024-25";
-const AVAILABLE_SEASONS = ["2024-25"]; // Add more as data is pulled
+var currentSeason = "2025-26";
+const AVAILABLE_SEASONS = ["2025-26", "2024-25"];
 const MADE_COLOR = "#4ecca3";
 const MISSED_COLOR = "#e94560";
 
@@ -372,7 +372,9 @@ function updateStats() {
     });
 
     if (filtered.length === 0) {
-        setStatValues("—", "—", "—", "—", "—", "—", "—");
+        ["stat-ortg","stat-ts","stat-efg","stat-ppg","stat-3par","stat-ast",
+         "stat-drtg","stat-stl","stat-blk","stat-dreb","stat-reb","stat-tov","stat-3papg","stat-record"]
+            .forEach(function(id) { setStatValue(id, "—", ""); });
         return;
     }
 
@@ -381,6 +383,8 @@ function updateStats() {
     // Aggregate stats across selected games
     var totalFGA = 0, totalFGM = 0, total3PA = 0, total3PM = 0;
     var totalPTS = 0, totalFTA = 0, totalOreb = 0, totalTov = 0;
+    var totalAst = 0, totalStl = 0, totalBlk = 0, totalDreb = 0, totalReb = 0;
+    var totalPlusMinus = 0;
     var wins = 0, losses = 0;
 
     filtered.forEach(function (g) {
@@ -390,8 +394,14 @@ function updateStats() {
         total3PM += g.three_pm;
         totalPTS += g.pts;
         totalFTA += g.fta;
-        totalOreb += g.oreb;
-        totalTov += g.tov;
+        totalOreb += g.oreb || 0;
+        totalTov += g.tov || 0;
+        totalAst += g.ast || 0;
+        totalStl += g.stl || 0;
+        totalBlk += g.blk || 0;
+        totalDreb += g.dreb || 0;
+        totalReb += g.reb || 0;
+        totalPlusMinus += g.plus_minus || 0;
 
         if (g.wl === "W") wins++;
         if (g.wl === "L") losses++;
@@ -414,15 +424,36 @@ function updateStats() {
     var poss = totalFGA - totalOreb + totalTov + 0.44 * totalFTA;
     var ortg = poss > 0 ? (totalPTS / poss * 100) : 0;
 
+    // Defensive Rating = Off Rating - Net Rating
+    // Net Rating ≈ Plus/Minus scaled to per-100-possessions
+    var drtg = poss > 0 ? (ortg - (totalPlusMinus / poss * 100)) : 0;
+
     // Points per game
     var ppg = totalPTS / numGames;
 
-    // Set values
+    // Per-game defensive stats
+    var astpg = totalAst / numGames;
+    var stlpg = totalStl / numGames;
+    var blkpg = totalBlk / numGames;
+    var drebpg = totalDreb / numGames;
+    var rebpg = totalReb / numGames;
+    var tovpg = totalTov / numGames;
+
+    // Set offensive values
     setStatValue("stat-ortg", ortg.toFixed(1), ratingClass(ortg, 105, 112));
     setStatValue("stat-ts", ts.toFixed(1) + "%", pctClass(ts, 55, 58));
     setStatValue("stat-efg", efg.toFixed(1) + "%", pctClass(efg, 50, 54));
     setStatValue("stat-ppg", ppg.toFixed(1), ratingClass(ppg, 108, 115));
     setStatValue("stat-3par", threepar.toFixed(1) + "%", "");
+    setStatValue("stat-ast", astpg.toFixed(1), "");
+
+    // Set defensive values
+    setStatValue("stat-drtg", drtg.toFixed(1), drtgClass(drtg, 110, 113));
+    setStatValue("stat-stl", stlpg.toFixed(1), ratingClass(stlpg, 7, 8.5));
+    setStatValue("stat-blk", blkpg.toFixed(1), ratingClass(blkpg, 4.5, 5.5));
+    setStatValue("stat-dreb", drebpg.toFixed(1), "");
+    setStatValue("stat-reb", rebpg.toFixed(1), "");
+    setStatValue("stat-tov", tovpg.toFixed(1), tovClass(tovpg, 14, 16));
     setStatValue("stat-3papg", threepapg.toFixed(1), "");
     setStatValue("stat-record", wins + "-" + losses, "");
 }
@@ -447,6 +478,24 @@ function ratingClass(val, lowThresh, highThresh) {
 function pctClass(val, lowThresh, highThresh) {
     if (val >= highThresh) return "good";
     if (val >= lowThresh) return "avg";
+    if (val > 0) return "poor";
+    return "";
+}
+
+
+function tovClass(val, lowThresh, highThresh) {
+    // Turnovers: lower is better (inverted color)
+    if (val <= lowThresh) return "good";
+    if (val <= highThresh) return "avg";
+    if (val > 0) return "poor";
+    return "";
+}
+
+
+function drtgClass(val, lowThresh, highThresh) {
+    // Defensive Rating: lower is better (inverted color)
+    if (val <= lowThresh) return "good";
+    if (val <= highThresh) return "avg";
     if (val > 0) return "poor";
     return "";
 }

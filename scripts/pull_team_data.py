@@ -172,9 +172,11 @@ def compute_team_stats_from_shots(shots, game_logs):
         poss = fga - oreb + tov + 0.44 * fta
         off_rating = (pts / poss * 100) if poss > 0 else 0
 
+        # Defensive Rating estimate: Off Rating - (Plus/Minus scaled to per-100-poss)
+        plus_minus = gl.get("PLUS_MINUS", 0) or 0
+        def_rating = (off_rating - (plus_minus / poss * 100)) if poss > 0 else 0
+
         # Fast break points not available from shot chart, use game log if present
-        # The TeamGameLogs endpoint doesn't have fast break pts directly,
-        # so we'll mark it as N/A unless we can get it
         fb_pts = gl.get("PTS_FB", None)
 
         per_game.append({
@@ -197,10 +199,16 @@ def compute_team_stats_from_shots(shots, game_logs):
             "ts_pct": round(ts_pct, 1),
             "three_par": round(three_par, 1),
             "off_rating": round(off_rating, 1),
+            "def_rating": round(def_rating, 1),
+            "plus_minus": plus_minus,
             "fb_pts": fb_pts,
             "oreb": oreb,
-            "tov": tov,
+            "dreb": dreb,
+            "reb": reb,
             "ast": ast,
+            "tov": tov,
+            "stl": stl,
+            "blk": blk,
         })
 
     return per_game

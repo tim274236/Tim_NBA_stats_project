@@ -19,10 +19,16 @@
     "ts_pct": 48.0,
     "three_par": 35.6,
     "off_rating": 96.9,
+    "def_rating": 82.6,
+    "plus_minus": 15.0,
     "fb_pts": null,
     "oreb": 13,
+    "dreb": 36,
+    "reb": 49,
+    "ast": 23,
     "tov": 12.0,
-    "ast": 23
+    "stl": 9,
+    "blk": 13
   },
   {
     "game_id": "0022400091",
@@ -44,10 +50,16 @@
     "ts_pct": 49.2,
     "three_par": 37.4,
     "off_rating": 97.6,
+    "def_rating": 81.3,
+    "plus_minus": 19.0,
     "fb_pts": null,
     "oreb": 9,
+    "dreb": 45,
+    "reb": 54,
+    "ast": 21,
     "tov": 10.0,
-    "ast": 21
+    "stl": 15,
+    "blk": 5
   },
   {
     "game_id": "0022400100",
@@ -69,10 +81,16 @@
     "ts_pct": 62.1,
     "three_par": 44.9,
     "off_rating": 125.4,
+    "def_rating": 101.9,
+    "plus_minus": 24.0,
     "fb_pts": null,
     "oreb": 11,
+    "dreb": 34,
+    "reb": 45,
+    "ast": 26,
     "tov": 10.0,
-    "ast": 26
+    "stl": 13,
+    "blk": 12
   },
   {
     "game_id": "0022400125",
@@ -94,10 +112,16 @@
     "ts_pct": 56.7,
     "three_par": 46.1,
     "off_rating": 103.4,
+    "def_rating": 91.6,
+    "plus_minus": 12.0,
     "fb_pts": null,
     "oreb": 5,
+    "dreb": 34,
+    "reb": 39,
+    "ast": 28,
     "tov": 14.0,
-    "ast": 28
+    "stl": 18,
+    "blk": 6
   },
   {
     "game_id": "0022400140",
@@ -119,10 +143,16 @@
     "ts_pct": 66.3,
     "three_par": 51.6,
     "off_rating": 133.8,
+    "def_rating": 111.4,
+    "plus_minus": 23.0,
     "fb_pts": null,
     "oreb": 14,
+    "dreb": 31,
+    "reb": 45,
+    "ast": 31,
     "tov": 13.0,
-    "ast": 31
+    "stl": 14,
+    "blk": 9
   },
   {
     "game_id": "0022400150",
@@ -144,10 +174,16 @@
     "ts_pct": 56.8,
     "three_par": 46.4,
     "off_rating": 103.6,
+    "def_rating": 90.8,
+    "plus_minus": 13.0,
     "fb_pts": null,
     "oreb": 3,
+    "dreb": 38,
+    "reb": 41,
+    "ast": 25,
     "tov": 12.0,
-    "ast": 25
+    "stl": 11,
+    "blk": 3
   },
   {
     "game_id": "0022400163",
@@ -169,10 +205,16 @@
     "ts_pct": 55.4,
     "three_par": 36.5,
     "off_rating": 98.0,
+    "def_rating": 82.7,
+    "plus_minus": 16.0,
     "fb_pts": null,
     "oreb": 5,
+    "dreb": 37,
+    "reb": 42,
+    "ast": 23,
     "tov": 17.0,
-    "ast": 23
+    "stl": 12,
+    "blk": 4
   },
   {
     "game_id": "0022400177",
@@ -194,10 +236,16 @@
     "ts_pct": 55.4,
     "three_par": 40.0,
     "off_rating": 109.8,
+    "def_rating": 111.6,
+    "plus_minus": -2.0,
     "fb_pts": null,
     "oreb": 13,
+    "dreb": 34,
+    "reb": 47,
+    "ast": 29,
     "tov": 14.0,
-    "ast": 29
+    "stl": 15,
+    "blk": 6
   },
   {
     "game_id": "0022400192",
@@ -219,10 +267,16 @@
     "ts_pct": 62.9,
     "three_par": 41.1,
     "off_rating": 121.0,
+    "def_rating": 102.8,
+    "plus_minus": 19.0,
     "fb_pts": null,
     "oreb": 7,
+    "dreb": 34,
+    "reb": 41,
+    "ast": 24,
     "tov": 11.0,
-    "ast": 24
+    "stl": 9,
+    "blk": 8
   },
   {
     "game_id": "0022400207",
@@ -244,10 +298,16 @@
     "ts_pct": 55.0,
     "three_par": 35.1,
     "off_rating": 113.2,
+    "def_rating": 124.0,
+    "plus_minus": -11.0,
     "fb_pts": null,
     "oreb": 14,
+    "dreb": 27,
+    "reb": 41,
+    "ast": 25,
     "tov": 11.0,
-    "ast": 25
+    "stl": 4,
+    "blk": 6
   },
   {
     "game_id": "0022400215",
@@ -269,10 +329,16 @@
     "ts_pct": 66.3,
     "three_par": 50.5,
     "off_rating": 129.9,
+    "def_rating": 124.1,
+    "plus_minus": 6.0,
     "fb_pts": null,
     "oreb": 9,
+    "dreb": 20,
+    "reb": 29,
+    "ast": 31,
     "tov": 11.0,
-    "ast": 31
+    "stl": 16,
+    "blk": 5
   },
   {
     "game_id": "0022400221",
@@ -294,10 +360,16 @@
     "ts_pct": 55.8,
     "three_par": 44.3,
     "off_rating": 109.2,
+    "def_rating": 90.7,
+    "plus_minus": 18.0,
     "fb_pts": null,
     "oreb": 5,
+    "dreb": 26,
+    "reb": 31,
+    "ast": 20,
     "tov": 7.0,
-    "ast": 20
+    "stl": 16,
+    "blk": 7
   },
   {
     "game_id": "0022400018",
@@ -319,10 +391,16 @@
     "ts_pct": 50.0,
     "three_par": 44.0,
     "off_rating": 102.1,
+    "def_rating": 85.6,
+    "plus_minus": 16.0,
     "fb_pts": null,
     "oreb": 13,
+    "dreb": 40,
+    "reb": 53,
+    "ast": 21,
     "tov": 11.0,
-    "ast": 21
+    "stl": 6,
+    "blk": 11
   },
   {
     "game_id": "0022400242",
@@ -344,10 +422,16 @@
     "ts_pct": 60.7,
     "three_par": 48.3,
     "off_rating": 120.2,
+    "def_rating": 122.2,
+    "plus_minus": -2.0,
     "fb_pts": null,
     "oreb": 7,
+    "dreb": 22,
+    "reb": 29,
+    "ast": 29,
     "tov": 8.0,
-    "ast": 29
+    "stl": 11,
+    "blk": 5
   },
   {
     "game_id": "0022400025",
@@ -369,10 +453,16 @@
     "ts_pct": 50.4,
     "three_par": 53.0,
     "off_rating": 99.9,
+    "def_rating": 105.7,
+    "plus_minus": -6.0,
     "fb_pts": null,
     "oreb": 13,
+    "dreb": 34,
+    "reb": 47,
+    "ast": 24,
     "tov": 14.0,
-    "ast": 24
+    "stl": 16,
+    "blk": 4
   },
   {
     "game_id": "0022400256",
@@ -394,10 +484,16 @@
     "ts_pct": 53.9,
     "three_par": 34.1,
     "off_rating": 108.9,
+    "def_rating": 98.9,
+    "plus_minus": 10.0,
     "fb_pts": null,
     "oreb": 15,
+    "dreb": 31,
+    "reb": 46,
+    "ast": 24,
     "tov": 14.0,
-    "ast": 24
+    "stl": 14,
+    "blk": 8
   },
   {
     "game_id": "0022400285",
@@ -419,10 +515,16 @@
     "ts_pct": 67.0,
     "three_par": 36.0,
     "off_rating": 128.7,
+    "def_rating": 107.9,
+    "plus_minus": 21.0,
     "fb_pts": null,
     "oreb": 11,
+    "dreb": 33,
+    "reb": 44,
+    "ast": 28,
     "tov": 15.0,
-    "ast": 28
+    "stl": 6,
+    "blk": 3
   },
   {
     "game_id": "0022400299",
@@ -444,10 +546,16 @@
     "ts_pct": 54.4,
     "three_par": 43.5,
     "off_rating": 102.5,
+    "def_rating": 98.6,
+    "plus_minus": 4.0,
     "fb_pts": null,
     "oreb": 8,
+    "dreb": 40,
+    "reb": 48,
+    "ast": 26,
     "tov": 14.0,
-    "ast": 26
+    "stl": 10,
+    "blk": 9
   },
   {
     "game_id": "0022400048",
@@ -469,10 +577,16 @@
     "ts_pct": 50.5,
     "three_par": 43.0,
     "off_rating": 106.3,
+    "def_rating": 97.9,
+    "plus_minus": 8.0,
     "fb_pts": null,
     "oreb": 15,
+    "dreb": 32,
+    "reb": 47,
+    "ast": 20,
     "tov": 10.0,
-    "ast": 20
+    "stl": 12,
+    "blk": 3
   },
   {
     "game_id": "0022400310",
@@ -494,10 +608,16 @@
     "ts_pct": 55.2,
     "three_par": 41.5,
     "off_rating": 114.9,
+    "def_rating": 117.8,
+    "plus_minus": -3.0,
     "fb_pts": null,
     "oreb": 11,
+    "dreb": 35,
+    "reb": 46,
+    "ast": 30,
     "tov": 7.0,
-    "ast": 30
+    "stl": 5,
+    "blk": 4
   },
   {
     "game_id": "0022400055",
@@ -519,10 +639,16 @@
     "ts_pct": 62.2,
     "three_par": 46.1,
     "off_rating": 133.2,
+    "def_rating": 106.2,
+    "plus_minus": 27.0,
     "fb_pts": null,
     "oreb": 15,
+    "dreb": 19,
+    "reb": 34,
+    "ast": 32,
     "tov": 8.0,
-    "ast": 32
+    "stl": 18,
+    "blk": 3
   },
   {
     "game_id": "0022400328",
@@ -544,10 +670,16 @@
     "ts_pct": 58.9,
     "three_par": 46.1,
     "off_rating": 125.9,
+    "def_rating": 89.8,
+    "plus_minus": 37.0,
     "fb_pts": null,
     "oreb": 13,
+    "dreb": 42,
+    "reb": 55,
+    "ast": 28,
     "tov": 6.0,
-    "ast": 28
+    "stl": 15,
+    "blk": 11
   },
   {
     "game_id": "0022400342",
@@ -569,10 +701,16 @@
     "ts_pct": 63.1,
     "three_par": 37.6,
     "off_rating": 114.2,
+    "def_rating": 104.6,
+    "plus_minus": 10.0,
     "fb_pts": null,
     "oreb": 10,
+    "dreb": 35,
+    "reb": 45,
+    "ast": 27,
     "tov": 20.0,
-    "ast": 27
+    "stl": 13,
+    "blk": 3
   },
   {
     "game_id": "0022401203",
@@ -594,10 +732,16 @@
     "ts_pct": 56.7,
     "three_par": 49.5,
     "off_rating": 116.7,
+    "def_rating": 102.9,
+    "plus_minus": 14.0,
     "fb_pts": null,
     "oreb": 17,
+    "dreb": 35,
+    "reb": 52,
+    "ast": 29,
     "tov": 14.0,
-    "ast": 29
+    "stl": 14,
+    "blk": 5
   },
   {
     "game_id": "0022401230",
@@ -619,10 +763,16 @@
     "ts_pct": 59.0,
     "three_par": 37.5,
     "off_rating": 108.7,
+    "def_rating": 94.0,
+    "plus_minus": 15.0,
     "fb_pts": null,
     "oreb": 4,
+    "dreb": 39,
+    "reb": 43,
+    "ast": 19,
     "tov": 12.0,
-    "ast": 19
+    "stl": 12,
+    "blk": 4
   },
   {
     "game_id": "0022400361",
@@ -644,10 +794,16 @@
     "ts_pct": 58.3,
     "three_par": 37.3,
     "off_rating": 106.0,
+    "def_rating": 100.0,
+    "plus_minus": 6.0,
     "fb_pts": null,
     "oreb": 4,
+    "dreb": 28,
+    "reb": 32,
+    "ast": 23,
     "tov": 13.0,
-    "ast": 23
+    "stl": 15,
+    "blk": 6
   },
   {
     "game_id": "0022400375",
@@ -669,10 +825,16 @@
     "ts_pct": 55.6,
     "three_par": 39.5,
     "off_rating": 108.9,
+    "def_rating": 101.6,
+    "plus_minus": 7.0,
     "fb_pts": null,
     "oreb": 12,
+    "dreb": 36,
+    "reb": 48,
+    "ast": 24,
     "tov": 14.0,
-    "ast": 24
+    "stl": 8,
+    "blk": 5
   },
   {
     "game_id": "0022400400",
@@ -694,10 +856,16 @@
     "ts_pct": 53.2,
     "three_par": 35.8,
     "off_rating": 113.2,
+    "def_rating": 96.6,
+    "plus_minus": 18.0,
     "fb_pts": null,
     "oreb": 19,
+    "dreb": 40,
+    "reb": 59,
+    "ast": 25,
     "tov": 12.0,
-    "ast": 25
+    "stl": 15,
+    "blk": 9
   },
   {
     "game_id": "0022400410",
@@ -719,10 +887,16 @@
     "ts_pct": 56.8,
     "three_par": 38.9,
     "off_rating": 120.5,
+    "def_rating": 114.5,
+    "plus_minus": 6.0,
     "fb_pts": null,
     "oreb": 9,
+    "dreb": 36,
+    "reb": 45,
+    "ast": 20,
     "tov": 3.0,
-    "ast": 20
+    "stl": 4,
+    "blk": 4
   },
   {
     "game_id": "0022400428",
@@ -744,10 +918,16 @@
     "ts_pct": 56.3,
     "three_par": 43.2,
     "off_rating": 103.8,
+    "def_rating": 92.0,
+    "plus_minus": 12.0,
     "fb_pts": null,
     "oreb": 9,
+    "dreb": 40,
+    "reb": 49,
+    "ast": 29,
     "tov": 17.0,
-    "ast": 29
+    "stl": 9,
+    "blk": 1
   },
   {
     "game_id": "0022400440",
@@ -769,10 +949,16 @@
     "ts_pct": 60.0,
     "three_par": 42.7,
     "off_rating": 119.0,
+    "def_rating": 97.0,
+    "plus_minus": 24.0,
     "fb_pts": null,
     "oreb": 9,
+    "dreb": 36,
+    "reb": 45,
+    "ast": 35,
     "tov": 10.0,
-    "ast": 35
+    "stl": 10,
+    "blk": 9
   },
   {
     "game_id": "0022400452",
@@ -794,10 +980,16 @@
     "ts_pct": 57.0,
     "three_par": 40.4,
     "off_rating": 110.7,
+    "def_rating": 102.8,
+    "plus_minus": 8.0,
     "fb_pts": null,
     "oreb": 9,
+    "dreb": 28,
+    "reb": 37,
+    "ast": 25,
     "tov": 12.0,
-    "ast": 25
+    "stl": 16,
+    "blk": 2
   },
   {
     "game_id": "0022400466",
@@ -819,10 +1011,16 @@
     "ts_pct": 61.2,
     "three_par": 44.2,
     "off_rating": 115.1,
+    "def_rating": 97.2,
+    "plus_minus": 18.0,
     "fb_pts": null,
     "oreb": 4,
+    "dreb": 31,
+    "reb": 35,
+    "ast": 29,
     "tov": 10.0,
-    "ast": 29
+    "stl": 11,
+    "blk": 3
   },
   {
     "game_id": "0022400473",
@@ -844,10 +1042,16 @@
     "ts_pct": 62.7,
     "three_par": 32.1,
     "off_rating": 117.9,
+    "def_rating": 107.8,
+    "plus_minus": 10.0,
     "fb_pts": null,
     "oreb": 7,
+    "dreb": 34,
+    "reb": 41,
+    "ast": 27,
     "tov": 13.0,
-    "ast": 27
+    "stl": 9,
+    "blk": 7
   },
   {
     "game_id": "0022400487",
@@ -869,10 +1073,16 @@
     "ts_pct": 56.6,
     "three_par": 43.7,
     "off_rating": 105.3,
+    "def_rating": 92.3,
+    "plus_minus": 13.0,
     "fb_pts": null,
     "oreb": 9,
+    "dreb": 37,
+    "reb": 46,
+    "ast": 22,
     "tov": 16.0,
-    "ast": 22
+    "stl": 11,
+    "blk": 6
   },
   {
     "game_id": "0022400509",
@@ -894,10 +1104,16 @@
     "ts_pct": 62.6,
     "three_par": 34.4,
     "off_rating": 120.2,
+    "def_rating": 127.1,
+    "plus_minus": -7.0,
     "fb_pts": null,
     "oreb": 9,
+    "dreb": 29,
+    "reb": 38,
+    "ast": 35,
     "tov": 13.0,
-    "ast": 35
+    "stl": 9,
+    "blk": 5
   },
   {
     "game_id": "0022400529",
@@ -919,10 +1135,16 @@
     "ts_pct": 65.0,
     "three_par": 30.3,
     "off_rating": 121.2,
+    "def_rating": 97.2,
+    "plus_minus": 25.0,
     "fb_pts": null,
     "oreb": 8,
+    "dreb": 38,
+    "reb": 46,
+    "ast": 20,
     "tov": 15.0,
-    "ast": 20
+    "stl": 9,
+    "blk": 9
   },
   {
     "game_id": "0022400545",
@@ -944,10 +1166,16 @@
     "ts_pct": 61.6,
     "three_par": 36.8,
     "off_rating": 125.5,
+    "def_rating": 87.6,
+    "plus_minus": 41.0,
     "fb_pts": null,
     "oreb": 15,
+    "dreb": 41,
+    "reb": 56,
+    "ast": 26,
     "tov": 13.0,
-    "ast": 26
+    "stl": 11,
+    "blk": 4
   },
   {
     "game_id": "0022400555",
@@ -969,10 +1197,16 @@
     "ts_pct": 66.4,
     "three_par": 44.4,
     "off_rating": 121.7,
+    "def_rating": 105.2,
+    "plus_minus": 16.0,
     "fb_pts": null,
     "oreb": 10,
+    "dreb": 28,
+    "reb": 38,
+    "ast": 32,
     "tov": 18.0,
-    "ast": 32
+    "stl": 10,
+    "blk": 4
   },
   {
     "game_id": "0022400574",
@@ -994,10 +1228,16 @@
     "ts_pct": 61.0,
     "three_par": 50.5,
     "off_rating": 123.1,
+    "def_rating": 104.7,
+    "plus_minus": 20.0,
     "fb_pts": null,
     "oreb": 8,
+    "dreb": 31,
+    "reb": 39,
+    "ast": 25,
     "tov": 7.0,
-    "ast": 25
+    "stl": 12,
+    "blk": 5
   },
   {
     "game_id": "0022400583",
@@ -1019,10 +1259,16 @@
     "ts_pct": 50.9,
     "three_par": 50.5,
     "off_rating": 100.7,
+    "def_rating": 109.0,
+    "plus_minus": -8.0,
     "fb_pts": null,
     "oreb": 14,
+    "dreb": 32,
+    "reb": 46,
+    "ast": 24,
     "tov": 15.0,
-    "ast": 24
+    "stl": 7,
+    "blk": 2
   },
   {
     "game_id": "0022400595",
@@ -1044,10 +1290,16 @@
     "ts_pct": 68.5,
     "three_par": 49.4,
     "off_rating": 131.3,
+    "def_rating": 104.4,
+    "plus_minus": 26.0,
     "fb_pts": null,
     "oreb": 8,
+    "dreb": 35,
+    "reb": 43,
+    "ast": 37,
     "tov": 12.0,
-    "ast": 37
+    "stl": 8,
+    "blk": 5
   },
   {
     "game_id": "0022400618",
@@ -1069,10 +1321,16 @@
     "ts_pct": 58.0,
     "three_par": 41.1,
     "off_rating": 118.3,
+    "def_rating": 109.6,
+    "plus_minus": 9.0,
     "fb_pts": null,
     "oreb": 13,
+    "dreb": 26,
+    "reb": 39,
+    "ast": 20,
     "tov": 11.0,
-    "ast": 20
+    "stl": 15,
+    "blk": 4
   },
   {
     "game_id": "0022400625",
@@ -1094,10 +1352,16 @@
     "ts_pct": 58.9,
     "three_par": 42.0,
     "off_rating": 112.0,
+    "def_rating": 117.8,
+    "plus_minus": -6.0,
     "fb_pts": null,
     "oreb": 8,
+    "dreb": 25,
+    "reb": 33,
+    "ast": 26,
     "tov": 13.0,
-    "ast": 26
+    "stl": 9,
+    "blk": 4
   },
   {
     "game_id": "0022400647",
@@ -1119,10 +1383,16 @@
     "ts_pct": 58.0,
     "three_par": 33.7,
     "off_rating": 122.0,
+    "def_rating": 111.6,
+    "plus_minus": 10.0,
     "fb_pts": null,
     "oreb": 14,
+    "dreb": 29,
+    "reb": 43,
+    "ast": 24,
     "tov": 9.0,
-    "ast": 24
+    "stl": 7,
+    "blk": 3
   },
   {
     "game_id": "0022400673",
@@ -1144,10 +1414,16 @@
     "ts_pct": 49.5,
     "three_par": 39.4,
     "off_rating": 101.9,
+    "def_rating": 108.4,
+    "plus_minus": -7.0,
     "fb_pts": null,
     "oreb": 17,
+    "dreb": 33,
+    "reb": 50,
+    "ast": 21,
     "tov": 14.0,
-    "ast": 21
+    "stl": 8,
+    "blk": 3
   },
   {
     "game_id": "0022400691",
@@ -1169,10 +1445,16 @@
     "ts_pct": 63.1,
     "three_par": 43.0,
     "off_rating": 135.8,
+    "def_rating": 103.7,
+    "plus_minus": 34.0,
     "fb_pts": null,
     "oreb": 20,
+    "dreb": 50,
+    "reb": 70,
+    "ast": 37,
     "tov": 12.0,
-    "ast": 37
+    "stl": 5,
+    "blk": 6
   },
   {
     "game_id": "0022400705",
@@ -1194,10 +1476,16 @@
     "ts_pct": 61.0,
     "three_par": 41.4,
     "off_rating": 118.5,
+    "def_rating": 91.0,
+    "plus_minus": 29.0,
     "fb_pts": null,
     "oreb": 14,
+    "dreb": 41,
+    "reb": 55,
+    "ast": 28,
     "tov": 17.0,
-    "ast": 28
+    "stl": 9,
+    "blk": 5
   },
   {
     "game_id": "0022400724",
@@ -1219,10 +1507,16 @@
     "ts_pct": 61.5,
     "three_par": 41.2,
     "off_rating": 136.1,
+    "def_rating": 105.9,
+    "plus_minus": 31.0,
     "fb_pts": null,
     "oreb": 17,
+    "dreb": 29,
+    "reb": 46,
+    "ast": 24,
     "tov": 6.0,
-    "ast": 24
+    "stl": 15,
+    "blk": 4
   },
   {
     "game_id": "0022400739",
@@ -1244,10 +1538,16 @@
     "ts_pct": 62.0,
     "three_par": 36.9,
     "off_rating": 122.7,
+    "def_rating": 110.5,
+    "plus_minus": 12.0,
     "fb_pts": null,
     "oreb": 11,
+    "dreb": 33,
+    "reb": 44,
+    "ast": 26,
     "tov": 12.0,
-    "ast": 26
+    "stl": 10,
+    "blk": 7
   },
   {
     "game_id": "0022400746",
@@ -1269,10 +1569,16 @@
     "ts_pct": 54.7,
     "three_par": 40.0,
     "off_rating": 122.3,
+    "def_rating": 109.5,
+    "plus_minus": 13.0,
     "fb_pts": null,
     "oreb": 21,
+    "dreb": 34,
+    "reb": 55,
+    "ast": 29,
     "tov": 9.0,
-    "ast": 29
+    "stl": 5,
+    "blk": 5
   },
   {
     "game_id": "0022400761",
@@ -1294,10 +1600,16 @@
     "ts_pct": 67.1,
     "three_par": 57.9,
     "off_rating": 133.0,
+    "def_rating": 98.0,
+    "plus_minus": 36.0,
     "fb_pts": null,
     "oreb": 10,
+    "dreb": 35,
+    "reb": 45,
+    "ast": 29,
     "tov": 11.0,
-    "ast": 29
+    "stl": 15,
+    "blk": 8
   },
   {
     "game_id": "0022400778",
@@ -1319,10 +1631,16 @@
     "ts_pct": 59.4,
     "three_par": 44.3,
     "off_rating": 116.4,
+    "def_rating": 102.2,
+    "plus_minus": 14.0,
     "fb_pts": null,
     "oreb": 11,
+    "dreb": 30,
+    "reb": 41,
+    "ast": 22,
     "tov": 13.0,
-    "ast": 22
+    "stl": 10,
+    "blk": 3
   },
   {
     "game_id": "0022400787",
@@ -1344,10 +1662,16 @@
     "ts_pct": 51.2,
     "three_par": 33.0,
     "off_rating": 104.6,
+    "def_rating": 120.1,
+    "plus_minus": -15.0,
     "fb_pts": null,
     "oreb": 12,
+    "dreb": 37,
+    "reb": 49,
+    "ast": 25,
     "tov": 10.0,
-    "ast": 25
+    "stl": 4,
+    "blk": 7
   },
   {
     "game_id": "0022400804",
@@ -1369,10 +1693,16 @@
     "ts_pct": 61.4,
     "three_par": 44.3,
     "off_rating": 129.0,
+    "def_rating": 106.2,
+    "plus_minus": 23.0,
     "fb_pts": null,
     "oreb": 17,
+    "dreb": 34,
+    "reb": 51,
+    "ast": 38,
     "tov": 12.0,
-    "ast": 38
+    "stl": 10,
+    "blk": 10
   },
   {
     "game_id": "0022400820",
@@ -1394,10 +1724,16 @@
     "ts_pct": 68.6,
     "three_par": 40.7,
     "off_rating": 129.0,
+    "def_rating": 122.0,
+    "plus_minus": 7.0,
     "fb_pts": null,
     "oreb": 7,
+    "dreb": 30,
+    "reb": 37,
+    "ast": 32,
     "tov": 13.0,
-    "ast": 32
+    "stl": 9,
+    "blk": 8
   },
   {
     "game_id": "0022400826",
@@ -1419,10 +1755,16 @@
     "ts_pct": 53.9,
     "three_par": 46.2,
     "off_rating": 112.5,
+    "def_rating": 115.2,
+    "plus_minus": -3.0,
     "fb_pts": null,
     "oreb": 16,
+    "dreb": 37,
+    "reb": 53,
+    "ast": 27,
     "tov": 11.0,
-    "ast": 27
+    "stl": 10,
+    "blk": 8
   },
   {
     "game_id": "0022400840",
@@ -1444,10 +1786,16 @@
     "ts_pct": 62.8,
     "three_par": 33.3,
     "off_rating": 124.3,
+    "def_rating": 116.6,
+    "plus_minus": 8.0,
     "fb_pts": null,
     "oreb": 11,
+    "dreb": 34,
+    "reb": 45,
+    "ast": 27,
     "tov": 12.0,
-    "ast": 27
+    "stl": 10,
+    "blk": 4
   },
   {
     "game_id": "0022400851",
@@ -1469,10 +1817,16 @@
     "ts_pct": 63.5,
     "three_par": 49.5,
     "off_rating": 123.5,
+    "def_rating": 108.9,
+    "plus_minus": 16.0,
     "fb_pts": null,
     "oreb": 9,
+    "dreb": 34,
+    "reb": 43,
+    "ast": 37,
     "tov": 12.0,
-    "ast": 37
+    "stl": 10,
+    "blk": 1
   },
   {
     "game_id": "0022400871",
@@ -1494,10 +1848,16 @@
     "ts_pct": 66.5,
     "three_par": 43.6,
     "off_rating": 139.3,
+    "def_rating": 126.0,
+    "plus_minus": 14.0,
     "fb_pts": null,
     "oreb": 12,
+    "dreb": 33,
+    "reb": 45,
+    "ast": 34,
     "tov": 7.0,
-    "ast": 34
+    "stl": 7,
+    "blk": 6
   },
   {
     "game_id": "0022400879",
@@ -1519,10 +1879,16 @@
     "ts_pct": 62.9,
     "three_par": 38.1,
     "off_rating": 127.0,
+    "def_rating": 118.7,
+    "plus_minus": 9.0,
     "fb_pts": null,
     "oreb": 14,
+    "dreb": 35,
+    "reb": 49,
+    "ast": 31,
     "tov": 13.0,
-    "ast": 31
+    "stl": 11,
+    "blk": 6
   },
   {
     "game_id": "0022400895",
@@ -1544,10 +1910,16 @@
     "ts_pct": 62.9,
     "three_par": 41.4,
     "off_rating": 116.1,
+    "def_rating": 99.7,
+    "plus_minus": 17.0,
     "fb_pts": null,
     "oreb": 3,
+    "dreb": 36,
+    "reb": 39,
+    "ast": 27,
     "tov": 11.0,
-    "ast": 27
+    "stl": 10,
+    "blk": 4
   },
   {
     "game_id": "0022400908",
@@ -1569,10 +1941,16 @@
     "ts_pct": 58.5,
     "three_par": 45.2,
     "off_rating": 106.5,
+    "def_rating": 88.6,
+    "plus_minus": 18.0,
     "fb_pts": null,
     "oreb": 4,
+    "dreb": 39,
+    "reb": 43,
+    "ast": 25,
     "tov": 13.0,
-    "ast": 25
+    "stl": 12,
+    "blk": 8
   },
   {
     "game_id": "0022400920",
@@ -1594,10 +1972,16 @@
     "ts_pct": 60.5,
     "three_par": 40.4,
     "off_rating": 127.0,
+    "def_rating": 103.0,
+    "plus_minus": 24.0,
     "fb_pts": null,
     "oreb": 10,
+    "dreb": 46,
+    "reb": 56,
+    "ast": 25,
     "tov": 5.0,
-    "ast": 25
+    "stl": 5,
+    "blk": 14
   },
   {
     "game_id": "0022400936",
@@ -1619,10 +2003,16 @@
     "ts_pct": 59.3,
     "three_par": 47.0,
     "off_rating": 120.9,
+    "def_rating": 133.3,
+    "plus_minus": -13.0,
     "fb_pts": null,
     "oreb": 13,
+    "dreb": 24,
+    "reb": 37,
+    "ast": 29,
     "tov": 11.0,
-    "ast": 29
+    "stl": 9,
+    "blk": 6
   },
   {
     "game_id": "0022400946",
@@ -1644,10 +2034,16 @@
     "ts_pct": 60.6,
     "three_par": 45.1,
     "off_rating": 119.9,
+    "def_rating": 113.8,
+    "plus_minus": 6.0,
     "fb_pts": null,
     "oreb": 11,
+    "dreb": 33,
+    "reb": 44,
+    "ast": 19,
     "tov": 12.0,
-    "ast": 19
+    "stl": 7,
+    "blk": 2
   },
   {
     "game_id": "0022400969",
@@ -1669,10 +2065,16 @@
     "ts_pct": 57.3,
     "three_par": 38.2,
     "off_rating": 105.9,
+    "def_rating": 100.3,
+    "plus_minus": 6.0,
     "fb_pts": null,
     "oreb": 10,
+    "dreb": 34,
+    "reb": 44,
+    "ast": 17,
     "tov": 18.0,
-    "ast": 17
+    "stl": 11,
+    "blk": 8
   },
   {
     "game_id": "0022400982",
@@ -1694,10 +2096,16 @@
     "ts_pct": 60.5,
     "three_par": 32.6,
     "off_rating": 118.6,
+    "def_rating": 102.9,
+    "plus_minus": 16.0,
     "fb_pts": null,
     "oreb": 8,
+    "dreb": 42,
+    "reb": 50,
+    "ast": 30,
     "tov": 10.0,
-    "ast": 30
+    "stl": 3,
+    "blk": 3
   },
   {
     "game_id": "0022401002",
@@ -1719,10 +2127,16 @@
     "ts_pct": 67.3,
     "three_par": 57.8,
     "off_rating": 130.6,
+    "def_rating": 98.2,
+    "plus_minus": 33.0,
     "fb_pts": null,
     "oreb": 11,
+    "dreb": 44,
+    "reb": 55,
+    "ast": 36,
     "tov": 14.0,
-    "ast": 36
+    "stl": 10,
+    "blk": 5
   },
   {
     "game_id": "0022401017",
@@ -1744,10 +2158,16 @@
     "ts_pct": 69.5,
     "three_par": 41.5,
     "off_rating": 140.3,
+    "def_rating": 105.5,
+    "plus_minus": 35.0,
     "fb_pts": null,
     "oreb": 10,
+    "dreb": 33,
+    "reb": 43,
+    "ast": 29,
     "tov": 9.0,
-    "ast": 29
+    "stl": 10,
+    "blk": 7
   },
   {
     "game_id": "0022401036",
@@ -1769,10 +2189,16 @@
     "ts_pct": 51.1,
     "three_par": 38.0,
     "off_rating": 103.2,
+    "def_rating": 101.2,
+    "plus_minus": 2.0,
     "fb_pts": null,
     "oreb": 10,
+    "dreb": 32,
+    "reb": 42,
+    "ast": 28,
     "tov": 9.0,
-    "ast": 28
+    "stl": 9,
+    "blk": 8
   },
   {
     "game_id": "0022401052",
@@ -1794,10 +2220,16 @@
     "ts_pct": 66.6,
     "three_par": 39.0,
     "off_rating": 118.9,
+    "def_rating": 103.1,
+    "plus_minus": 16.0,
     "fb_pts": null,
     "oreb": 6,
+    "dreb": 46,
+    "reb": 52,
+    "ast": 30,
     "tov": 17.0,
-    "ast": 30
+    "stl": 7,
+    "blk": 6
   },
   {
     "game_id": "0022401064",
@@ -1819,10 +2251,16 @@
     "ts_pct": 61.1,
     "three_par": 34.4,
     "off_rating": 116.5,
+    "def_rating": 96.9,
+    "plus_minus": 21.0,
     "fb_pts": null,
     "oreb": 7,
+    "dreb": 38,
+    "reb": 45,
+    "ast": 28,
     "tov": 12.0,
-    "ast": 28
+    "stl": 9,
+    "blk": 4
   },
   {
     "game_id": "0022401079",
@@ -1844,10 +2282,16 @@
     "ts_pct": 63.4,
     "three_par": 38.3,
     "off_rating": 124.4,
+    "def_rating": 104.6,
+    "plus_minus": 21.0,
     "fb_pts": null,
     "oreb": 8,
+    "dreb": 39,
+    "reb": 47,
+    "ast": 26,
     "tov": 10.0,
-    "ast": 26
+    "stl": 9,
+    "blk": 4
   },
   {
     "game_id": "0022401094",
@@ -1869,10 +2313,16 @@
     "ts_pct": 67.1,
     "three_par": 43.9,
     "off_rating": 128.2,
+    "def_rating": 103.4,
+    "plus_minus": 28.0,
     "fb_pts": null,
     "oreb": 9,
+    "dreb": 35,
+    "reb": 44,
+    "ast": 39,
     "tov": 14.0,
-    "ast": 39
+    "stl": 11,
+    "blk": 6
   },
   {
     "game_id": "0022401108",
@@ -1894,10 +2344,16 @@
     "ts_pct": 54.3,
     "three_par": 39.6,
     "off_rating": 111.6,
+    "def_rating": 96.6,
+    "plus_minus": 16.0,
     "fb_pts": null,
     "oreb": 13,
+    "dreb": 33,
+    "reb": 46,
+    "ast": 25,
     "tov": 10.0,
-    "ast": 25
+    "stl": 12,
+    "blk": 11
   },
   {
     "game_id": "0022401123",
@@ -1919,10 +2375,16 @@
     "ts_pct": 58.1,
     "three_par": 39.3,
     "off_rating": 107.1,
+    "def_rating": 120.7,
+    "plus_minus": -14.0,
     "fb_pts": null,
     "oreb": 7,
+    "dreb": 26,
+    "reb": 33,
+    "ast": 24,
     "tov": 15.0,
-    "ast": 24
+    "stl": 7,
+    "blk": 6
   },
   {
     "game_id": "0022401135",
@@ -1944,10 +2406,16 @@
     "ts_pct": 52.0,
     "three_par": 41.1,
     "off_rating": 106.1,
+    "def_rating": 135.1,
+    "plus_minus": -27.0,
     "fb_pts": null,
     "oreb": 9,
+    "dreb": 25,
+    "reb": 34,
+    "ast": 20,
     "tov": 7.0,
-    "ast": 20
+    "stl": 9,
+    "blk": 3
   },
   {
     "game_id": "0022401153",
@@ -1969,10 +2437,16 @@
     "ts_pct": 60.3,
     "three_par": 35.6,
     "off_rating": 129.8,
+    "def_rating": 114.5,
+    "plus_minus": 16.0,
     "fb_pts": null,
     "oreb": 15,
+    "dreb": 29,
+    "reb": 44,
+    "ast": 26,
     "tov": 7.0,
-    "ast": 26
+    "stl": 9,
+    "blk": 5
   },
   {
     "game_id": "0022401164",
@@ -1994,10 +2468,16 @@
     "ts_pct": 63.9,
     "three_par": 34.9,
     "off_rating": 122.7,
+    "def_rating": 109.9,
+    "plus_minus": 13.0,
     "fb_pts": null,
     "oreb": 8,
+    "dreb": 36,
+    "reb": 44,
+    "ast": 24,
     "tov": 12.0,
-    "ast": 24
+    "stl": 11,
+    "blk": 2
   },
   {
     "game_id": "0022401181",
@@ -2019,10 +2499,16 @@
     "ts_pct": 68.6,
     "three_par": 53.0,
     "off_rating": 131.0,
+    "def_rating": 100.3,
+    "plus_minus": 34.0,
     "fb_pts": null,
     "oreb": 5,
+    "dreb": 42,
+    "reb": 47,
+    "ast": 41,
     "tov": 10.0,
-    "ast": 41
+    "stl": 12,
+    "blk": 4
   },
   {
     "game_id": "0022401196",
@@ -2044,9 +2530,15 @@
     "ts_pct": 52.3,
     "three_par": 48.0,
     "off_rating": 111.8,
+    "def_rating": 97.2,
+    "plus_minus": 15.0,
     "fb_pts": null,
     "oreb": 17,
+    "dreb": 37,
+    "reb": 54,
+    "ast": 16,
     "tov": 10.0,
-    "ast": 16
+    "stl": 8,
+    "blk": 4
   }
 ]
