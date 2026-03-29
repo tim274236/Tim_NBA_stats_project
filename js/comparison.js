@@ -59,6 +59,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Set up empty panel click handlers
     updateGridDisplay();
 
+    // Expand/minimize buttons
+    setupExpandButtons();
+
     // Hex toggle
     document.getElementById("comp-hex-toggle").addEventListener("click", function () {
         compHexMode = !compHexMode;
@@ -601,6 +604,42 @@ function updateGridDisplay() {
 // ============================================================
 // PLAYER TAGS (below search)
 // ============================================================
+
+// ============================================================
+// EXPAND / MINIMIZE PANELS
+// ============================================================
+
+function setupExpandButtons() {
+    document.querySelectorAll(".expand-btn").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+            var panelIndex = parseInt(btn.getAttribute("data-panel"));
+            var panel = document.getElementById("panel-" + panelIndex);
+            var grid = document.getElementById("comparison-grid");
+
+            if (panel.classList.contains("expanded")) {
+                // Minimize
+                panel.classList.remove("expanded");
+                grid.classList.remove("has-expanded");
+                btn.innerHTML = "&#x26F6;";
+                btn.title = "Enlarge";
+            } else {
+                // First collapse any other expanded panel
+                document.querySelectorAll(".court-panel.expanded").forEach(function (p) {
+                    p.classList.remove("expanded");
+                    p.querySelector(".expand-btn").innerHTML = "&#x26F6;";
+                    p.querySelector(".expand-btn").title = "Enlarge";
+                });
+
+                // Expand this panel
+                panel.classList.add("expanded");
+                grid.classList.add("has-expanded");
+                btn.innerHTML = "&#x2715;";
+                btn.title = "Minimize";
+            }
+        });
+    });
+}
+
 
 // ============================================================
 // RE-RENDER ALL COURTS (for hex/dots toggle)

@@ -374,7 +374,63 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: border-color 0.2s;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* --- EXPAND / MINIMIZE BUTTON --- */
+.expand-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #2a2a4a;
+    border-radius: 6px;
+    background-color: #0f3460;
+    color: #8892a8;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    z-index: 10;
+    padding: 0;
+    line-height: 1;
+}
+
+.expand-btn:hover {
+    background-color: #e94560;
+    border-color: #e94560;
+    color: #ffffff;
+}
+
+/* Expanded panel — takes full grid width */
+.court-panel.expanded {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    z-index: 5;
+    border-color: #e94560;
+    box-shadow: 0 0 20px rgba(233, 69, 96, 0.3);
+}
+
+.court-panel.expanded .panel-court {
+    max-height: none;
+}
+
+.court-panel.expanded .panel-court .court-svg {
+    max-height: none;
+}
+
+/* Hide non-expanded panels when one is expanded */
+.comparison-grid.has-expanded .court-panel:not(.expanded) {
+    display: none !important;
+}
+
+/* Hide expand button on empty panels */
+.court-panel.empty .expand-btn {
+    display: none;
 }
 
 .court-panel.active {
