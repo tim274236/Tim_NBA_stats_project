@@ -21,6 +21,7 @@ var teamShots = [];
 var teamStats = [];      // per-game stats array
 var selectedGameIds = []; // which games are selected (empty = all)
 var courtSvg = null;
+var hexMode = false;     // dots vs hex toggle
 
 
 // ============================================================
@@ -64,6 +65,16 @@ document.addEventListener("DOMContentLoaded", function () {
     // Collapse toggles
     setupCollapseToggle("team-bar-toggle", "team-bar-content", "team-bar-arrow");
     setupCollapseToggle("game-bar-toggle", "game-bar-content", "game-bar-arrow");
+
+    // Hex toggle
+    document.getElementById("hex-toggle").addEventListener("click", function () {
+        hexMode = !hexMode;
+        var label = document.getElementById("hex-toggle-label");
+        var btn = document.getElementById("hex-toggle");
+        label.textContent = hexMode ? "Hex" : "Dots";
+        btn.classList.toggle("active", hexMode);
+        applyGameFilter(); // re-render with current mode
+    });
 
     // Season selector
     buildSeasonSelector();
@@ -260,8 +271,17 @@ function applyGameFilter() {
         });
     }
 
-    // Plot shots on court
-    plotTeamShots(filteredShots);
+    // Plot shots on court based on mode
+    if (hexMode) {
+        // Hide dots, show hex
+        var shotsLayer = courtSvg.node().__courtGroup.select(".shots-layer");
+        shotsLayer.selectAll("circle").remove();
+        plotHexMap(courtSvg, filteredShots);
+    } else {
+        // Hide hex, show dots
+        clearHexMap(courtSvg);
+        plotTeamShots(filteredShots);
+    }
 
     // Update stats
     updateStats();

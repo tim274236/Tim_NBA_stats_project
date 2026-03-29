@@ -88,6 +88,14 @@
                     <option value="Backcourt">Backcourt</option>
                 </select>
             </div>
+
+            <div class="control-group filter-group">
+                <label class="control-label">View</label>
+                <button id="comp-hex-toggle" class="hex-toggle-btn">
+                    <span class="hex-toggle-dot"></span>
+                    <span id="comp-hex-toggle-label">Dots</span>
+                </button>
+            </div>
         </div>
     </section>
 
@@ -138,7 +146,9 @@
     <div id="tooltip" class="tooltip"></div>
 
     <!-- ============ SCRIPTS ============ -->
+    <script src="https://cdn.jsdelivr.net/npm/d3-hexbin@0.2.2/build/d3-hexbin.min.js"></script>
     <script src="js/court.js"></script>
+    <script src="js/hexmap.js"></script>
     <script src="js/comparison.js"></script>
 
 </body>

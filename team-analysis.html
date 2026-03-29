@@ -74,6 +74,12 @@
 
             <!-- LEFT: Shot Chart -->
             <div class="court-section">
+                <div class="court-toolbar">
+                    <button id="hex-toggle" class="hex-toggle-btn">
+                        <span class="hex-toggle-dot"></span>
+                        <span id="hex-toggle-label">Dots</span>
+                    </button>
+                </div>
                 <div id="team-court"></div>
             </div>
 
@@ -130,7 +136,9 @@
     <div id="tooltip" class="tooltip"></div>
 
     <!-- ============ SCRIPTS ============ -->
+    <script src="https://cdn.jsdelivr.net/npm/d3-hexbin@0.2.2/build/d3-hexbin.min.js"></script>
     <script src="js/court.js"></script>
+    <script src="js/hexmap.js"></script>
     <script src="js/team-analysis.js"></script>
 
 </body>

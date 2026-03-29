@@ -271,6 +271,52 @@ body {
     color: #8892a8;
 }
 
+/* --- HEX TOGGLE BUTTON --- */
+.court-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 6px;
+}
+
+.hex-toggle-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid #2a2a4a;
+    border-radius: 20px;
+    background-color: #0f3460;
+    color: #c0c8d8;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.hex-toggle-btn:hover {
+    border-color: #e94560;
+    color: #ffffff;
+}
+
+.hex-toggle-btn.active {
+    background-color: #e94560;
+    border-color: #e94560;
+    color: #ffffff;
+}
+
+.hex-toggle-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #4ecca3;
+    transition: all 0.2s;
+}
+
+.hex-toggle-btn.active .hex-toggle-dot {
+    border-radius: 2px;
+    background-color: #ffffff;
+}
+
 /* --- MAIN CONTENT --- */
 .main-content {
     flex: 1;

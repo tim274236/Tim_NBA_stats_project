@@ -17,6 +17,9 @@ const SEASON = "2024-25";
 // Each slot: { playerId, playerName, teamAbbr, courtSvg, shots }
 const slots = [null, null, null, null];
 
+// Global hex mode toggle for all comparison courts
+var compHexMode = false;
+
 // All players from players.json
 let allPlayers = [];
 
@@ -55,6 +58,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Set up empty panel click handlers
     updateGridDisplay();
+
+    // Hex toggle
+    document.getElementById("comp-hex-toggle").addEventListener("click", function () {
+        compHexMode = !compHexMode;
+        var label = document.getElementById("comp-hex-toggle-label");
+        var btn = document.getElementById("comp-hex-toggle");
+        label.textContent = compHexMode ? "Hex" : "Dots";
+        btn.classList.toggle("active", compHexMode);
+        rerenderAllCourts();
+    });
 
     console.log("Comparison page ready.");
 });
@@ -381,21 +394,31 @@ function applyFiltersToAll() {
     for (var i = 0; i < MAX_PLAYERS; i++) {
         if (!slots[i]) continue;
 
-        var courtGroup = slots[i].courtSvg.node().__courtGroup;
+        if (compHexMode) {
+            // In hex mode, re-render hex with filtered data
+            var filtered = filterShotsData(slots[i].shots, filters);
+            var courtGroup = slots[i].courtSvg.node().__courtGroup;
+            courtGroup.select(".shots-layer").selectAll("circle").remove();
+            plotHexMap(slots[i].courtSvg, filtered);
+        } else {
+            // In dots mode, show/hide individual dots
+            var courtGroup = slots[i].courtSvg.node().__courtGroup;
+            clearHexMap(slots[i].courtSvg);
 
-        courtGroup.selectAll(".shot-dot").each(function () {
-            var dot = d3.select(this);
-            var d = dot.datum();
-            var visible = true;
+            courtGroup.selectAll(".shot-dot").each(function () {
+                var dot = d3.select(this);
+                var d = dot.datum();
+                var visible = true;
 
-            if (filters.result === "made" && d.SHOT_MADE_FLAG !== 1) visible = false;
-            if (filters.result === "missed" && d.SHOT_MADE_FLAG !== 0) visible = false;
-            if (filters.shotType !== "all" && d.SHOT_TYPE !== filters.shotType) visible = false;
-            if (filters.quarter !== "all" && d.PERIOD !== parseInt(filters.quarter)) visible = false;
-            if (filters.zone !== "all" && d.SHOT_ZONE_BASIC !== filters.zone) visible = false;
+                if (filters.result === "made" && d.SHOT_MADE_FLAG !== 1) visible = false;
+                if (filters.result === "missed" && d.SHOT_MADE_FLAG !== 0) visible = false;
+                if (filters.shotType !== "all" && d.SHOT_TYPE !== filters.shotType) visible = false;
+                if (filters.quarter !== "all" && d.PERIOD !== parseInt(filters.quarter)) visible = false;
+                if (filters.zone !== "all" && d.SHOT_ZONE_BASIC !== filters.zone) visible = false;
 
-            dot.attr("display", visible ? null : "none");
-        });
+                dot.attr("display", visible ? null : "none");
+            });
+        }
     }
 
     updateAllStats();
@@ -578,6 +601,36 @@ function updateGridDisplay() {
 // ============================================================
 // PLAYER TAGS (below search)
 // ============================================================
+
+// ============================================================
+// RE-RENDER ALL COURTS (for hex/dots toggle)
+// ============================================================
+
+function rerenderAllCourts() {
+    var filters = getCurrentFilters();
+
+    for (var i = 0; i < MAX_PLAYERS; i++) {
+        if (!slots[i]) continue;
+
+        var courtSvg = slots[i].courtSvg;
+        var filtered = filterShotsData(slots[i].shots, filters);
+
+        if (compHexMode) {
+            // Clear dots, show hex
+            var courtGroup = courtSvg.node().__courtGroup;
+            courtGroup.select(".shots-layer").selectAll("circle").remove();
+            plotHexMap(courtSvg, filtered);
+        } else {
+            // Clear hex, show dots
+            clearHexMap(courtSvg);
+            plotShotsOnCourt(i);
+            applyFiltersToAll();
+        }
+    }
+
+    updateAllStats();
+}
+
 
 function updatePlayerTags() {
     var container = document.getElementById("selected-players");
