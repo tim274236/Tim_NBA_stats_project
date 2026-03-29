@@ -91,8 +91,11 @@ function setupComparisonSearch() {
             var isAdded = slots.some(function (s) { return s && s.playerId === player.id; });
             var checkmark = isAdded ? "&#10003; " : "";
             var addedClass = isAdded ? ' class="already-added"' : "";
+            var headshotUrl = "https://cdn.nba.com/headshots/nba/latest/1040x760/" + player.id + ".png";
 
-            li.innerHTML = checkmark +
+            li.innerHTML =
+                '<img class="search-headshot" src="' + headshotUrl + '" alt="" onerror="this.style.display=\'none\'">' +
+                checkmark +
                 "<span" + addedClass + ">" + player.full_name + "</span>" +
                 ' <span class="team-name">' + player.team_abbreviation + "</span>" +
                 ' <span class="shot-count">(' + player.shot_count + " shots)</span>";
@@ -506,7 +509,9 @@ function updateGridDisplay() {
             panel.classList.add("active");
             panel.classList.remove("empty");
             panel.style.display = "";
+            var headshotUrl = "https://cdn.nba.com/headshots/nba/latest/1040x760/" + slots[i].playerId + ".png";
             header.innerHTML =
+                '<img class="panel-headshot" src="' + headshotUrl + '" alt="" onerror="this.style.display=\'none\'">' +
                 '<span class="panel-player-name">' + slots[i].playerName + '</span>' +
                 '<span class="panel-player-team">' + slots[i].teamAbbr + '</span>';
         } else if (i < activeCount + 1 && activeCount < MAX_PLAYERS && activeCount > 0) {
@@ -583,7 +588,9 @@ function updatePlayerTags() {
 
         var tag = document.createElement("div");
         tag.className = "player-tag";
+        var tagHeadshotUrl = "https://cdn.nba.com/headshots/nba/latest/1040x760/" + slots[i].playerId + ".png";
         tag.innerHTML =
+            '<img class="tag-headshot" src="' + tagHeadshotUrl + '" alt="" onerror="this.style.display=\'none\'">' +
             '<span class="player-tag-name">' + slots[i].playerName + '</span>' +
             '<span class="player-team">' + slots[i].teamAbbr + '</span>' +
             '<button class="player-tag-remove" data-player-id="' + slots[i].playerId + '" title="Remove">&times;</button>';

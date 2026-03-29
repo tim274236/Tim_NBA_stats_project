@@ -138,6 +138,19 @@ body {
     font-size: 13px;
     cursor: pointer;
     border-bottom: 1px solid #1a2a4a;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.search-headshot {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    background-color: #1a2a4a;
+    flex-shrink: 0;
 }
 
 .search-dropdown li:hover,
@@ -188,6 +201,15 @@ body {
     border-radius: 6px;
     font-size: 13px;
     border-left: 3px solid #4ecca3;
+}
+
+.tag-headshot {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    background-color: #1a2a4a;
 }
 
 .player-tag-name {
@@ -352,6 +374,20 @@ body {
     padding-bottom: 8px;
     border-bottom: 1px solid #2a2a4a;
     margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.panel-headshot {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    background-color: #1a2a4a;
+    border: 2px solid #3a3a5a;
 }
 
 .panel-player-name {

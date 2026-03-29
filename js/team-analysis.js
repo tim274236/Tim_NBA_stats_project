@@ -79,7 +79,7 @@ function buildTeamBar() {
         btn.setAttribute("data-team-id", team.id);
 
         btn.innerHTML =
-            '<div class="team-color-dot" style="background-color:' + team.primary_color + ';"></div>' +
+            '<img class="team-logo" src="https://cdn.nba.com/logos/nba/' + team.id + '/primary/L/logo.svg" alt="' + team.abbreviation + '" onerror="this.style.display=\'none\'">' +
             '<span class="team-abbr">' + team.abbreviation + '</span>';
 
         btn.addEventListener("click", function () {
@@ -112,9 +112,12 @@ function selectTeam(team) {
     document.getElementById("dashboard").style.display = "flex";
     document.getElementById("game-selector-bar").style.display = "block";
 
-    // Set team name in stats
-    document.getElementById("stats-team-name").textContent = team.full_name;
-    document.getElementById("stats-team-name").style.borderBottomColor = team.primary_color;
+    // Set team name in stats with logo
+    var statsName = document.getElementById("stats-team-name");
+    statsName.innerHTML =
+        '<img class="stats-team-logo" src="https://cdn.nba.com/logos/nba/' + team.id + '/primary/L/logo.svg" alt="' + team.abbreviation + '" onerror="this.style.display=\'none\'">' +
+        '<span>' + team.full_name + '</span>';
+    statsName.style.borderBottomColor = team.primary_color;
 
     // Load team data
     loadTeamData(team);

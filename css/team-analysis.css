@@ -115,11 +115,18 @@ body {
     letter-spacing: 0.5px;
 }
 
-.team-color-dot {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 2px solid rgba(255,255,255,0.2);
+.team-logo {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.stats-team-logo {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 8px;
 }
 
 /* --- GAME SELECTOR BAR --- */
@@ -261,6 +268,8 @@ body {
     padding-bottom: 8px;
     border-bottom: 2px solid #e94560;
     margin-bottom: 4px;
+    display: flex;
+    align-items: center;
 }
 
 .stat-card {
