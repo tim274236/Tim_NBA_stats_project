@@ -1,0 +1,397 @@
+/* ============================================================
+   data-sources.css — NBA Data Sources Explorer
+   ============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- TOP BAR --- */
+.top-bar {
+    background-color: #16213e;
+    padding: 14px 24px;
+    border-bottom: 2px solid #e94560;
+    text-align: center;
+    position: relative;
+}
+
+.back-link {
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8892a8;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #e94560;
+}
+
+.app-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.app-subtitle {
+    font-size: 13px;
+    color: #8892a8;
+    margin-top: 2px;
+}
+
+/* --- SUMMARY BAR --- */
+.summary-bar {
+    background-color: #121d36;
+    border-bottom: 1px solid #2a2a4a;
+    padding: 16px 24px;
+}
+
+.summary-inner {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.summary-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.summary-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: #4ecca3;
+}
+
+.summary-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #8892a8;
+}
+
+/* --- MAIN CONTENT --- */
+.main-content {
+    flex: 1;
+    padding: 20px 24px 48px;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* --- API CARD --- */
+.api-card {
+    background-color: #16213e;
+    border: 1px solid #2a2a4a;
+    border-radius: 10px;
+    padding: 20px 24px;
+    transition: border-color 0.2s;
+}
+
+.api-card:hover {
+    border-color: #3a3a5a;
+}
+
+/* --- API HEADER --- */
+.api-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.api-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+}
+
+.api-field-count {
+    font-size: 11px;
+    font-weight: 600;
+    color: #8892a8;
+    background-color: #0f3460;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.api-tag {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.team-tag {
+    background-color: rgba(233, 69, 96, 0.15);
+    color: #e94560;
+}
+
+.player-tag {
+    background-color: rgba(78, 204, 163, 0.15);
+    color: #4ecca3;
+}
+
+.used-badge {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background-color: rgba(78, 204, 163, 0.15);
+    color: #4ecca3;
+    border: 1px solid rgba(78, 204, 163, 0.3);
+}
+
+/* --- API DESCRIPTION --- */
+.api-desc {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #a0a8b8;
+    margin-bottom: 10px;
+}
+
+.api-desc strong {
+    color: #e0e0e0;
+}
+
+/* --- PARAMETERS --- */
+.api-params {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.param {
+    font-size: 11px;
+    font-weight: 600;
+    font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+    color: #f0c040;
+    background-color: rgba(240, 192, 64, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(240, 192, 64, 0.2);
+}
+
+/* --- FIELDS SECTION --- */
+.fields-section {
+    margin-bottom: 12px;
+}
+
+.fields-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 12px;
+    background-color: #0f3460;
+    border: 1px solid #2a2a4a;
+    border-radius: 6px;
+    color: #8892a8;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.fields-toggle:hover {
+    color: #e94560;
+    border-color: #e94560;
+}
+
+.toggle-arrow {
+    font-size: 10px;
+    transition: transform 0.2s;
+}
+
+.fields-list {
+    max-height: 400px;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+    opacity: 1;
+    padding-top: 10px;
+}
+
+.fields-list.collapsed {
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0;
+}
+
+.fields-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.field {
+    font-size: 11px;
+    font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background-color: #0f3460;
+    color: #8892a8;
+    border: 1px solid #2a2a4a;
+}
+
+.field.core {
+    background-color: rgba(78, 204, 163, 0.1);
+    color: #4ecca3;
+    border-color: rgba(78, 204, 163, 0.25);
+}
+
+.field.rank {
+    background-color: rgba(138, 138, 168, 0.1);
+    color: #6a7a9a;
+    border-color: #2a2a4a;
+    font-style: italic;
+}
+
+.field-legend {
+    display: flex;
+    gap: 16px;
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px solid #2a2a4a;
+}
+
+.legend-item {
+    font-size: 11px;
+    color: #8892a8;
+}
+
+/* --- SAMPLE TABLE --- */
+.sample-section {
+    margin-top: 4px;
+}
+
+.sample-title {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #e94560;
+    margin-bottom: 8px;
+}
+
+.sample-table-wrap {
+    overflow-x: auto;
+    border-radius: 6px;
+    border: 1px solid #2a2a4a;
+}
+
+.sample-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.sample-table thead {
+    background-color: #0f3460;
+}
+
+.sample-table th {
+    padding: 8px 12px;
+    text-align: left;
+    font-weight: 600;
+    color: #8892a8;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #2a2a4a;
+}
+
+.sample-table td {
+    padding: 7px 12px;
+    color: #c0c8d8;
+    border-bottom: 1px solid #1a2540;
+    font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+    font-size: 11px;
+}
+
+.sample-table tbody tr:hover {
+    background-color: rgba(78, 204, 163, 0.05);
+}
+
+.sample-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* --- FOOTER --- */
+.home-footer {
+    text-align: center;
+    padding: 20px 24px;
+    border-top: 1px solid #2a2a4a;
+    font-size: 12px;
+    color: #5a6a8a;
+}
+
+.home-footer a {
+    color: #4ecca3;
+    text-decoration: none;
+}
+
+.home-footer a:hover {
+    text-decoration: underline;
+}
+
+.home-footer strong {
+    color: #8892a8;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .summary-inner {
+        gap: 24px;
+    }
+
+    .summary-value {
+        font-size: 22px;
+    }
+
+    .api-card {
+        padding: 16px;
+    }
+
+    .api-name {
+        font-size: 16px;
+    }
+
+    .back-link {
+        position: static;
+        transform: none;
+        display: block;
+        margin-bottom: 6px;
+        text-align: left;
+    }
+}

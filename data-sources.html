@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Sources — NBA Shot Chart Explorer</title>
+    <link rel="stylesheet" href="css/data-sources.css">
+</head>
+<body>
+
+    <!-- ============ TOP BAR ============ -->
+    <header class="top-bar">
+        <a href="index.html" class="back-link">&larr; Home</a>
+        <h1 class="app-title">NBA Data Sources</h1>
+        <p class="app-subtitle">All available API endpoints and the data you can pull from each</p>
+    </header>
+
+    <!-- ============ SUMMARY ============ -->
+    <section class="summary-bar">
+        <div class="summary-inner">
+            <div class="summary-stat">
+                <span class="summary-value">12</span>
+                <span class="summary-label">Endpoints Documented</span>
+            </div>
+            <div class="summary-stat">
+                <span class="summary-value">137</span>
+                <span class="summary-label">Total Available in nba_api</span>
+            </div>
+            <div class="summary-stat">
+                <span class="summary-value">545+</span>
+                <span class="summary-label">Total Data Fields</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ MAIN CONTENT ============ -->
+    <main class="main-content">
+
+        <!-- API Card: TeamGameLogs -->
+        <div class="api-card" id="teamgamelogs">
+            <div class="api-header">
+                <div class="api-tag team-tag">Team</div>
+                <h2 class="api-name">TeamGameLogs</h2>
+                <span class="api-field-count">57 fields</span>
+                <span class="used-badge">Used in App</span>
+            </div>
+            <p class="api-desc">Per-game box score stats for any team. Returns every game in a season with full traditional stats plus league-wide rankings for each stat. This is the primary data source for the <strong>Team Shot Analysis</strong> stats panel.</p>
+            <div class="api-params">
+                <span class="param">team_id</span>
+                <span class="param">season</span>
+                <span class="param">season_type</span>
+                <span class="param">last_n_games</span>
+            </div>
+            <div class="fields-section">
+                <button class="fields-toggle" onclick="toggleFields(this)">
+                    <span>Show All 57 Fields</span>
+                    <span class="toggle-arrow">&#9660;</span>
+                </button>
+                <div class="fields-list collapsed">
+                    <div class="fields-grid">
+                        <span class="field core">SEASON_YEAR</span>
+                        <span class="field core">TEAM_ID</span>
+                        <span class="field core">TEAM_ABBREVIATION</span>
+                        <span class="field core">TEAM_NAME</span>
+                        <span class="field core">GAME_ID</span>
+                        <span class="field core">GAME_DATE</span>
+                        <span class="field core">MATCHUP</span>
+                        <span class="field core">WL</span>
+                        <span class="field">MIN</span>
+                        <span class="field core">FGM</span>
+                        <span class="field core">FGA</span>
+                        <span class="field">FG_PCT</span>
+                        <span class="field core">FG3M</span>
+                        <span class="field core">FG3A</span>
+                        <span class="field">FG3_PCT</span>
+                        <span class="field core">FTM</span>
+                        <span class="field core">FTA</span>
+                        <span class="field">FT_PCT</span>
+                        <span class="field core">OREB</span>
+                        <span class="field core">DREB</span>
+                        <span class="field core">REB</span>
+                        <span class="field core">AST</span>
+                        <span class="field core">TOV</span>
+                        <span class="field core">STL</span>
+                        <span class="field core">BLK</span>
+                        <span class="field">BLKA</span>
+                        <span class="field">PF</span>
+                        <span class="field">PFD</span>
+                        <span class="field core">PTS</span>
+                        <span class="field core">PLUS_MINUS</span>
+                        <span class="field rank">GP_RANK</span>
+                        <span class="field rank">W_RANK</span>
+                        <span class="field rank">L_RANK</span>
+                        <span class="field rank">W_PCT_RANK</span>
+                        <span class="field rank">MIN_RANK</span>
+                        <span class="field rank">FGM_RANK</span>
+                        <span class="field rank">FGA_RANK</span>
+                        <span class="field rank">FG_PCT_RANK</span>
+                        <span class="field rank">FG3M_RANK</span>
+                        <span class="field rank">FG3A_RANK</span>
+                        <span class="field rank">FG3_PCT_RANK</span>
+                        <span class="field rank">FTM_RANK</span>
+                        <span class="field rank">FTA_RANK</span>
+                        <span class="field rank">FT_PCT_RANK</span>
+                        <span class="field rank">OREB_RANK</span>
+                        <span class="field rank">DREB_RANK</span>
+                        <span class="field rank">REB_RANK</span>
+                        <span class="field rank">AST_RANK</span>
+                        <span class="field rank">TOV_RANK</span>
+                        <span class="field rank">STL_RANK</span>
+                        <span class="field rank">BLK_RANK</span>
+                        <span class="field rank">BLKA_RANK</span>
+                        <span class="field rank">PF_RANK</span>
+                        <span class="field rank">PFD_RANK</span>
+                        <span class="field rank">PTS_RANK</span>
+                        <span class="field rank">PLUS_MINUS_RANK</span>
+                        <span class="field">AVAILABLE_FLAG</span>
+                    </div>
+                    <div class="field-legend">
+                        <span class="legend-item"><span class="field core">Core Stats</span></span>
+                        <span class="legend-item"><span class="field rank">League Rankings</span></span>
+                        <span class="legend-item"><span class="field">Other</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="sample-section">
+                <h3 class="sample-title">Example Data</h3>
+                <div class="sample-table-wrap">
+                    <table class="sample-table">
+                        <thead>
+                            <tr><th>GAME_DATE</th><th>MATCHUP</th><th>WL</th><th>PTS</th><th>FGM</th><th>FGA</th><th>FG3M</th><th>FG3A</th><th>REB</th><th>AST</th><th>STL</th><th>BLK</th><th>TOV</th><th>+/-</th></tr>
+                        </thead>
+                        <tbody id="sample-teamgamelogs"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- API Card: ShotChartDetail -->
+        <div class="api-card" id="shotchartdetail">
+            <div class="api-header">
+                <div class="api-tag player-tag">Player</div>
+                <div class="api-tag team-tag">Team</div>
+                <h2 class="api-name">ShotChartDetail</h2>
+                <span class="api-field-count">24 fields</span>
+                <span class="used-badge">Used in App</span>
+            </div>
+            <p class="api-desc">Every single shot attempt for a player or team in a season. Includes X/Y court coordinates, shot type, zone, distance, and result. This is the <strong>core data source</strong> powering all shot chart visualizations across the app.</p>
+            <div class="api-params">
+                <span class="param">player_id</span>
+                <span class="param">team_id</span>
+                <span class="param">season</span>
+                <span class="param">context_measure</span>
+            </div>
+            <div class="fields-section">
+                <button class="fields-toggle" onclick="toggleFields(this)">
+                    <span>Show All 24 Fields</span>
+                    <span class="toggle-arrow">&#9660;</span>
+                </button>
+                <div class="fields-list collapsed">
+                    <div class="fields-grid">
+                        <span class="field">GRID_TYPE</span>
+                        <span class="field core">GAME_ID</span>
+                        <span class="field">GAME_EVENT_ID</span>
+                        <span class="field core">PLAYER_ID</span>
+                        <span class="field core">PLAYER_NAME</span>
+                        <span class="field core">TEAM_ID</span>
+                        <span class="field">TEAM_NAME</span>
+                        <span class="field core">PERIOD</span>
+                        <span class="field">MINUTES_REMAINING</span>
+                        <span class="field">SECONDS_REMAINING</span>
+                        <span class="field core">EVENT_TYPE</span>
+                        <span class="field core">ACTION_TYPE</span>
+                        <span class="field core">SHOT_TYPE</span>
+                        <span class="field core">SHOT_ZONE_BASIC</span>
+                        <span class="field core">SHOT_ZONE_AREA</span>
+                        <span class="field core">SHOT_ZONE_RANGE</span>
+                        <span class="field core">SHOT_DISTANCE</span>
+                        <span class="field core">LOC_X</span>
+                        <span class="field core">LOC_Y</span>
+                        <span class="field">SHOT_ATTEMPTED_FLAG</span>
+                        <span class="field core">SHOT_MADE_FLAG</span>
+                        <span class="field core">GAME_DATE</span>
+                        <span class="field">HTM</span>
+                        <span class="field">VTM</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sample-section">
+                <h3 class="sample-title">Example Data</h3>
+                <div class="sample-table-wrap">
+                    <table class="sample-table">
+                        <thead>
+                            <tr><th>PLAYER_NAME</th><th>ACTION_TYPE</th><th>SHOT_TYPE</th><th>SHOT_ZONE_BASIC</th><th>SHOT_DISTANCE</th><th>LOC_X</th><th>LOC_Y</th><th>MADE</th><th>PERIOD</th><th>GAME_DATE</th></tr>
+                        </thead>
+                        <tbody id="sample-shotchartdetail"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- API Card: LeagueDashTeamStats -->
+        <div class="api-card" id="leaguedashteamstats">
+            <div class="api-header">
+                <div class="api-tag team-tag">Team</div>
+                <h2 class="api-name">LeagueDashTeamStats</h2>
+                <span class="api-field-count">54 fields</span>
+            </div>
+            <p class="api-desc">Season-level aggregated stats for all 30 NBA teams. Includes totals for every traditional stat plus league-wide rankings. Great for team-vs-team comparisons and league-wide analysis.</p>
+            <div class="api-params">
+                <span class="param">season</span>
+                <span class="param">season_type</span>
+                <span class="param">per_mode</span>
+            </div>
+            <div class="fields-section">
+                <button class="fields-toggle" onclick="toggleFields(this)">
+                    <span>Show All 54 Fields</span>
+                    <span class="toggle-arrow">&#9660;</span>
+                </button>
+                <div class="fields-list collapsed">
+                    <div class="fields-grid">
+                        <span class="field core">TEAM_ID</span>
+                        <span class="field core">TEAM_NAME</span>
+                        <span class="field core">GP</span>
+                        <span class="field core">W</span>
+                        <span class="field core">L</span>
+                        <span class="field core">W_PCT</span>
+                        <span class="field">MIN</span>
+                        <span class="field core">FGM</span>
+                        <span class="field core">FGA</span>
+                        <span class="field core">FG_PCT</span>
+                        <span class="field core">FG3M</span>
+                        <span class="field core">FG3A</span>
+                        <span class="field core">FG3_PCT</span>
+                        <span class="field">FTM</span>
+                        <span class="field">FTA</span>
+                        <span class="field">FT_PCT</span>
+                        <span class="field">OREB</span>
+                        <span class="field">DREB</span>
+                        <span class="field core">REB</span>
+                        <span class="field core">AST</span>
+                        <span class="field core">TOV</span>
+                        <span class="field core">STL</span>
+                        <span class="field core">BLK</span>
+                        <span class="field">BLKA</span>
+                        <span class="field">PF</span>
+                        <span class="field">PFD</span>
+                        <span class="field core">PTS</span>
+                        <span class="field core">PLUS_MINUS</span>
+                        <span class="field rank">GP_RANK &hellip; PLUS_MINUS_RANK</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sample-section">
+                <h3 class="sample-title">Example Data</h3>
+                <div class="sample-table-wrap">
+                    <table class="sample-table">
+                        <thead>
+                            <tr><th>TEAM</th><th>GP</th><th>W</th><th>L</th><th>W%</th><th>PTS</th><th>FG%</th><th>3P%</th><th>REB</th><th>AST</th><th>STL</th><th>BLK</th><th>TOV</th><th>+/-</th></tr>
+                        </thead>
+                        <tbody id="sample-leaguedashteamstats"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- API Card: LeagueDashPlayerStats -->
+        <div class="api-card" id="leaguedashplayerstats">
+            <div class="api-header">
+                <div class="api-tag player-tag">Player</div>
+                <h2 class="api-name">LeagueDashPlayerStats</h2>
+                <span class="api-field-count">67 fields</span>
+            </div>
+            <p class="api-desc">Season-level aggregated stats for every active player in the league. Includes traditional stats, fantasy points, double-doubles, triple-doubles, and league rankings for every stat.</p>
+            <div class="api-params">
+                <span class="param">season</span>
+                <span class="param">per_mode</span>
+                <span class="param">season_type</span>
+            </div>
+            <div class="fields-section">
+                <button class="fields-toggle" onclick="toggleFields(this)">
+                    <span>Show All 67 Fields</span>
+                    <span class="toggle-arrow">&#9660;</span>
+                </button>
+                <div class="fields-list collapsed">
+                    <div class="fields-grid">
+                        <span class="field core">PLAYER_ID</span>
+                        <span class="field core">PLAYER_NAME</span>
+                        <span class="field">NICKNAME</span>
+                        <span class="field core">TEAM_ID</span>
+                        <span class="field core">TEAM_ABBREVIATION</span>
+                        <span class="field core">AGE</span>
+                        <span class="field core">GP</span>
+                        <span class="field">W</span>
+                        <span class="field">L</span>
+                        <span class="field">W_PCT</span>
+                        <span class="field core">MIN</span>
+                        <span class="field core">FGM</span>
+                        <span class="field core">FGA</span>
+                        <span class="field core">FG_PCT</span>
+                        <span class="field core">FG3M</span>
+                        <span class="field core">FG3A</span>
+                        <span class="field core">FG3_PCT</span>
+                        <span class="field">FTM</span>
+                        <span class="field">FTA</span>
+                        <span class="field">FT_PCT</span>
+                        <span class="field">OREB</span>
+                        <span class="field">DREB</span>
+                        <span class="field core">REB</span>
+                        <span class="field core">AST</span>
+                        <span class="field core">TOV</span>
+                        <span class="field core">STL</span>
+                        <span class="field core">BLK</span>
+                        <span class="field">BLKA</span>
+                        <span class="field">PF</span>
+                        <span class="field">PFD</span>
+                        <span class="field core">PTS</span>
+                        <span class="field core">PLUS_MINUS</span>
+                        <span class="field">NBA_FANTASY_PTS</span>
+                        <span class="field">DD2</span>
+                        <span class="field">TD3</span>
+                        <span class="field">WNBA_FANTASY_PTS</span>
+                        <span class="field rank">GP_RANK &hellip; WNBA_FANTASY_PTS_RANK</span>
+                        <span class="field">TEAM_COUNT</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sample-section">
+                <h3 class="sample-title">Example Data</h3>
+                <div class="sample-table-wrap">
+                    <table class="sample-table">
+                        <thead>
+                            <tr><th>PLAYER</th><th>TEAM</th><th>AGE</th><th>GP</th><th>MIN</th><th>PTS</th><th>FG%</th><th>3P%</th><th>REB</th><th>AST</th><th>STL</th><th>BLK</th><th>TOV</th><th>+/-</th></tr>
+                        </thead>
+                        <tbody id="sample-leaguedashplayerstats"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- API Card: CommonPlayerInfo -->
+        <div class="api-card" id="commonplayerinfo">
+            <div class="api-header">
+                <div class="api-tag player-tag">Player</div>
+                <h2 class="api-name">CommonPlayerInfo</h2>
+                <span class="api-field-count">33 fields</span>
+            </div>
+            <p class="api-desc">Biographical information for a single player. Includes height, weight, position, jersey number, draft info, school, country of origin, and career year range. Useful for player profile cards.</p>
+            <div class="api-params">
+                <span class="param">player_id</span>
+            </div>
+            <div class="fields-section">
+                <button class="fields-toggle" onclick="toggleFields(this)">
+                    <span>Show All 33 Fields</span>
+                    <span class="toggle-arrow">&#9660;</span>
+                </button>
+                <div class="fields-list collapsed">
+                    <div class="fields-grid">
+                        <span class="field core">PERSON_ID</span>
+                        <span class="field core">FIRST_NAME</span>
+                        <span class="field core">LAST_NAME</span>
+                        <span class="field core">DISPLAY_FIRST_LAST</span>
+                        <span class="field">DISPLAY_LAST_COMMA_FIRST</span>
+                        <span class="field">DISPLAY_FI_LAST</span>
+                        <span class="field">PLAYER_SLUG</span>
+                        <span class="field core">BIRTHDATE</span>
+                        <span class="field core">SCHOOL</span>
+                        <span class="field core">COUNTRY</span>
+                        <span class="field">LAST_AFFILIATION</span>
+                        <span class="field core">HEIGHT</span>
+                        <span class="field core">WEIGHT</span>
+                        <span class="field core">SEASON_EXP</span>
+                        <span class="field core">JERSEY</span>
+                        <span class="field core">POSITION</span>
+                        <span class="field">ROSTERSTATUS</span>
+                        <span class="field">GAMES_PLAYED_CURRENT_SEASON_FLAG</span>
+                        <span class="field core">TEAM_ID</span>
+                        <span class="field core">TEAM_NAME</span>
+                        <span class="field">TEAM_ABBREVIATION</span>
+                        <span class="field">TEAM_CODE</span>
+                        <span class="field">TEAM_CITY</span>
+                        <span class="field">PLAYERCODE</span>
+                        <span class="field core">FROM_YEAR</span>
+                        <span class="field core">TO_YEAR</span>
+                        <span class="field">DLEAGUE_FLAG</span>
+                        <span class="field">NBA_FLAG</span>
+                        <span class="field">GAMES_PLAYED_FLAG</span>
+                        <span class="field core">DRAFT_YEAR</span>
+                        <span class="field core">DRAFT_ROUND</span>
+                        <span class="field core">DRAFT_NUMBER</span>
+                        <span class="field">GREATEST_75_FLAG</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sample-section">
+                <h3 class="sample-title">Example Data (Stephen Curry)</h3>
+                <div class="sample-table-wrap">
+                    <table class="sample-table">
+                        <thead>
+                            <tr><th>NAME</th><th>TEAM</th><th>POS</th><th>HEIGHT</th><th>WEIGHT</th><th>SCHOOL</th><th>COUNTRY</th><th>DRAFT</th><th>JERSEY</th><th>YRS EXP</th></tr>
+                        </thead>
+                        <tbody id="sample-commonplayerinfo"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- API Card: PlayerCareerStats -->
+        <div class="api-card" id="playercareerstats">
+            <div class="api-header">
+                <div class="api-tag player-tag">Player</div>
+                <h2 class="api-name">PlayerCareerStats</h2>
+                <span class="api-field-count">27 fields</span>
+            </div>
+            <p class="api-desc">Season-by-season career stats for a single player. Each row is one season, with totals for every traditional stat. Great for career trajectory charts and year-over-year comparisons.</p>
+            <div class="api-params">
+                <span class="param">player_id</span>
+                <span class="param">per_mode</span>
+            </div>
+            <div class="fields-section">
+                <button class="fields-toggle" onclick="toggleFields(this)">
+                    <span>Show All 27 Fields</span>
+                    <span class="toggle-arrow">&#9660;</span>
+                </button>
+                <div class="fields-list collapsed">
+                    <div class="fields-grid">
+                        <span class="field core">PLAYER_ID</span>
+                        <span class="field core">SEASON_ID</span>
+                        <span class="field">LEAGUE_ID</span>
+                        <span class="field core">TEAM_ID</span>
+                        <span class="field core">TEAM_ABBREVIATION</span>
+                        <span class="field core">PLAYER_AGE</span>
+                        <span class="field core">GP</span>
+                        <span class="field core">GS</span>
+                        <span class="field core">MIN</span>
+                        <span class="field core">FGM</span>
+                        <span class="field core">FGA</span>
+                        <span class="field core">FG_PCT</span>
+                        <span class="field core">FG3M</span>
+                        <span class="field core">FG3A</span>
+                        <span class="field core">FG3_PCT</span>
+                        <span class="field">FTM</span>
+                        <span class="field">FTA</span>
+                        <span class="field">FT_PCT</span>
+                        <span class="field">OREB</span>
+                        <span class="field">DREB</span>
+                        <span class="field core">REB</span>
+                        <span class="field core">AST</span>
+                        <span class="field core">STL</span>
+                        <span class="field core">BLK</span>
+                        <span class="field core">TOV</span>
+                        <span class="field">PF</span>
+                        <span class="field core">PTS</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sample-section">
+                <h3 class="sample-title">Example Data (Stephen Curry — last 3 seasons)</h3>
+                <div class="sample-table-wrap">
+                    <table class="sample-table">
+                        <thead>
+                            <tr><th>SEASON</th><th>TEAM</th><th>AGE</th><th>GP</th><th>GS</th><th>MIN</th><th>PTS</th><th>FG%</th><th>3P%</th><th>REB</th><th>AST</th><th>STL</th></tr>
+                        </thead>
+                        <tbody id="sample-playercareerstats"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- API Card: LeagueStandingsV3 -->
+        <div class="api-card" id="leaguestandingsv3">
+            <div class="api-header">
+                <div class="api-tag team-tag">Team</div>
+                <h2 class="api-name">LeagueStandingsV3</h2>
+                <span class="api-field-count">92 fields</span>
+            </div>
+            <p class="api-desc">Complete league standings with an enormous amount of detail. Conference/division records, home/road splits, streaks, monthly breakdowns, situational records (ahead at half, OT, 3-point games), and more. The most field-rich endpoint available.</p>
+            <div class="api-params">
+                <span class="param">season</span>
+                <span class="param">season_type</span>
+            </div>
+            <div class="fields-section">
+                <button class="fields-toggle" onclick="toggleFields(this)">
+                    <span>Show All 92 Fields</span>
+                    <span class="toggle-arrow">&#9660;</span>
+                </button>
+                <div class="fields-list collapsed">
+                    <div class="fields-grid">
+                        <span class="field core">TeamID</span>
+                        <span class="field core">TeamCity</span>
+                        <span class="field core">TeamName</span>
+                        <span class="field core">Conference</span>
+                        <span class="field core">ConferenceRecord</span>
+                        <span class="field core">PlayoffRank</span>
+                        <span class="field">ClinchIndicator</span>
+                        <span class="field core">Division</span>
+                        <span class="field core">DivisionRecord</span>
+                        <span class="field core">DivisionRank</span>
+                        <span class="field core">WINS</span>
+                        <span class="field core">LOSSES</span>
+                        <span class="field core">WinPCT</span>
+                        <span class="field">LeagueRank</span>
+                        <span class="field core">Record</span>
+                        <span class="field core">HOME</span>
+                        <span class="field core">ROAD</span>
+                        <span class="field core">L10</span>
+                        <span class="field">Last10Home</span>
+                        <span class="field">Last10Road</span>
+                        <span class="field">OT</span>
+                        <span class="field">ThreePTSOrLess</span>
+                        <span class="field">TenPTSOrMore</span>
+                        <span class="field">LongHomeStreak</span>
+                        <span class="field">LongRoadStreak</span>
+                        <span class="field">LongWinStreak</span>
+                        <span class="field">LongLossStreak</span>
+                        <span class="field">CurrentStreak</span>
+                        <span class="field core">ConferenceGamesBack</span>
+                        <span class="field">DivisionGamesBack</span>
+                        <span class="field">AheadAtHalf</span>
+                        <span class="field">BehindAtHalf</span>
+                        <span class="field">TiedAtHalf</span>
+                        <span class="field core">PointsPG</span>
+                        <span class="field core">OppPointsPG</span>
+                        <span class="field core">DiffPointsPG</span>
+                        <span class="field">vsEast</span>
+                        <span class="field">vsWest</span>
+                        <span class="field">Jan &hellip; Dec</span>
+                        <span class="field">PlayoffSeeding</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sample-section">
+                <h3 class="sample-title">Example Data</h3>
+                <div class="sample-table-wrap">
+                    <table class="sample-table">
+                        <thead>
+                            <tr><th>TEAM</th><th>CONF</th><th>W</th><th>L</th><th>W%</th><th>HOME</th><th>ROAD</th><th>L10</th><th>STREAK</th><th>PPG</th><th>OPP PPG</th><th>DIFF</th><th>GB</th></tr>
+                        </thead>
+                        <tbody id="sample-leaguestandingsv3"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- API Card: LeagueLeaders -->
+        <div class="api-card" id="leagueleaders">
+            <div class="api-header">
+                <div class="api-tag player-tag">Player</div>
+                <h2 class="api-name">LeagueLeaders</h2>
+                <span class="api-field-count">28 fields</span>
+            </div>
+            <p class="api-desc">League-wide player rankings by any stat category. Returns all qualifying players ranked from best to worst. Includes efficiency rating and assist-to-turnover ratio. Great for leaderboard visualizations.</p>
+            <div class="api-params">
+                <span class="param">season</span>
+                <span class="param">stat_category</span>
+                <span class="param">per_mode</span>
+                <span class="param">scope</span>
+            </div>
+            <div class="fields-section">
+                <button class="fields-toggle" onclick="toggleFields(this)">
+                    <span>Show All 28 Fields</span>
+                    <span class="toggle-arrow">&#9660;</span>
+                </button>
+                <div class="fields-list collapsed">
+                    <div class="fields-grid">
+                        <span class="field core">PLAYER_ID</span>
+                        <span class="field core">RANK</span>
+                        <span class="field core">PLAYER</span>
+                        <span class="field core">TEAM_ID</span>
+                        <span class="field core">TEAM</span>
+                        <span class="field core">GP</span>
+                        <span class="field core">MIN</span>
+                        <span class="field core">FGM</span>
+                        <span class="field core">FGA</span>
+                        <span class="field core">FG_PCT</span>
+                        <span class="field core">FG3M</span>
+                        <span class="field core">FG3A</span>
+                        <span class="field core">FG3_PCT</span>
+                        <span class="field">FTM</span>
+                        <span class="field">FTA</span>
+                        <span class="field">FT_PCT</span>
+                        <span class="field">OREB</span>
+                        <span class="field">DREB</span>
+                        <span class="field core">REB</span>
+                        <span class="field core">AST</span>
+                        <span class="field core">STL</span>
+                        <span class="field core">BLK</span>
+                        <span class="field core">TOV</span>
+                        <span class="field">PF</span>
+                        <span class="field core">PTS</span>
+                        <span class="field core">EFF</span>
+                        <span class="field core">AST_TOV</span>
+                        <span class="field core">STL_TOV</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sample-section">
+                <h3 class="sample-title">Example Data</h3>
+                <div class="sample-table-wrap">
+                    <table class="sample-table">
+                        <thead>
+                            <tr><th>RANK</th><th>PLAYER</th><th>TEAM</th><th>GP</th><th>MIN</th><th>PTS</th><th>FG%</th><th>3P%</th><th>REB</th><th>AST</th><th>EFF</th><th>AST/TOV</th></tr>
+                        </thead>
+                        <tbody id="sample-leagueleaders"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- API Card: PlayerGameLogs -->
+        <div class="api-card" id="playergamelogs">
+            <div class="api-header">
+                <div class="api-tag player-tag">Player</div>
+                <h2 class="api-name">PlayerGameLogs</h2>
+                <span class="api-field-count">70 fields</span>
+            </div>
+            <p class="api-desc">Per-game box score stats for any individual player. Same structure as TeamGameLogs but at the player level. Includes every traditional stat plus league rankings per game. Powers game-by-game analysis.</p>
+            <div class="api-params">
+                <span class="param">player_id</span>
+                <span class="param">season</span>
+                <span class="param">season_type</span>
+                <span class="param">last_n_games</span>
+            </div>
+            <div class="fields-section">
+                <button class="fields-toggle" onclick="toggleFields(this)">
+                    <span>Show All 70 Fields</span>
+                    <span class="toggle-arrow">&#9660;</span>
+                </button>
+                <div class="fields-list collapsed">
+                    <div class="fields-grid">
+                        <span class="field core">SEASON_YEAR</span>
+                        <span class="field core">PLAYER_ID</span>
+                        <span class="field core">PLAYER_NAME</span>
+                        <span class="field">NICKNAME</span>
+                        <span class="field core">TEAM_ID</span>
+                        <span class="field core">TEAM_ABBREVIATION</span>
+                        <span class="field">TEAM_NAME</span>
+                        <span class="field core">GAME_ID</span>
+                        <span class="field core">GAME_DATE</span>
+                        <span class="field core">MATCHUP</span>
+                        <span class="field core">WL</span>
+                        <span class="field core">MIN</span>
+                        <span class="field core">FGM &hellip; PTS</span>
+                        <span class="field core">PLUS_MINUS</span>
+                        <span class="field">NBA_FANTASY_PTS</span>
+                        <span class="field">DD2</span>
+                        <span class="field">TD3</span>
+                        <span class="field rank">GP_RANK &hellip; WNBA_FANTASY_PTS_RANK</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sample-section">
+                <h3 class="sample-title">Example Data (Stephen Curry — last 2 games)</h3>
+                <div class="sample-table-wrap">
+                    <table class="sample-table">
+                        <thead>
+                            <tr><th>DATE</th><th>MATCHUP</th><th>WL</th><th>MIN</th><th>PTS</th><th>FGM</th><th>FGA</th><th>FG3M</th><th>FG3A</th><th>REB</th><th>AST</th><th>STL</th><th>+/-</th></tr>
+                        </thead>
+                        <tbody id="sample-playergamelogs"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- API Card: PlayerIndex -->
+        <div class="api-card" id="playerindex">
+            <div class="api-header">
+                <div class="api-tag player-tag">Player</div>
+                <h2 class="api-name">PlayerIndex</h2>
+                <span class="api-field-count">26 fields</span>
+            </div>
+            <p class="api-desc">Directory of all active players in the league for a season. Includes bio data (height, weight, college, country, draft info) plus basic season averages. Great for building player search/dropdown lists.</p>
+            <div class="api-params">
+                <span class="param">season</span>
+            </div>
+            <div class="fields-section">
+                <button class="fields-toggle" onclick="toggleFields(this)">
+                    <span>Show All 26 Fields</span>
+                    <span class="toggle-arrow">&#9660;</span>
+                </button>
+                <div class="fields-list collapsed">
+                    <div class="fields-grid">
+                        <span class="field core">PERSON_ID</span>
+                        <span class="field core">PLAYER_LAST_NAME</span>
+                        <span class="field core">PLAYER_FIRST_NAME</span>
+                        <span class="field">PLAYER_SLUG</span>
+                        <span class="field core">TEAM_ID</span>
+                        <span class="field">TEAM_SLUG</span>
+                        <span class="field">IS_DEFUNCT</span>
+                        <span class="field">TEAM_CITY</span>
+                        <span class="field core">TEAM_NAME</span>
+                        <span class="field core">TEAM_ABBREVIATION</span>
+                        <span class="field core">JERSEY_NUMBER</span>
+                        <span class="field core">POSITION</span>
+                        <span class="field core">HEIGHT</span>
+                        <span class="field core">WEIGHT</span>
+                        <span class="field core">COLLEGE</span>
+                        <span class="field core">COUNTRY</span>
+                        <span class="field core">DRAFT_YEAR</span>
+                        <span class="field core">DRAFT_ROUND</span>
+                        <span class="field core">DRAFT_NUMBER</span>
+                        <span class="field">ROSTER_STATUS</span>
+                        <span class="field">FROM_YEAR</span>
+                        <span class="field">TO_YEAR</span>
+                        <span class="field core">PTS</span>
+                        <span class="field core">REB</span>
+                        <span class="field core">AST</span>
+                        <span class="field">STATS_TIMEFRAME</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sample-section">
+                <h3 class="sample-title">Example Data</h3>
+                <div class="sample-table-wrap">
+                    <table class="sample-table">
+                        <thead>
+                            <tr><th>NAME</th><th>TEAM</th><th>#</th><th>POS</th><th>HEIGHT</th><th>WEIGHT</th><th>COLLEGE</th><th>COUNTRY</th><th>DRAFT</th><th>PTS</th><th>REB</th><th>AST</th></tr>
+                        </thead>
+                        <tbody id="sample-playerindex"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- API Card: LeagueDashPlayerBioStats -->
+        <div class="api-card" id="leaguedashplayerbiostats">
+            <div class="api-header">
+                <div class="api-tag player-tag">Player</div>
+                <h2 class="api-name">LeagueDashPlayerBioStats</h2>
+                <span class="api-field-count">23 fields</span>
+            </div>
+            <p class="api-desc">Player bio data combined with advanced stats. Unique fields like NET_RATING, usage rate (USG_PCT), true shooting (TS_PCT), assist percentage, and offensive/defensive rebound rates. Combines physical profile with advanced metrics.</p>
+            <div class="api-params">
+                <span class="param">season</span>
+                <span class="param">per_mode</span>
+            </div>
+            <div class="fields-section">
+                <button class="fields-toggle" onclick="toggleFields(this)">
+                    <span>Show All 23 Fields</span>
+                    <span class="toggle-arrow">&#9660;</span>
+                </button>
+                <div class="fields-list collapsed">
+                    <div class="fields-grid">
+                        <span class="field core">PLAYER_ID</span>
+                        <span class="field core">PLAYER_NAME</span>
+                        <span class="field core">TEAM_ID</span>
+                        <span class="field core">TEAM_ABBREVIATION</span>
+                        <span class="field core">AGE</span>
+                        <span class="field core">PLAYER_HEIGHT</span>
+                        <span class="field core">PLAYER_HEIGHT_INCHES</span>
+                        <span class="field core">PLAYER_WEIGHT</span>
+                        <span class="field core">COLLEGE</span>
+                        <span class="field core">COUNTRY</span>
+                        <span class="field core">DRAFT_YEAR</span>
+                        <span class="field">DRAFT_ROUND</span>
+                        <span class="field">DRAFT_NUMBER</span>
+                        <span class="field core">GP</span>
+                        <span class="field core">PTS</span>
+                        <span class="field core">REB</span>
+                        <span class="field core">AST</span>
+                        <span class="field core">NET_RATING</span>
+                        <span class="field core">OREB_PCT</span>
+                        <span class="field core">DREB_PCT</span>
+                        <span class="field core">USG_PCT</span>
+                        <span class="field core">TS_PCT</span>
+                        <span class="field core">AST_PCT</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sample-section">
+                <h3 class="sample-title">Example Data</h3>
+                <div class="sample-table-wrap">
+                    <table class="sample-table">
+                        <thead>
+                            <tr><th>PLAYER</th><th>TEAM</th><th>AGE</th><th>HT</th><th>WT</th><th>GP</th><th>PTS</th><th>NET RTG</th><th>USG%</th><th>TS%</th><th>AST%</th><th>OREB%</th><th>DREB%</th></tr>
+                        </thead>
+                        <tbody id="sample-leaguedashplayerbiostats"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- API Card: LeagueDashTeamClutch -->
+        <div class="api-card" id="leaguedashteamclutch">
+            <div class="api-header">
+                <div class="api-tag team-tag">Team</div>
+                <h2 class="api-name">LeagueDashTeamClutch</h2>
+                <span class="api-field-count">54 fields</span>
+            </div>
+            <p class="api-desc">Team stats filtered to clutch situations only (last 5 minutes, score within 5 points by default). Same stat columns as LeagueDashTeamStats but only counting clutch possessions. Reveals which teams perform best under pressure.</p>
+            <div class="api-params">
+                <span class="param">season</span>
+                <span class="param">ahead_behind</span>
+                <span class="param">clutch_time</span>
+                <span class="param">point_diff</span>
+            </div>
+            <div class="fields-section">
+                <button class="fields-toggle" onclick="toggleFields(this)">
+                    <span>Show All 54 Fields</span>
+                    <span class="toggle-arrow">&#9660;</span>
+                </button>
+                <div class="fields-list collapsed">
+                    <div class="fields-grid">
+                        <span class="field core">TEAM_ID</span>
+                        <span class="field core">TEAM_NAME</span>
+                        <span class="field core">GP</span>
+                        <span class="field core">W</span>
+                        <span class="field core">L</span>
+                        <span class="field core">W_PCT</span>
+                        <span class="field core">FGM &hellip; PTS</span>
+                        <span class="field core">PLUS_MINUS</span>
+                        <span class="field rank">GP_RANK &hellip; PLUS_MINUS_RANK</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sample-section">
+                <h3 class="sample-title">Example Data (Clutch Stats)</h3>
+                <div class="sample-table-wrap">
+                    <table class="sample-table">
+                        <thead>
+                            <tr><th>TEAM</th><th>GP</th><th>W</th><th>L</th><th>W%</th><th>FG%</th><th>3P%</th><th>FT%</th><th>PTS</th><th>REB</th><th>AST</th><th>TOV</th><th>+/-</th></tr>
+                        </thead>
+                        <tbody id="sample-leaguedashteamclutch"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="home-footer">
+        <p>Data sourced from <strong>nba_api</strong> Python package &bull; 137 total endpoints available &bull; <a href="https://github.com/swar/nba_api" target="_blank">GitHub Repo</a></p>
+    </footer>
+
+    <!-- ============ SCRIPTS ============ -->
+    <script>
+    function toggleFields(btn) {
+        var list = btn.nextElementSibling;
+        var arrow = btn.querySelector('.toggle-arrow');
+        var isCollapsed = list.classList.toggle('collapsed');
+        arrow.innerHTML = isCollapsed ? '&#9660;' : '&#9650;';
+        var label = btn.querySelector('span:first-child');
+        label.textContent = isCollapsed ? label.textContent.replace('Hide', 'Show') : label.textContent.replace('Show', 'Hide');
+    }
+
+    // Load sample data and populate tables
+    fetch('data/api-samples.json')
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+            populateTeamGameLogs(data.TeamGameLogs);
+            populateShotChartDetail(data.ShotChartDetail);
+            populateLeagueDashTeamStats(data.LeagueDashTeamStats);
+            populateLeagueDashPlayerStats(data.LeagueDashPlayerStats);
+            populateCommonPlayerInfo(data.CommonPlayerInfo);
+            populatePlayerCareerStats(data.PlayerCareerStats);
+            populateLeagueStandingsV3(data.LeagueStandingsV3);
+            populateLeagueLeaders(data.LeagueLeaders);
+            populatePlayerGameLogs(data.PlayerGameLogs);
+            populatePlayerIndex(data.PlayerIndex);
+            populateLeagueDashPlayerBioStats(data.LeagueDashPlayerBioStats);
+            populateLeagueDashTeamClutch(data.LeagueDashTeamClutch);
+        });
+
+    function row(cells) {
+        return '<tr>' + cells.map(function(c) { return '<td>' + (c != null ? c : '—') + '</td>'; }).join('') + '</tr>';
+    }
+
+    function populateTeamGameLogs(d) {
+        var html = d.sample.map(function(g) {
+            return row([g.GAME_DATE, g.MATCHUP, g.WL, g.PTS, g.FGM, g.FGA, g.FG3M, g.FG3A, g.REB, g.AST, g.STL, g.BLK, g.TOV, g.PLUS_MINUS]);
+        }).join('');
+        document.getElementById('sample-teamgamelogs').innerHTML = html;
+    }
+
+    function populateShotChartDetail(d) {
+        var html = d.sample.map(function(s) {
+            return row([s.PLAYER_NAME, s.ACTION_TYPE, s.SHOT_TYPE, s.SHOT_ZONE_BASIC, s.SHOT_DISTANCE, s.LOC_X, s.LOC_Y, s.SHOT_MADE_FLAG, s.PERIOD, s.GAME_DATE]);
+        }).join('');
+        document.getElementById('sample-shotchartdetail').innerHTML = html;
+    }
+
+    function populateLeagueDashTeamStats(d) {
+        var html = d.sample.map(function(t) {
+            return row([t.TEAM_NAME, t.GP, t.W, t.L, (t.W_PCT * 100).toFixed(1) + '%', t.PTS, (t.FG_PCT * 100).toFixed(1) + '%', (t.FG3_PCT * 100).toFixed(1) + '%', t.REB, t.AST, t.STL, t.BLK, t.TOV, t.PLUS_MINUS]);
+        }).join('');
+        document.getElementById('sample-leaguedashteamstats').innerHTML = html;
+    }
+
+    function populateLeagueDashPlayerStats(d) {
+        var html = d.sample.map(function(p) {
+            return row([p.PLAYER_NAME, p.TEAM_ABBREVIATION, p.AGE, p.GP, p.MIN.toFixed(1), p.PTS.toFixed(1), (p.FG_PCT * 100).toFixed(1) + '%', (p.FG3_PCT * 100).toFixed(1) + '%', p.REB.toFixed(1), p.AST.toFixed(1), p.STL.toFixed(1), p.BLK.toFixed(1), p.TOV.toFixed(1), p.PLUS_MINUS.toFixed(1)]);
+        }).join('');
+        document.getElementById('sample-leaguedashplayerstats').innerHTML = html;
+    }
+
+    function populateCommonPlayerInfo(d) {
+        var p = d.sample[0];
+        var html = row([p.DISPLAY_FIRST_LAST, p.TEAM_NAME, p.POSITION, p.HEIGHT, p.WEIGHT, p.SCHOOL, p.COUNTRY, p.DRAFT_YEAR + ' R' + p.DRAFT_ROUND + ' #' + p.DRAFT_NUMBER, p.JERSEY, p.SEASON_EXP]);
+        document.getElementById('sample-commonplayerinfo').innerHTML = html;
+    }
+
+    function populatePlayerCareerStats(d) {
+        var last3 = d.sample.slice(-3);
+        if (d.total_rows >= 3) last3 = d.sample.slice(0, 3);
+        var html = last3.map(function(s) {
+            return row([s.SEASON_ID, s.TEAM_ABBREVIATION, s.PLAYER_AGE, s.GP, s.GS, s.MIN.toFixed(0), s.PTS.toFixed(0), (s.FG_PCT * 100).toFixed(1) + '%', (s.FG3_PCT * 100).toFixed(1) + '%', s.REB.toFixed(0), s.AST.toFixed(0), s.STL.toFixed(0)]);
+        }).join('');
+        document.getElementById('sample-playercareerstats').innerHTML = html;
+    }
+
+    function populateLeagueStandingsV3(d) {
+        var html = d.sample.map(function(t) {
+            return row([t.TeamCity + ' ' + t.TeamName, t.Conference, t.WINS, t.LOSSES, (t.WinPCT * 100).toFixed(1) + '%', t.HOME, t.ROAD, t.L10, t.strCurrentStreak, t.PointsPG.toFixed(1), t.OppPointsPG.toFixed(1), t.DiffPointsPG.toFixed(1), t.ConferenceGamesBack]);
+        }).join('');
+        document.getElementById('sample-leaguestandingsv3').innerHTML = html;
+    }
+
+    function populateLeagueLeaders(d) {
+        var html = d.sample.map(function(p) {
+            return row([p.RANK, p.PLAYER, p.TEAM, p.GP, p.MIN.toFixed(1), p.PTS.toFixed(1), (p.FG_PCT * 100).toFixed(1) + '%', (p.FG3_PCT * 100).toFixed(1) + '%', p.REB.toFixed(1), p.AST.toFixed(1), p.EFF.toFixed(1), p.AST_TOV.toFixed(2)]);
+        }).join('');
+        document.getElementById('sample-leagueleaders').innerHTML = html;
+    }
+
+    function populatePlayerGameLogs(d) {
+        var html = d.sample.map(function(g) {
+            return row([g.GAME_DATE, g.MATCHUP, g.WL, g.MIN, g.PTS, g.FGM, g.FGA, g.FG3M, g.FG3A, g.REB, g.AST, g.STL, g.PLUS_MINUS]);
+        }).join('');
+        document.getElementById('sample-playergamelogs').innerHTML = html;
+    }
+
+    function populatePlayerIndex(d) {
+        var html = d.sample.map(function(p) {
+            return row([p.PLAYER_FIRST_NAME + ' ' + p.PLAYER_LAST_NAME, p.TEAM_ABBREVIATION, p.JERSEY_NUMBER, p.POSITION, p.HEIGHT, p.WEIGHT, p.COLLEGE, p.COUNTRY, p.DRAFT_YEAR + ' R' + p.DRAFT_ROUND + ' #' + p.DRAFT_NUMBER, p.PTS, p.REB, p.AST]);
+        }).join('');
+        document.getElementById('sample-playerindex').innerHTML = html;
+    }
+
+    function populateLeagueDashPlayerBioStats(d) {
+        var html = d.sample.map(function(p) {
+            return row([p.PLAYER_NAME, p.TEAM_ABBREVIATION, p.AGE, p.PLAYER_HEIGHT, p.PLAYER_WEIGHT, p.GP, p.PTS.toFixed(1), p.NET_RATING.toFixed(1), (p.USG_PCT * 100).toFixed(1) + '%', (p.TS_PCT * 100).toFixed(1) + '%', (p.AST_PCT * 100).toFixed(1) + '%', (p.OREB_PCT * 100).toFixed(1) + '%', (p.DREB_PCT * 100).toFixed(1) + '%']);
+        }).join('');
+        document.getElementById('sample-leaguedashplayerbiostats').innerHTML = html;
+    }
+
+    function populateLeagueDashTeamClutch(d) {
+        var html = d.sample.map(function(t) {
+            return row([t.TEAM_NAME, t.GP, t.W, t.L, (t.W_PCT * 100).toFixed(1) + '%', (t.FG_PCT * 100).toFixed(1) + '%', (t.FG3_PCT * 100).toFixed(1) + '%', (t.FT_PCT * 100).toFixed(1) + '%', t.PTS, t.REB, t.AST, t.TOV, t.PLUS_MINUS]);
+        }).join('');
+        document.getElementById('sample-leaguedashteamclutch').innerHTML = html;
+    }
+    </script>
+
+</body>
+</html>
