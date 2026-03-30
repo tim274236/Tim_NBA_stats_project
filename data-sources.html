@@ -19,7 +19,7 @@
     <section class="summary-bar">
         <div class="summary-inner">
             <div class="summary-stat">
-                <span class="summary-value">12</span>
+                <span class="summary-value">17</span>
                 <span class="summary-label">Endpoints Documented</span>
             </div>
             <div class="summary-stat">
@@ -27,7 +27,7 @@
                 <span class="summary-label">Total Available in nba_api</span>
             </div>
             <div class="summary-stat">
-                <span class="summary-value">545+</span>
+                <span class="summary-value">670+</span>
                 <span class="summary-label">Total Data Fields</span>
             </div>
         </div>
@@ -826,6 +826,300 @@
             </div>
         </div>
 
+        <!-- API Card: SynergyPlayTypes -->
+        <div class="api-card" id="synergyplaytypes">
+            <div class="api-header">
+                <div class="api-tag player-tag">Player</div>
+                <div class="api-tag team-tag">Team</div>
+                <h2 class="api-name">SynergyPlayTypes</h2>
+                <span class="api-field-count">24 fields</span>
+            </div>
+            <p class="api-desc">Breaks down scoring by <strong>play type</strong> — isolation, pick &amp; roll, post-up, spot-up, transition, cut, off-screen, handoff. Shows points per possession, efficiency percentile, FG%, turnover rate, and frequency for each play type. Reveals a player's offensive identity.</p>
+            <div class="api-params">
+                <span class="param">season</span>
+                <span class="param">play_type</span>
+                <span class="param">type_grouping</span>
+                <span class="param">player_or_team</span>
+                <span class="param">per_mode</span>
+            </div>
+            <div class="fields-section">
+                <button class="fields-toggle" onclick="toggleFields(this)">
+                    <span>Show All 24 Fields</span>
+                    <span class="toggle-arrow">&#9660;</span>
+                </button>
+                <div class="fields-list collapsed">
+                    <div class="fields-grid">
+                        <span class="field">SEASON_ID</span>
+                        <span class="field core">PLAYER_ID</span>
+                        <span class="field core">PLAYER_NAME</span>
+                        <span class="field core">TEAM_ID</span>
+                        <span class="field core">TEAM_ABBREVIATION</span>
+                        <span class="field">TEAM_NAME</span>
+                        <span class="field core">PLAY_TYPE</span>
+                        <span class="field core">TYPE_GROUPING</span>
+                        <span class="field core">PERCENTILE</span>
+                        <span class="field core">GP</span>
+                        <span class="field core">POSS_PCT</span>
+                        <span class="field core">PPP</span>
+                        <span class="field core">FG_PCT</span>
+                        <span class="field core">FT_POSS_PCT</span>
+                        <span class="field core">TOV_POSS_PCT</span>
+                        <span class="field">SF_POSS_PCT</span>
+                        <span class="field">PLUSONE_POSS_PCT</span>
+                        <span class="field core">SCORE_POSS_PCT</span>
+                        <span class="field core">EFG_PCT</span>
+                        <span class="field core">POSS</span>
+                        <span class="field core">PTS</span>
+                        <span class="field core">FGM</span>
+                        <span class="field core">FGA</span>
+                        <span class="field">FGMX</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sample-section">
+                <h3 class="sample-title">Example Data (Isolation — Top 3 Players)</h3>
+                <div class="sample-table-wrap">
+                    <table class="sample-table">
+                        <thead>
+                            <tr><th>PLAYER</th><th>TEAM</th><th>PLAY TYPE</th><th>GP</th><th>POSS</th><th>PPP</th><th>FG%</th><th>EFG%</th><th>TOV%</th><th>SCORE%</th><th>%ILE</th><th>PTS</th></tr>
+                        </thead>
+                        <tbody id="sample-synergyplaytypes"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- API Card: PlayerDashboardByShootingSplits -->
+        <div class="api-card" id="playerdashboardbyshootingsplits">
+            <div class="api-header">
+                <div class="api-tag player-tag">Player</div>
+                <h2 class="api-name">PlayerDashboardByShootingSplits</h2>
+                <span class="api-field-count">30 fields &times; multiple tables</span>
+            </div>
+            <p class="api-desc">Splits a player's shooting by <strong>court area</strong> (restricted area, paint, mid-range, 3PT zones), <strong>distance</strong> (5ft buckets), and <strong>assisted vs unassisted</strong>. Shows what % of makes were assisted vs self-created for each zone. Multiple result tables in one call.</p>
+            <div class="api-params">
+                <span class="param">player_id</span>
+                <span class="param">season</span>
+                <span class="param">per_mode</span>
+            </div>
+            <div class="fields-section">
+                <button class="fields-toggle" onclick="toggleFields(this)">
+                    <span>Show All 30 Fields</span>
+                    <span class="toggle-arrow">&#9660;</span>
+                </button>
+                <div class="fields-list collapsed">
+                    <div class="fields-grid">
+                        <span class="field core">GROUP_SET</span>
+                        <span class="field core">GROUP_VALUE</span>
+                        <span class="field core">FGM</span>
+                        <span class="field core">FGA</span>
+                        <span class="field core">FG_PCT</span>
+                        <span class="field core">FG3M</span>
+                        <span class="field core">FG3A</span>
+                        <span class="field core">FG3_PCT</span>
+                        <span class="field core">EFG_PCT</span>
+                        <span class="field">BLKA</span>
+                        <span class="field core">PCT_AST_2PM</span>
+                        <span class="field core">PCT_UAST_2PM</span>
+                        <span class="field core">PCT_AST_3PM</span>
+                        <span class="field core">PCT_UAST_3PM</span>
+                        <span class="field core">PCT_AST_FGM</span>
+                        <span class="field core">PCT_UAST_FGM</span>
+                        <span class="field rank">FGM_RANK &hellip; PCT_UAST_FGM_RANK</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sample-section">
+                <h3 class="sample-title">Example Data (Stephen Curry — Shot Area Splits)</h3>
+                <div class="sample-table-wrap">
+                    <table class="sample-table">
+                        <thead>
+                            <tr><th>ZONE</th><th>FGM</th><th>FGA</th><th>FG%</th><th>EFG%</th><th>% ASSISTED</th><th>% UNASSISTED</th></tr>
+                        </thead>
+                        <tbody id="sample-playerdashboardbyshootingsplits"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- API Card: HustleStatsBoxScore -->
+        <div class="api-card" id="hustlestatsboxscore">
+            <div class="api-header">
+                <div class="api-tag player-tag">Player</div>
+                <div class="api-tag team-tag">Team</div>
+                <h2 class="api-name">HustleStatsBoxScore</h2>
+                <span class="api-field-count">25 fields</span>
+            </div>
+            <p class="api-desc">The <strong>"effort" stats</strong> that don't show up in traditional box scores. Per-game hustle data including contested shots (2PT and 3PT separately), deflections, charges drawn, screen assists, loose balls recovered (offense + defense), and box outs. Reveals the grinders and energy players.</p>
+            <div class="api-params">
+                <span class="param">game_id</span>
+            </div>
+            <div class="fields-section">
+                <button class="fields-toggle" onclick="toggleFields(this)">
+                    <span>Show All 25 Fields</span>
+                    <span class="toggle-arrow">&#9660;</span>
+                </button>
+                <div class="fields-list collapsed">
+                    <div class="fields-grid">
+                        <span class="field core">GAME_ID</span>
+                        <span class="field core">TEAM_ID</span>
+                        <span class="field core">TEAM_ABBREVIATION</span>
+                        <span class="field">TEAM_CITY</span>
+                        <span class="field core">PLAYER_ID</span>
+                        <span class="field core">PLAYER_NAME</span>
+                        <span class="field">START_POSITION</span>
+                        <span class="field">COMMENT</span>
+                        <span class="field core">MINUTES</span>
+                        <span class="field core">PTS</span>
+                        <span class="field core">CONTESTED_SHOTS</span>
+                        <span class="field core">CONTESTED_SHOTS_2PT</span>
+                        <span class="field core">CONTESTED_SHOTS_3PT</span>
+                        <span class="field core">DEFLECTIONS</span>
+                        <span class="field core">CHARGES_DRAWN</span>
+                        <span class="field core">SCREEN_ASSISTS</span>
+                        <span class="field core">SCREEN_AST_PTS</span>
+                        <span class="field core">OFF_LOOSE_BALLS_RECOVERED</span>
+                        <span class="field core">DEF_LOOSE_BALLS_RECOVERED</span>
+                        <span class="field core">LOOSE_BALLS_RECOVERED</span>
+                        <span class="field core">OFF_BOXOUTS</span>
+                        <span class="field core">DEF_BOXOUTS</span>
+                        <span class="field">BOX_OUT_PLAYER_TEAM_REBS</span>
+                        <span class="field">BOX_OUT_PLAYER_REBS</span>
+                        <span class="field core">BOX_OUTS</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sample-section">
+                <h3 class="sample-title">Example Data (Single Game)</h3>
+                <div class="sample-table-wrap">
+                    <table class="sample-table">
+                        <thead>
+                            <tr><th>PLAYER</th><th>TEAM</th><th>MIN</th><th>PTS</th><th>CONTESTED</th><th>CONTESTED 2PT</th><th>CONTESTED 3PT</th><th>DEFLECTIONS</th><th>CHARGES</th><th>SCREENS</th><th>LOOSE BALLS</th><th>BOX OUTS</th></tr>
+                        </thead>
+                        <tbody id="sample-hustlestatsboxscore"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- API Card: LeagueSeasonMatchups -->
+        <div class="api-card" id="leagueseasonmatchups">
+            <div class="api-header">
+                <div class="api-tag player-tag">Player</div>
+                <h2 class="api-name">LeagueSeasonMatchups</h2>
+                <span class="api-field-count">27 fields</span>
+            </div>
+            <p class="api-desc"><strong>Head-to-head defensive matchup data.</strong> Shows who guarded who, total possessions matched up, FG% when guarded by that defender, plus help defense stats (help blocks, help FGA allowed). The gold standard for "how does Player A perform against Defender B?"</p>
+            <div class="api-params">
+                <span class="param">season</span>
+                <span class="param">off_player_id</span>
+                <span class="param">def_player_id</span>
+            </div>
+            <div class="fields-section">
+                <button class="fields-toggle" onclick="toggleFields(this)">
+                    <span>Show All 27 Fields</span>
+                    <span class="toggle-arrow">&#9660;</span>
+                </button>
+                <div class="fields-list collapsed">
+                    <div class="fields-grid">
+                        <span class="field">SEASON_ID</span>
+                        <span class="field core">OFF_PLAYER_ID</span>
+                        <span class="field core">OFF_PLAYER_NAME</span>
+                        <span class="field core">DEF_PLAYER_ID</span>
+                        <span class="field core">DEF_PLAYER_NAME</span>
+                        <span class="field core">GP</span>
+                        <span class="field core">MATCHUP_MIN</span>
+                        <span class="field core">PARTIAL_POSS</span>
+                        <span class="field core">PLAYER_PTS</span>
+                        <span class="field">TEAM_PTS</span>
+                        <span class="field core">MATCHUP_AST</span>
+                        <span class="field core">MATCHUP_TOV</span>
+                        <span class="field core">MATCHUP_BLK</span>
+                        <span class="field core">MATCHUP_FGM</span>
+                        <span class="field core">MATCHUP_FGA</span>
+                        <span class="field core">MATCHUP_FG_PCT</span>
+                        <span class="field core">MATCHUP_FG3M</span>
+                        <span class="field core">MATCHUP_FG3A</span>
+                        <span class="field core">MATCHUP_FG3_PCT</span>
+                        <span class="field core">HELP_BLK</span>
+                        <span class="field core">HELP_FGM</span>
+                        <span class="field core">HELP_FGA</span>
+                        <span class="field">HELP_FG_PERC</span>
+                        <span class="field">MATCHUP_FTM</span>
+                        <span class="field">MATCHUP_FTA</span>
+                        <span class="field">SFL</span>
+                        <span class="field core">MATCHUP_TIME_SEC</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sample-section">
+                <h3 class="sample-title">Example Data (Stephen Curry vs Defenders)</h3>
+                <div class="sample-table-wrap">
+                    <table class="sample-table">
+                        <thead>
+                            <tr><th>OFFENSE</th><th>DEFENDER</th><th>GP</th><th>MIN</th><th>POSS</th><th>PTS</th><th>FGM</th><th>FGA</th><th>FG%</th><th>3PM</th><th>3PA</th><th>3P%</th><th>AST</th><th>TOV</th></tr>
+                        </thead>
+                        <tbody id="sample-leagueseasonmatchups"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- API Card: TeamDashPtShots -->
+        <div class="api-card" id="teamdashptshots">
+            <div class="api-header">
+                <div class="api-tag team-tag">Team</div>
+                <h2 class="api-name">TeamDashPtShots</h2>
+                <span class="api-field-count">18 fields &times; multiple tables</span>
+            </div>
+            <p class="api-desc"><strong>Player tracking shot data</strong> with next-level detail. Breaks down shooting by <strong>shot clock range</strong> (24-22, 22-18, etc.), <strong>dribbles before shot</strong> (0, 1, 2, 3-6, 7+), <strong>closest defender distance</strong> (0-2ft, 2-4ft, 4-6ft, 6+ft), and touch time. Multiple result tables per call.</p>
+            <div class="api-params">
+                <span class="param">team_id</span>
+                <span class="param">season</span>
+                <span class="param">per_mode</span>
+            </div>
+            <div class="fields-section">
+                <button class="fields-toggle" onclick="toggleFields(this)">
+                    <span>Show All 18 Fields</span>
+                    <span class="toggle-arrow">&#9660;</span>
+                </button>
+                <div class="fields-list collapsed">
+                    <div class="fields-grid">
+                        <span class="field core">TEAM_ID</span>
+                        <span class="field core">TEAM_NAME</span>
+                        <span class="field">SORT_ORDER</span>
+                        <span class="field">G</span>
+                        <span class="field core">SHOT_CLOCK_RANGE</span>
+                        <span class="field core">FGA_FREQUENCY</span>
+                        <span class="field core">FGM</span>
+                        <span class="field core">FGA</span>
+                        <span class="field core">FG_PCT</span>
+                        <span class="field core">EFG_PCT</span>
+                        <span class="field">FG2A_FREQUENCY</span>
+                        <span class="field">FG2M</span>
+                        <span class="field">FG2A</span>
+                        <span class="field">FG2_PCT</span>
+                        <span class="field">FG3A_FREQUENCY</span>
+                        <span class="field">FG3M</span>
+                        <span class="field">FG3A</span>
+                        <span class="field">FG3_PCT</span>
+                    </div>
+                    <p style="color:#8892a8; font-size:11px; margin-top:8px;">Also available as: <strong>DribbleShooting</strong> (DRIBBLE_RANGE), <strong>ClosestDefenderShooting</strong> (CLOSE_DEF_DIST_RANGE), <strong>TouchTimeShooting</strong> (TOUCH_TIME_RANGE)</p>
+                </div>
+            </div>
+            <div class="sample-section">
+                <h3 class="sample-title">Example Data (Warriors — Shot Clock Breakdown)</h3>
+                <div class="sample-table-wrap">
+                    <table class="sample-table">
+                        <thead>
+                            <tr><th>SHOT CLOCK</th><th>FGA FREQ</th><th>FGM</th><th>FGA</th><th>FG%</th><th>EFG%</th><th>2P FG%</th><th>3P FG%</th></tr>
+                        </thead>
+                        <tbody id="sample-teamdashptshots"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <!-- ============ FOOTER ============ -->
@@ -860,6 +1154,11 @@
             populatePlayerIndex(data.PlayerIndex);
             populateLeagueDashPlayerBioStats(data.LeagueDashPlayerBioStats);
             populateLeagueDashTeamClutch(data.LeagueDashTeamClutch);
+            populateSynergyPlayTypes(data.SynergyPlayTypes);
+            populatePlayerDashboardByShootingSplits(data.PlayerDashboardByShootingSplits);
+            populateHustleStatsBoxScore(data.HustleStatsBoxScore);
+            populateLeagueSeasonMatchups(data.LeagueSeasonMatchups);
+            populateTeamDashPtShots(data.TeamDashPtShots);
         });
 
     function row(cells) {
@@ -949,6 +1248,41 @@
             return row([t.TEAM_NAME, t.GP, t.W, t.L, (t.W_PCT * 100).toFixed(1) + '%', (t.FG_PCT * 100).toFixed(1) + '%', (t.FG3_PCT * 100).toFixed(1) + '%', (t.FT_PCT * 100).toFixed(1) + '%', t.PTS, t.REB, t.AST, t.TOV, t.PLUS_MINUS]);
         }).join('');
         document.getElementById('sample-leaguedashteamclutch').innerHTML = html;
+    }
+
+    function populateSynergyPlayTypes(d) {
+        var html = d.sample.map(function(p) {
+            return row([p.PLAYER_NAME, p.TEAM_ABBREVIATION, p.PLAY_TYPE, p.GP, p.POSS, (p.PPP).toFixed(3), (p.FG_PCT * 100).toFixed(1) + '%', (p.EFG_PCT * 100).toFixed(1) + '%', (p.TOV_POSS_PCT * 100).toFixed(1) + '%', (p.SCORE_POSS_PCT * 100).toFixed(1) + '%', (p.PERCENTILE * 100).toFixed(0) + 'th', p.PTS]);
+        }).join('');
+        document.getElementById('sample-synergyplaytypes').innerHTML = html;
+    }
+
+    function populatePlayerDashboardByShootingSplits(d) {
+        var html = d.sample.map(function(s) {
+            return row([s.GROUP_VALUE, s.FGM, s.FGA, (s.FG_PCT * 100).toFixed(1) + '%', (s.EFG_PCT * 100).toFixed(1) + '%', (s.PCT_AST_FGM * 100).toFixed(1) + '%', (s.PCT_UAST_FGM * 100).toFixed(1) + '%']);
+        }).join('');
+        document.getElementById('sample-playerdashboardbyshootingsplits').innerHTML = html;
+    }
+
+    function populateHustleStatsBoxScore(d) {
+        var html = d.sample.map(function(p) {
+            return row([p.PLAYER_NAME, p.TEAM_ABBREVIATION, p.MINUTES, p.PTS, p.CONTESTED_SHOTS, p.CONTESTED_SHOTS_2PT, p.CONTESTED_SHOTS_3PT, p.DEFLECTIONS, p.CHARGES_DRAWN, p.SCREEN_ASSISTS, p.LOOSE_BALLS_RECOVERED, p.BOX_OUTS]);
+        }).join('');
+        document.getElementById('sample-hustlestatsboxscore').innerHTML = html;
+    }
+
+    function populateLeagueSeasonMatchups(d) {
+        var html = d.sample.map(function(m) {
+            return row([m.OFF_PLAYER_NAME, m.DEF_PLAYER_NAME, m.GP, m.MATCHUP_MIN, m.PARTIAL_POSS, m.PLAYER_PTS, m.MATCHUP_FGM, m.MATCHUP_FGA, (m.MATCHUP_FG_PCT * 100).toFixed(1) + '%', m.MATCHUP_FG3M, m.MATCHUP_FG3A, (m.MATCHUP_FG3_PCT * 100).toFixed(1) + '%', m.MATCHUP_AST, m.MATCHUP_TOV]);
+        }).join('');
+        document.getElementById('sample-leagueseasonmatchups').innerHTML = html;
+    }
+
+    function populateTeamDashPtShots(d) {
+        var html = d.sample.map(function(s) {
+            return row([s.SHOT_CLOCK_RANGE, (s.FGA_FREQUENCY * 100).toFixed(1) + '%', s.FGM, s.FGA, (s.FG_PCT * 100).toFixed(1) + '%', (s.EFG_PCT * 100).toFixed(1) + '%', (s.FG2_PCT * 100).toFixed(1) + '%', (s.FG3_PCT * 100).toFixed(1) + '%']);
+        }).join('');
+        document.getElementById('sample-teamdashptshots').innerHTML = html;
     }
     </script>
 
