@@ -17,8 +17,8 @@ const SEASON = "2025-26";
 // Each slot: { playerId, playerName, teamAbbr, courtSvg, shots }
 const slots = [null, null, null, null];
 
-// Global hex mode toggle for all comparison courts
-var compHexMode = false;
+// Each slot view mode: "dots" | "hex" | "zones"
+const slotViewMode = ["dots", "dots", "dots", "dots"];
 
 // All players from players.json
 let allPlayers = [];
@@ -61,16 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Expand/minimize buttons
     setupExpandButtons();
-
-    // Hex toggle
-    document.getElementById("comp-hex-toggle").addEventListener("click", function () {
-        compHexMode = !compHexMode;
-        var label = document.getElementById("comp-hex-toggle-label");
-        var btn = document.getElementById("comp-hex-toggle");
-        label.textContent = compHexMode ? "Hex" : "Dots";
-        btn.classList.toggle("active", compHexMode);
-        rerenderAllCourts();
-    });
 
     console.log("Comparison page ready.");
 });
@@ -234,8 +224,11 @@ function removePlayer(playerId) {
             // Clear shots from court
             var courtGroup = slots[i].courtSvg.node().__courtGroup;
             courtGroup.select(".shots-layer").selectAll("circle").remove();
+            clearHexMap(slots[i].courtSvg);
+            clearZoneOverlay(slots[i].courtSvg);
 
             slots[i] = null;
+            slotViewMode[i] = "dots";
 
             // Compact: shift players to fill gaps
             compactSlots();
@@ -259,7 +252,8 @@ function compactSlots() {
                 playerId: slots[i].playerId,
                 playerName: slots[i].playerName,
                 teamAbbr: slots[i].teamAbbr,
-                shots: slots[i].shots
+                shots: slots[i].shots,
+                viewMode: slotViewMode[i]
             });
         }
     }
@@ -269,8 +263,11 @@ function compactSlots() {
         if (slots[i]) {
             var courtGroup = slots[i].courtSvg.node().__courtGroup;
             courtGroup.select(".shots-layer").selectAll("circle").remove();
+            clearHexMap(slots[i].courtSvg);
+            clearZoneOverlay(slots[i].courtSvg);
         }
         slots[i] = null;
+        slotViewMode[i] = "dots";
     }
 
     // Re-assign to first N slots
@@ -285,8 +282,9 @@ function compactSlots() {
             courtSvg: courtSvg,
             shots: active[j].shots
         };
+        slotViewMode[j] = active[j].viewMode || "dots";
 
-        plotShotsOnCourt(j);
+        switchSlotView(j, slotViewMode[j], true);
     }
 }
 
@@ -396,32 +394,7 @@ function applyFiltersToAll() {
 
     for (var i = 0; i < MAX_PLAYERS; i++) {
         if (!slots[i]) continue;
-
-        if (compHexMode) {
-            // In hex mode, re-render hex with filtered data
-            var filtered = filterShotsData(slots[i].shots, filters);
-            var courtGroup = slots[i].courtSvg.node().__courtGroup;
-            courtGroup.select(".shots-layer").selectAll("circle").remove();
-            plotHexMap(slots[i].courtSvg, filtered);
-        } else {
-            // In dots mode, show/hide individual dots
-            var courtGroup = slots[i].courtSvg.node().__courtGroup;
-            clearHexMap(slots[i].courtSvg);
-
-            courtGroup.selectAll(".shot-dot").each(function () {
-                var dot = d3.select(this);
-                var d = dot.datum();
-                var visible = true;
-
-                if (filters.result === "made" && d.SHOT_MADE_FLAG !== 1) visible = false;
-                if (filters.result === "missed" && d.SHOT_MADE_FLAG !== 0) visible = false;
-                if (filters.shotType !== "all" && d.SHOT_TYPE !== filters.shotType) visible = false;
-                if (filters.quarter !== "all" && d.PERIOD !== parseInt(filters.quarter)) visible = false;
-                if (filters.zone !== "all" && d.SHOT_ZONE_BASIC !== filters.zone) visible = false;
-
-                dot.attr("display", visible ? null : "none");
-            });
-        }
+        applyFiltersToSlot(i, filters);
     }
 
     updateAllStats();
@@ -453,6 +426,212 @@ function filterShotsData(shots, filters) {
         if (filters.zone !== "all" && s.SHOT_ZONE_BASIC !== filters.zone) return false;
         return true;
     });
+}
+
+
+// ============================================================
+// ZONE OVERLAY
+// ============================================================
+
+var ZONE_DEFS = [
+    {
+        name: "Restricted",
+        filter: function (s) { return s.SHOT_ZONE_BASIC === "Restricted Area"; },
+        labelX: 0, labelY: 20,
+        pillWidth: 70, pillHeight: 36
+    },
+    {
+        name: "Paint (L)",
+        filter: function (s) { return s.SHOT_ZONE_BASIC === "In The Paint (Non-RA)" && s.LOC_X < 0; },
+        labelX: -50, labelY: 90,
+        pillWidth: 65, pillHeight: 36
+    },
+    {
+        name: "Paint (R)",
+        filter: function (s) { return s.SHOT_ZONE_BASIC === "In The Paint (Non-RA)" && s.LOC_X >= 0; },
+        labelX: 50, labelY: 90,
+        pillWidth: 65, pillHeight: 36
+    },
+    {
+        name: "Mid (L)",
+        filter: function (s) { return s.SHOT_ZONE_BASIC === "Mid-Range" && s.LOC_X < -80; },
+        labelX: -155, labelY: 100,
+        pillWidth: 60, pillHeight: 36
+    },
+    {
+        name: "Mid (LC)",
+        filter: function (s) { return s.SHOT_ZONE_BASIC === "Mid-Range" && s.LOC_X >= -80 && s.LOC_X < 0; },
+        labelX: -55, labelY: 180,
+        pillWidth: 60, pillHeight: 36
+    },
+    {
+        name: "Mid (RC)",
+        filter: function (s) { return s.SHOT_ZONE_BASIC === "Mid-Range" && s.LOC_X >= 0 && s.LOC_X < 80; },
+        labelX: 55, labelY: 180,
+        pillWidth: 60, pillHeight: 36
+    },
+    {
+        name: "Mid (R)",
+        filter: function (s) { return s.SHOT_ZONE_BASIC === "Mid-Range" && s.LOC_X >= 80; },
+        labelX: 155, labelY: 100,
+        pillWidth: 60, pillHeight: 36
+    },
+    {
+        name: "3PT (L)",
+        filter: function (s) { return s.SHOT_ZONE_BASIC === "Above the Break 3" && s.LOC_X < -80; },
+        labelX: -180, labelY: 250,
+        pillWidth: 60, pillHeight: 36
+    },
+    {
+        name: "3PT (C)",
+        filter: function (s) { return s.SHOT_ZONE_BASIC === "Above the Break 3" && s.LOC_X >= -80 && s.LOC_X <= 80; },
+        labelX: 0, labelY: 300,
+        pillWidth: 60, pillHeight: 36
+    },
+    {
+        name: "3PT (R)",
+        filter: function (s) { return s.SHOT_ZONE_BASIC === "Above the Break 3" && s.LOC_X > 80; },
+        labelX: 180, labelY: 250,
+        pillWidth: 60, pillHeight: 36
+    },
+    {
+        name: "Corner L",
+        filter: function (s) { return s.SHOT_ZONE_BASIC === "Left Corner 3"; },
+        labelX: -230, labelY: 10,
+        pillWidth: 60, pillHeight: 36
+    },
+    {
+        name: "Corner R",
+        filter: function (s) { return s.SHOT_ZONE_BASIC === "Right Corner 3"; },
+        labelX: 230, labelY: 10,
+        pillWidth: 60, pillHeight: 36
+    }
+];
+
+function plotZoneOverlay(courtSvg, shots) {
+    var scales = courtSvg.node().__scales;
+    var courtGroup = courtSvg.node().__courtGroup;
+
+    clearZoneOverlay(courtSvg);
+
+    var zoneLayer = courtGroup.append("g")
+        .attr("class", "zone-overlay");
+
+    var zoneColorScale = d3.scaleLinear()
+        .domain([0.30, 0.45, 0.60])
+        .range(["#e94560", "#f0c040", "#4ecca3"])
+        .clamp(true);
+
+    ZONE_DEFS.forEach(function (zone) {
+        var zoneShots = shots.filter(zone.filter);
+        if (zoneShots.length < 3) return;
+
+        var made = zoneShots.filter(function (s) { return s.SHOT_MADE_FLAG === 1; }).length;
+        var fgPct = made / zoneShots.length;
+        var px = scales.x(zone.labelX);
+        var py = scales.y(zone.labelY);
+
+        zoneLayer.append("rect")
+            .attr("x", px - zone.pillWidth / 2)
+            .attr("y", py - zone.pillHeight / 2)
+            .attr("width", zone.pillWidth)
+            .attr("height", zone.pillHeight)
+            .attr("rx", 8)
+            .attr("fill", zoneColorScale(fgPct))
+            .attr("fill-opacity", 0.85)
+            .attr("stroke", "rgba(255,255,255,0.3)")
+            .attr("stroke-width", 1);
+
+        zoneLayer.append("text")
+            .attr("x", px)
+            .attr("y", py - 3)
+            .attr("text-anchor", "middle")
+            .attr("fill", "#ffffff")
+            .attr("font-size", "13px")
+            .attr("font-weight", "800")
+            .attr("font-family", "-apple-system, BlinkMacSystemFont, sans-serif")
+            .text(Math.round(fgPct * 100) + "%");
+
+        zoneLayer.append("text")
+            .attr("x", px)
+            .attr("y", py + 12)
+            .attr("text-anchor", "middle")
+            .attr("fill", "rgba(255,255,255,0.8)")
+            .attr("font-size", "9px")
+            .attr("font-weight", "600")
+            .attr("font-family", "-apple-system, BlinkMacSystemFont, sans-serif")
+            .text(made + "/" + zoneShots.length);
+    });
+}
+
+function clearZoneOverlay(courtSvg) {
+    var courtGroup = courtSvg.node().__courtGroup;
+    courtGroup.select(".zone-overlay").remove();
+}
+
+function updatePanelToggleState(slotIndex) {
+    var panel = document.getElementById("panel-" + slotIndex);
+    if (!panel) return;
+
+    panel.querySelectorAll(".view-toggle-btn").forEach(function (btn) {
+        btn.classList.toggle("active", btn.getAttribute("data-mode") === slotViewMode[slotIndex]);
+    });
+}
+
+function applyFiltersToSlot(slotIndex, filters) {
+    if (!slots[slotIndex]) return;
+
+    var filtered = filterShotsData(slots[slotIndex].shots, filters);
+    var courtSvg = slots[slotIndex].courtSvg;
+    var courtGroup = courtSvg.node().__courtGroup;
+    var shotsLayer = courtGroup.select(".shots-layer");
+
+    if (slotViewMode[slotIndex] === "hex") {
+        shotsLayer.selectAll("circle").remove();
+        clearZoneOverlay(courtSvg);
+        clearHexMap(courtSvg);
+        plotHexMap(courtSvg, filtered);
+        return;
+    }
+
+    clearHexMap(courtSvg);
+
+    if (slotViewMode[slotIndex] === "zones") {
+        if (shotsLayer.selectAll("circle").size() === 0) {
+            plotShotsOnCourt(slotIndex);
+        }
+        shotsLayer.selectAll("circle").attr("display", "none");
+        plotZoneOverlay(courtSvg, filtered);
+        return;
+    }
+
+    clearZoneOverlay(courtSvg);
+    if (shotsLayer.selectAll("circle").size() === 0) {
+        plotShotsOnCourt(slotIndex);
+    }
+
+    shotsLayer.selectAll(".shot-dot").each(function () {
+        var dot = d3.select(this);
+        var d = dot.datum();
+        var visible = true;
+
+        if (filters.result === "made" && d.SHOT_MADE_FLAG !== 1) visible = false;
+        if (filters.result === "missed" && d.SHOT_MADE_FLAG !== 0) visible = false;
+        if (filters.shotType !== "all" && d.SHOT_TYPE !== filters.shotType) visible = false;
+        if (filters.quarter !== "all" && d.PERIOD !== parseInt(filters.quarter)) visible = false;
+        if (filters.zone !== "all" && d.SHOT_ZONE_BASIC !== filters.zone) visible = false;
+
+        dot.attr("display", visible ? null : "none");
+    });
+}
+
+function switchSlotView(slotIndex, mode, forceRerender) {
+    if (!slots[slotIndex]) return;
+    if (!forceRerender && slotViewMode[slotIndex] === mode) return;
+
+    slotViewMode[slotIndex] = mode;
+    applyFiltersToSlot(slotIndex, getCurrentFilters());
+    updatePanelToggleState(slotIndex);
 }
 
 
@@ -539,7 +718,21 @@ function updateGridDisplay() {
             header.innerHTML =
                 '<img class="panel-headshot" src="' + headshotUrl + '" alt="" onerror="this.style.display=\'none\'">' +
                 '<span class="panel-player-name">' + slots[i].playerName + '</span>' +
-                '<span class="panel-player-team">' + slots[i].teamAbbr + '</span>';
+                '<span class="panel-player-team">' + slots[i].teamAbbr + '</span>' +
+                '<div class="panel-view-toggles">' +
+                '  <button class="view-toggle-btn' + (slotViewMode[i] === "dots" ? " active" : "") + '" data-slot="' + i + '" data-mode="dots" title="Dot Chart">Dots</button>' +
+                '  <button class="view-toggle-btn' + (slotViewMode[i] === "hex" ? " active" : "") + '" data-slot="' + i + '" data-mode="hex" title="Hex Map">Hex</button>' +
+                '  <button class="view-toggle-btn' + (slotViewMode[i] === "zones" ? " active" : "") + '" data-slot="' + i + '" data-mode="zones" title="Zone Heat Map">Zones</button>' +
+                '</div>';
+
+            panel.querySelectorAll(".view-toggle-btn").forEach(function (btn) {
+                btn.addEventListener("click", function (e) {
+                    e.stopPropagation();
+                    var slot = parseInt(btn.getAttribute("data-slot"));
+                    var mode = btn.getAttribute("data-mode");
+                    switchSlotView(slot, mode);
+                });
+            });
         } else if (i < activeCount + 1 && activeCount < MAX_PLAYERS && activeCount > 0) {
             // Show one empty "add player" slot
             panel.classList.remove("active");
@@ -646,25 +839,9 @@ function setupExpandButtons() {
 // ============================================================
 
 function rerenderAllCourts() {
-    var filters = getCurrentFilters();
-
     for (var i = 0; i < MAX_PLAYERS; i++) {
         if (!slots[i]) continue;
-
-        var courtSvg = slots[i].courtSvg;
-        var filtered = filterShotsData(slots[i].shots, filters);
-
-        if (compHexMode) {
-            // Clear dots, show hex
-            var courtGroup = courtSvg.node().__courtGroup;
-            courtGroup.select(".shots-layer").selectAll("circle").remove();
-            plotHexMap(courtSvg, filtered);
-        } else {
-            // Clear hex, show dots
-            clearHexMap(courtSvg);
-            plotShotsOnCourt(i);
-            applyFiltersToAll();
-        }
+        switchSlotView(i, slotViewMode[i], true);
     }
 
     updateAllStats();
