@@ -1,165 +1,30 @@
 [
   {
-    "id": 1628983,
-    "full_name": "Shai Gilgeous-Alexander",
-    "first_name": "Shai",
-    "last_name": "Gilgeous-Alexander",
-    "team_name": "Oklahoma City Thunder",
-    "team_abbreviation": "OKC",
-    "shot_count": 1656
-  },
-  {
-    "id": 1630162,
-    "full_name": "Anthony Edwards",
-    "first_name": "Anthony",
-    "last_name": "Edwards",
-    "team_name": "Minnesota Timberwolves",
-    "team_abbreviation": "MIN",
-    "shot_count": 1612
-  },
-  {
-    "id": 1628369,
-    "full_name": "Jayson Tatum",
-    "first_name": "Jayson",
-    "last_name": "Tatum",
+    "id": 1627759,
+    "full_name": "Jaylen Brown",
+    "first_name": "Jaylen",
+    "last_name": "Brown",
     "team_name": "Boston Celtics",
     "team_abbreviation": "BOS",
-    "shot_count": 1465
+    "shot_count": 1481
   },
   {
-    "id": 1630595,
-    "full_name": "Cade Cunningham",
-    "first_name": "Cade",
-    "last_name": "Cunningham",
-    "team_name": "Detroit Pistons",
-    "team_abbreviation": "DET",
+    "id": 1629029,
+    "full_name": "Luka Don\u010di\u0107",
+    "first_name": "Luka",
+    "last_name": "Don\u010di\u0107",
+    "team_name": "Los Angeles Lakers",
+    "team_abbreviation": "LAL",
     "shot_count": 1457
   },
   {
-    "id": 1630224,
-    "full_name": "Jalen Green",
-    "first_name": "Jalen",
-    "last_name": "Green",
-    "team_name": "Houston Rockets",
-    "team_abbreviation": "HOU",
-    "shot_count": 1437
-  },
-  {
-    "id": 1626164,
-    "full_name": "Devin Booker",
-    "first_name": "Devin",
-    "last_name": "Booker",
-    "team_name": "Phoenix Suns",
-    "team_abbreviation": "PHX",
-    "shot_count": 1420
-  },
-  {
-    "id": 1629639,
-    "full_name": "Tyler Herro",
-    "first_name": "Tyler",
-    "last_name": "Herro",
-    "team_name": "Miami Heat",
-    "team_abbreviation": "MIA",
-    "shot_count": 1378
-  },
-  {
-    "id": 1629027,
-    "full_name": "Trae Young",
-    "first_name": "Trae",
-    "last_name": "Young",
-    "team_name": "Atlanta Hawks",
-    "team_abbreviation": "ATL",
-    "shot_count": 1376
-  },
-  {
-    "id": 203999,
-    "full_name": "Nikola Joki\u0107",
-    "first_name": "Nikola",
-    "last_name": "Joki\u0107",
-    "team_name": "Denver Nuggets",
-    "team_abbreviation": "DEN",
-    "shot_count": 1364
-  },
-  {
-    "id": 1628378,
-    "full_name": "Donovan Mitchell",
-    "first_name": "Donovan",
-    "last_name": "Mitchell",
-    "team_name": "Cleveland Cavaliers",
-    "team_abbreviation": "CLE",
-    "shot_count": 1320
-  },
-  {
-    "id": 203507,
-    "full_name": "Giannis Antetokounmpo",
-    "first_name": "Giannis",
-    "last_name": "Antetokounmpo",
-    "team_name": "Milwaukee Bucks",
-    "team_abbreviation": "MIL",
-    "shot_count": 1319
-  },
-  {
-    "id": 201942,
-    "full_name": "DeMar DeRozan",
-    "first_name": "DeMar",
-    "last_name": "DeRozan",
-    "team_name": "Sacramento Kings",
-    "team_abbreviation": "SAC",
-    "shot_count": 1308
-  },
-  {
-    "id": 201935,
-    "full_name": "James Harden",
-    "first_name": "James",
-    "last_name": "Harden",
-    "team_name": "Los Angeles Clippers",
-    "team_abbreviation": "LAC",
-    "shot_count": 1295
-  },
-  {
-    "id": 2544,
-    "full_name": "LeBron James",
-    "first_name": "LeBron",
-    "last_name": "James",
-    "team_name": "Los Angeles Lakers",
-    "team_abbreviation": "LAL",
-    "shot_count": 1270
-  },
-  {
-    "id": 201939,
-    "full_name": "Stephen Curry",
-    "first_name": "Stephen",
-    "last_name": "Curry",
-    "team_name": "Golden State Warriors",
-    "team_abbreviation": "GSW",
-    "shot_count": 1258
-  },
-  {
-    "id": 203897,
-    "full_name": "Zach LaVine",
-    "first_name": "Zach",
-    "last_name": "LaVine",
-    "team_name": "Chicago Bulls",
-    "team_abbreviation": "CHI",
-    "shot_count": 1223
-  },
-  {
-    "id": 1626157,
-    "full_name": "Karl-Anthony Towns",
-    "first_name": "Karl-Anthony",
-    "last_name": "Towns",
-    "team_name": "New York Knicks",
-    "team_abbreviation": "NYK",
-    "shot_count": 1215
-  },
-  {
-    "id": 1628991,
-    "full_name": "Jaren Jackson Jr.",
-    "first_name": "Jaren",
-    "last_name": "Jackson Jr.",
-    "team_name": "Memphis Grizzlies",
-    "team_abbreviation": "MEM",
-    "shot_count": 1213
+    "id": 1630178,
+    "full_name": "Tyrese Maxey",
+    "first_name": "Tyrese",
+    "last_name": "Maxey",
+    "team_name": "Philadelphia 76ers",
+    "team_abbreviation": "PHI",
+    "shot_count": 1424
   },
   {
     "id": 1628973,
@@ -168,88 +33,16 @@
     "last_name": "Brunson",
     "team_name": "New York Knicks",
     "team_abbreviation": "NYK",
-    "shot_count": 1200
+    "shot_count": 1412
   },
   {
-    "id": 1628969,
-    "full_name": "Mikal Bridges",
-    "first_name": "Mikal",
-    "last_name": "Bridges",
-    "team_name": "New York Knicks",
-    "team_abbreviation": "NYK",
-    "shot_count": 1183
-  },
-  {
-    "id": 1627783,
-    "full_name": "Pascal Siakam",
-    "first_name": "Pascal",
-    "last_name": "Siakam",
-    "team_name": "Indiana Pacers",
-    "team_abbreviation": "IND",
-    "shot_count": 1182
-  },
-  {
-    "id": 1629636,
-    "full_name": "Darius Garland",
-    "first_name": "Darius",
-    "last_name": "Garland",
+    "id": 1628378,
+    "full_name": "Donovan Mitchell",
+    "first_name": "Donovan",
+    "last_name": "Mitchell",
     "team_name": "Cleveland Cavaliers",
     "team_abbreviation": "CLE",
-    "shot_count": 1174
-  },
-  {
-    "id": 1631114,
-    "full_name": "Jalen Williams",
-    "first_name": "Jalen",
-    "last_name": "Williams",
-    "team_name": "Oklahoma City Thunder",
-    "team_abbreviation": "OKC",
-    "shot_count": 1168
-  },
-  {
-    "id": 1628368,
-    "full_name": "De'Aaron Fox",
-    "first_name": "De'Aaron",
-    "last_name": "Fox",
-    "team_name": "Sacramento Kings",
-    "team_abbreviation": "SAC",
-    "shot_count": 1163
-  },
-  {
-    "id": 1630532,
-    "full_name": "Franz Wagner",
-    "first_name": "Franz",
-    "last_name": "Wagner",
-    "team_name": "Orlando Magic",
-    "team_abbreviation": "ORL",
-    "shot_count": 1161
-  },
-  {
-    "id": 1630578,
-    "full_name": "Alperen Sengun",
-    "first_name": "Alperen",
-    "last_name": "Sengun",
-    "team_name": "Houston Rockets",
-    "team_abbreviation": "HOU",
-    "shot_count": 1143
-  },
-  {
-    "id": 1629014,
-    "full_name": "Anfernee Simons",
-    "first_name": "Anfernee",
-    "last_name": "Simons",
-    "team_name": "Portland Trail Blazers",
-    "team_abbreviation": "POR",
-    "shot_count": 1125
-  },
-  {
-    "id": 201142,
-    "full_name": "Kevin Durant",
-    "first_name": "Kevin",
-    "last_name": "Durant",
-    "team_name": "Phoenix Suns",
-    "team_abbreviation": "PHX",
-    "shot_count": 1124
+    "shot_count": 1357
   },
   {
     "id": 1627750,
@@ -258,25 +51,133 @@
     "last_name": "Murray",
     "team_name": "Denver Nuggets",
     "team_abbreviation": "DEN",
-    "shot_count": 1121
+    "shot_count": 1328
   },
   {
-    "id": 1629632,
-    "full_name": "Coby White",
-    "first_name": "Coby",
-    "last_name": "White",
-    "team_name": "Chicago Bulls",
-    "team_abbreviation": "CHI",
-    "shot_count": 1121
+    "id": 201142,
+    "full_name": "Kevin Durant",
+    "first_name": "Kevin",
+    "last_name": "Durant",
+    "team_name": "Houston Rockets",
+    "team_abbreviation": "HOU",
+    "shot_count": 1303
   },
   {
-    "id": 1627759,
-    "full_name": "Jaylen Brown",
-    "first_name": "Jaylen",
-    "last_name": "Brown",
-    "team_name": "Boston Celtics",
-    "team_abbreviation": "BOS",
-    "shot_count": 1118
+    "id": 1628983,
+    "full_name": "Shai Gilgeous-Alexander",
+    "first_name": "Shai",
+    "last_name": "Gilgeous-Alexander",
+    "team_name": "Oklahoma City Thunder",
+    "team_abbreviation": "OKC",
+    "shot_count": 1279
+  },
+  {
+    "id": 1630162,
+    "full_name": "Anthony Edwards",
+    "first_name": "Anthony",
+    "last_name": "Edwards",
+    "team_name": "Minnesota Timberwolves",
+    "team_abbreviation": "MIN",
+    "shot_count": 1217
+  },
+  {
+    "id": 1627742,
+    "full_name": "Brandon Ingram",
+    "first_name": "Brandon",
+    "last_name": "Ingram",
+    "team_name": "Toronto Raptors",
+    "team_abbreviation": "TOR",
+    "shot_count": 1211
+  },
+  {
+    "id": 202695,
+    "full_name": "Kawhi Leonard",
+    "first_name": "Kawhi",
+    "last_name": "Leonard",
+    "team_name": "Los Angeles Clippers",
+    "team_abbreviation": "LAC",
+    "shot_count": 1183
+  },
+  {
+    "id": 1630552,
+    "full_name": "Jalen Johnson",
+    "first_name": "Jalen",
+    "last_name": "Johnson",
+    "team_name": "Atlanta Hawks",
+    "team_abbreviation": "ATL",
+    "shot_count": 1181
+  },
+  {
+    "id": 203944,
+    "full_name": "Julius Randle",
+    "first_name": "Julius",
+    "last_name": "Randle",
+    "team_name": "Minnesota Timberwolves",
+    "team_abbreviation": "MIN",
+    "shot_count": 1178
+  },
+  {
+    "id": 1630163,
+    "full_name": "LaMelo Ball",
+    "first_name": "LaMelo",
+    "last_name": "Ball",
+    "team_name": "Charlotte Hornets",
+    "team_abbreviation": "CHA",
+    "shot_count": 1159
+  },
+  {
+    "id": 1627783,
+    "full_name": "Pascal Siakam",
+    "first_name": "Pascal",
+    "last_name": "Siakam",
+    "team_name": "Indiana Pacers",
+    "team_abbreviation": "IND",
+    "shot_count": 1155
+  },
+  {
+    "id": 1630595,
+    "full_name": "Cade Cunningham",
+    "first_name": "Cade",
+    "last_name": "Cunningham",
+    "team_name": "Detroit Pistons",
+    "team_abbreviation": "DET",
+    "shot_count": 1153
+  },
+  {
+    "id": 1629638,
+    "full_name": "Nickeil Alexander-Walker",
+    "first_name": "Nickeil",
+    "last_name": "Alexander-Walker",
+    "team_name": "Atlanta Hawks",
+    "team_abbreviation": "ATL",
+    "shot_count": 1144
+  },
+  {
+    "id": 1630217,
+    "full_name": "Desmond Bane",
+    "first_name": "Desmond",
+    "last_name": "Bane",
+    "team_name": "Orlando Magic",
+    "team_abbreviation": "ORL",
+    "shot_count": 1144
+  },
+  {
+    "id": 1626164,
+    "full_name": "Devin Booker",
+    "first_name": "Devin",
+    "last_name": "Booker",
+    "team_name": "Phoenix Suns",
+    "team_abbreviation": "PHX",
+    "shot_count": 1133
+  },
+  {
+    "id": 203468,
+    "full_name": "CJ McCollum",
+    "first_name": "CJ",
+    "last_name": "McCollum",
+    "team_name": "Atlanta Hawks",
+    "team_abbreviation": "ATL",
+    "shot_count": 1103
   },
   {
     "id": 1628389,
@@ -285,25 +186,43 @@
     "last_name": "Adebayo",
     "team_name": "Miami Heat",
     "team_abbreviation": "MIA",
-    "shot_count": 1113
+    "shot_count": 1086
   },
   {
-    "id": 1631101,
-    "full_name": "Shaedon Sharpe",
-    "first_name": "Shaedon",
-    "last_name": "Sharpe",
-    "team_name": "Portland Trail Blazers",
-    "team_abbreviation": "POR",
-    "shot_count": 1104
+    "id": 203999,
+    "full_name": "Nikola Joki\u0107",
+    "first_name": "Nikola",
+    "last_name": "Joki\u0107",
+    "team_name": "Denver Nuggets",
+    "team_abbreviation": "DEN",
+    "shot_count": 1081
   },
   {
-    "id": 1628970,
-    "full_name": "Miles Bridges",
-    "first_name": "Miles",
-    "last_name": "Bridges",
-    "team_name": "Charlotte Hornets",
-    "team_abbreviation": "CHA",
-    "shot_count": 1089
+    "id": 1631094,
+    "full_name": "Paolo Banchero",
+    "first_name": "Paolo",
+    "last_name": "Banchero",
+    "team_name": "Orlando Magic",
+    "team_abbreviation": "ORL",
+    "shot_count": 1079
+  },
+  {
+    "id": 1628401,
+    "full_name": "Derrick White",
+    "first_name": "Derrick",
+    "last_name": "White",
+    "team_name": "Boston Celtics",
+    "team_abbreviation": "BOS",
+    "shot_count": 1077
+  },
+  {
+    "id": 201935,
+    "full_name": "James Harden",
+    "first_name": "James",
+    "last_name": "Harden",
+    "team_name": "Los Angeles Clippers",
+    "team_abbreviation": "LAC",
+    "shot_count": 1070
   },
   {
     "id": 1630567,
@@ -315,103 +234,256 @@
     "shot_count": 1063
   },
   {
-    "id": 1629673,
-    "full_name": "Jordan Poole",
-    "first_name": "Jordan",
-    "last_name": "Poole",
-    "team_name": "Washington Wizards",
-    "team_abbreviation": "WAS",
-    "shot_count": 1057
+    "id": 1630578,
+    "full_name": "Alperen Sengun",
+    "first_name": "Alperen",
+    "last_name": "Sengun",
+    "team_name": "Houston Rockets",
+    "team_abbreviation": "HOU",
+    "shot_count": 1062
+  },
+  {
+    "id": 1630530,
+    "full_name": "Trey Murphy III",
+    "first_name": "Trey",
+    "last_name": "Murphy III",
+    "team_name": "New Orleans Pelicans",
+    "team_abbreviation": "NOP",
+    "shot_count": 1050
+  },
+  {
+    "id": 1641705,
+    "full_name": "Victor Wembanyama",
+    "first_name": "Victor",
+    "last_name": "Wembanyama",
+    "team_name": "San Antonio Spurs",
+    "team_abbreviation": "SAS",
+    "shot_count": 1046
+  },
+  {
+    "id": 1630202,
+    "full_name": "Payton Pritchard",
+    "first_name": "Payton",
+    "last_name": "Pritchard",
+    "team_name": "Boston Celtics",
+    "team_abbreviation": "BOS",
+    "shot_count": 1037
+  },
+  {
+    "id": 1628970,
+    "full_name": "Miles Bridges",
+    "first_name": "Miles",
+    "last_name": "Bridges",
+    "team_name": "Charlotte Hornets",
+    "team_abbreviation": "CHA",
+    "shot_count": 1006
+  },
+  {
+    "id": 201942,
+    "full_name": "DeMar DeRozan",
+    "first_name": "DeMar",
+    "last_name": "DeRozan",
+    "team_name": "Sacramento Kings",
+    "team_abbreviation": "SAC",
+    "shot_count": 1000
+  },
+  {
+    "id": 1626157,
+    "full_name": "Karl-Anthony Towns",
+    "first_name": "Karl-Anthony",
+    "last_name": "Towns",
+    "team_name": "New York Knicks",
+    "team_abbreviation": "NYK",
+    "shot_count": 996
+  },
+  {
+    "id": 1631157,
+    "full_name": "Ryan Rollins",
+    "first_name": "Ryan",
+    "last_name": "Rollins",
+    "team_name": "Milwaukee Bucks",
+    "team_abbreviation": "MIL",
+    "shot_count": 995
+  },
+  {
+    "id": 1630166,
+    "full_name": "Deni Avdija",
+    "first_name": "Deni",
+    "last_name": "Avdija",
+    "team_name": "Portland Trail Blazers",
+    "team_abbreviation": "POR",
+    "shot_count": 990
+  },
+  {
+    "id": 1641706,
+    "full_name": "Brandon Miller",
+    "first_name": "Brandon",
+    "last_name": "Miller",
+    "team_name": "Charlotte Hornets",
+    "team_abbreviation": "CHA",
+    "shot_count": 981
+  },
+  {
+    "id": 1641708,
+    "full_name": "Amen Thompson",
+    "first_name": "Amen",
+    "last_name": "Thompson",
+    "team_name": "Houston Rockets",
+    "team_abbreviation": "HOU",
+    "shot_count": 981
+  },
+  {
+    "id": 1628368,
+    "full_name": "De'Aaron Fox",
+    "first_name": "De'Aaron",
+    "last_name": "Fox",
+    "team_name": "San Antonio Spurs",
+    "team_abbreviation": "SAS",
+    "shot_count": 980
   },
   {
     "id": 1629008,
     "full_name": "Michael Porter Jr.",
     "first_name": "Michael",
     "last_name": "Porter Jr.",
-    "team_name": "Denver Nuggets",
-    "team_abbreviation": "DEN",
-    "shot_count": 1048
+    "team_name": "Brooklyn Nets",
+    "team_abbreviation": "BKN",
+    "shot_count": 958
   },
   {
-    "id": 202696,
-    "full_name": "Nikola Vu\u010devi\u0107",
-    "first_name": "Nikola",
-    "last_name": "Vu\u010devi\u0107",
+    "id": 1641824,
+    "full_name": "Matas Buzelis",
+    "first_name": "Matas",
+    "last_name": "Buzelis",
     "team_name": "Chicago Bulls",
     "team_abbreviation": "CHI",
-    "shot_count": 1038
+    "shot_count": 946
   },
   {
-    "id": 1630559,
-    "full_name": "Austin Reaves",
-    "first_name": "Austin",
-    "last_name": "Reaves",
-    "team_name": "Los Angeles Lakers",
-    "team_abbreviation": "LAL",
-    "shot_count": 1037
-  },
-  {
-    "id": 1628384,
-    "full_name": "OG Anunoby",
-    "first_name": "OG",
-    "last_name": "Anunoby",
+    "id": 1628969,
+    "full_name": "Mikal Bridges",
+    "first_name": "Mikal",
+    "last_name": "Bridges",
     "team_name": "New York Knicks",
     "team_abbreviation": "NYK",
-    "shot_count": 1027
+    "shot_count": 936
   },
   {
-    "id": 1630217,
-    "full_name": "Desmond Bane",
-    "first_name": "Desmond",
-    "last_name": "Bane",
-    "team_name": "Memphis Grizzlies",
-    "team_abbreviation": "MEM",
-    "shot_count": 1018
+    "id": 1631095,
+    "full_name": "Jabari Smith Jr.",
+    "first_name": "Jabari",
+    "last_name": "Smith Jr.",
+    "team_name": "Houston Rockets",
+    "team_abbreviation": "HOU",
+    "shot_count": 918
   },
   {
-    "id": 1630169,
-    "full_name": "Tyrese Haliburton",
-    "first_name": "Tyrese",
-    "last_name": "Haliburton",
-    "team_name": "Indiana Pacers",
-    "team_abbreviation": "IND",
-    "shot_count": 1006
+    "id": 1628415,
+    "full_name": "Dillon Brooks",
+    "first_name": "Dillon",
+    "last_name": "Brooks",
+    "team_name": "Phoenix Suns",
+    "team_abbreviation": "PHX",
+    "shot_count": 896
   },
   {
-    "id": 203081,
-    "full_name": "Damian Lillard",
-    "first_name": "Damian",
-    "last_name": "Lillard",
-    "team_name": "Milwaukee Bucks",
-    "team_abbreviation": "MIL",
-    "shot_count": 992
+    "id": 1642263,
+    "full_name": "Reed Sheppard",
+    "first_name": "Reed",
+    "last_name": "Sheppard",
+    "team_name": "Houston Rockets",
+    "team_abbreviation": "HOU",
+    "shot_count": 892
   },
   {
-    "id": 1629628,
-    "full_name": "RJ Barrett",
-    "first_name": "RJ",
-    "last_name": "Barrett",
+    "id": 1630193,
+    "full_name": "Immanuel Quickley",
+    "first_name": "Immanuel",
+    "last_name": "Quickley",
     "team_name": "Toronto Raptors",
     "team_abbreviation": "TOR",
-    "shot_count": 982
+    "shot_count": 886
+  },
+  {
+    "id": 1641718,
+    "full_name": "Keyonte George",
+    "first_name": "Keyonte",
+    "last_name": "George",
+    "team_name": "Utah Jazz",
+    "team_abbreviation": "UTA",
+    "shot_count": 881
+  },
+  {
+    "id": 1631170,
+    "full_name": "Jaime Jaquez Jr.",
+    "first_name": "Jaime",
+    "last_name": "Jaquez Jr.",
+    "team_name": "Miami Heat",
+    "team_abbreviation": "MIA",
+    "shot_count": 863
   },
   {
     "id": 1626181,
     "full_name": "Norman Powell",
     "first_name": "Norman",
     "last_name": "Powell",
-    "team_name": "Los Angeles Clippers",
-    "team_abbreviation": "LAC",
-    "shot_count": 945
+    "team_name": "Miami Heat",
+    "team_abbreviation": "MIA",
+    "shot_count": 861
   },
   {
-    "id": 203944,
-    "full_name": "Julius Randle",
-    "first_name": "Julius",
-    "last_name": "Randle",
+    "id": 2544,
+    "full_name": "LeBron James",
+    "first_name": "LeBron",
+    "last_name": "James",
+    "team_name": "Los Angeles Lakers",
+    "team_abbreviation": "LAL",
+    "shot_count": 849
+  },
+  {
+    "id": 1631101,
+    "full_name": "Shaedon Sharpe",
+    "first_name": "Shaedon",
+    "last_name": "Sharpe",
+    "team_name": "Portland Trail Blazers",
+    "team_abbreviation": "POR",
+    "shot_count": 847
+  },
+  {
+    "id": 201566,
+    "full_name": "Russell Westbrook",
+    "first_name": "Russell",
+    "last_name": "Westbrook",
+    "team_name": "Sacramento Kings",
+    "team_abbreviation": "SAC",
+    "shot_count": 839
+  },
+  {
+    "id": 1641739,
+    "full_name": "Toumani Camara",
+    "first_name": "Toumani",
+    "last_name": "Camara",
+    "team_name": "Portland Trail Blazers",
+    "team_abbreviation": "POR",
+    "shot_count": 836
+  },
+  {
+    "id": 1629675,
+    "full_name": "Naz Reid",
+    "first_name": "Naz",
+    "last_name": "Reid",
     "team_name": "Minnesota Timberwolves",
     "team_abbreviation": "MIN",
-    "shot_count": 939
+    "shot_count": 836
+  },
+  {
+    "id": 1630168,
+    "full_name": "Onyeka Okongwu",
+    "first_name": "Onyeka",
+    "last_name": "Okongwu",
+    "team_name": "Atlanta Hawks",
+    "team_abbreviation": "ATL",
+    "shot_count": 832
   },
   {
     "id": 1630596,
@@ -420,7 +492,2167 @@
     "last_name": "Mobley",
     "team_name": "Cleveland Cavaliers",
     "team_abbreviation": "CLE",
-    "shot_count": 906
+    "shot_count": 821
+  },
+  {
+    "id": 1631221,
+    "full_name": "Collin Gillespie",
+    "first_name": "Collin",
+    "last_name": "Gillespie",
+    "team_name": "Phoenix Suns",
+    "team_abbreviation": "PHX",
+    "shot_count": 811
+  },
+  {
+    "id": 1641729,
+    "full_name": "Brice Sensabaugh",
+    "first_name": "Brice",
+    "last_name": "Sensabaugh",
+    "team_name": "Utah Jazz",
+    "team_abbreviation": "UTA",
+    "shot_count": 811
+  },
+  {
+    "id": 1628374,
+    "full_name": "Lauri Markkanen",
+    "first_name": "Lauri",
+    "last_name": "Markkanen",
+    "team_name": "Utah Jazz",
+    "team_abbreviation": "UTA",
+    "shot_count": 805
+  },
+  {
+    "id": 1641764,
+    "full_name": "Brandin Podziemski",
+    "first_name": "Brandin",
+    "last_name": "Podziemski",
+    "team_name": "Golden State Warriors",
+    "team_abbreviation": "GSW",
+    "shot_count": 804
+  },
+  {
+    "id": 1630230,
+    "full_name": "Naji Marshall",
+    "first_name": "Naji",
+    "last_name": "Marshall",
+    "team_name": "Dallas Mavericks",
+    "team_abbreviation": "DAL",
+    "shot_count": 802
+  },
+  {
+    "id": 1629627,
+    "full_name": "Zion Williamson",
+    "first_name": "Zion",
+    "last_name": "Williamson",
+    "team_name": "New Orleans Pelicans",
+    "team_abbreviation": "NOP",
+    "shot_count": 796
+  },
+  {
+    "id": 1642264,
+    "full_name": "Stephon Castle",
+    "first_name": "Stephon",
+    "last_name": "Castle",
+    "team_name": "San Antonio Spurs",
+    "team_abbreviation": "SAS",
+    "shot_count": 794
+  },
+  {
+    "id": 1628978,
+    "full_name": "Donte DiVincenzo",
+    "first_name": "Donte",
+    "last_name": "DiVincenzo",
+    "team_name": "Minnesota Timberwolves",
+    "team_abbreviation": "MIN",
+    "shot_count": 790
+  },
+  {
+    "id": 203952,
+    "full_name": "Andrew Wiggins",
+    "first_name": "Andrew",
+    "last_name": "Wiggins",
+    "team_name": "Miami Heat",
+    "team_abbreviation": "MIA",
+    "shot_count": 787
+  },
+  {
+    "id": 1628384,
+    "full_name": "OG Anunoby",
+    "first_name": "OG",
+    "last_name": "Anunoby",
+    "team_name": "New York Knicks",
+    "team_abbreviation": "NYK",
+    "shot_count": 776
+  },
+  {
+    "id": 1631105,
+    "full_name": "Jalen Duren",
+    "first_name": "Jalen",
+    "last_name": "Duren",
+    "team_name": "Detroit Pistons",
+    "team_abbreviation": "DET",
+    "shot_count": 774
+  },
+  {
+    "id": 1630183,
+    "full_name": "Jaden McDaniels",
+    "first_name": "Jaden",
+    "last_name": "McDaniels",
+    "team_name": "Minnesota Timberwolves",
+    "team_abbreviation": "MIN",
+    "shot_count": 774
+  },
+  {
+    "id": 202696,
+    "full_name": "Nikola Vu\u010devi\u0107",
+    "first_name": "Nikola",
+    "last_name": "Vu\u010devi\u0107",
+    "team_name": "Chicago Bulls",
+    "team_abbreviation": "CHI",
+    "shot_count": 770
+  },
+  {
+    "id": 1630559,
+    "full_name": "Austin Reaves",
+    "first_name": "Austin",
+    "last_name": "Reaves",
+    "team_name": "Los Angeles Lakers",
+    "team_abbreviation": "LAL",
+    "shot_count": 762
+  },
+  {
+    "id": 1629628,
+    "full_name": "RJ Barrett",
+    "first_name": "RJ",
+    "last_name": "Barrett",
+    "team_name": "Toronto Raptors",
+    "team_abbreviation": "TOR",
+    "shot_count": 753
+  },
+  {
+    "id": 1629614,
+    "full_name": "Andrew Nembhard",
+    "first_name": "Andrew",
+    "last_name": "Nembhard",
+    "team_name": "Indiana Pacers",
+    "team_abbreviation": "IND",
+    "shot_count": 753
+  },
+  {
+    "id": 203501,
+    "full_name": "Tim Hardaway Jr.",
+    "first_name": "Tim",
+    "last_name": "Hardaway Jr.",
+    "team_name": "Denver Nuggets",
+    "team_abbreviation": "DEN",
+    "shot_count": 750
+  },
+  {
+    "id": 1626171,
+    "full_name": "Bobby Portis",
+    "first_name": "Bobby",
+    "last_name": "Portis",
+    "team_name": "Milwaukee Bucks",
+    "team_abbreviation": "MIL",
+    "shot_count": 750
+  },
+  {
+    "id": 1630700,
+    "full_name": "Dyson Daniels",
+    "first_name": "Dyson",
+    "last_name": "Daniels",
+    "team_name": "Atlanta Hawks",
+    "team_abbreviation": "ATL",
+    "shot_count": 745
+  },
+  {
+    "id": 1631096,
+    "full_name": "Chet Holmgren",
+    "first_name": "Chet",
+    "last_name": "Holmgren",
+    "team_name": "Oklahoma City Thunder",
+    "team_abbreviation": "OKC",
+    "shot_count": 745
+  },
+  {
+    "id": 201939,
+    "full_name": "Stephen Curry",
+    "first_name": "Stephen",
+    "last_name": "Curry",
+    "team_name": "Golden State Warriors",
+    "team_abbreviation": "GSW",
+    "shot_count": 744
+  },
+  {
+    "id": 1629640,
+    "full_name": "Keldon Johnson",
+    "first_name": "Keldon",
+    "last_name": "Johnson",
+    "team_name": "San Antonio Spurs",
+    "team_abbreviation": "SAS",
+    "shot_count": 743
+  },
+  {
+    "id": 1641710,
+    "full_name": "Anthony Black",
+    "first_name": "Anthony",
+    "last_name": "Black",
+    "team_name": "Orlando Magic",
+    "team_abbreviation": "ORL",
+    "shot_count": 736
+  },
+  {
+    "id": 203924,
+    "full_name": "Jerami Grant",
+    "first_name": "Jerami",
+    "last_name": "Grant",
+    "team_name": "Portland Trail Blazers",
+    "team_abbreviation": "POR",
+    "shot_count": 730
+  },
+  {
+    "id": 1628991,
+    "full_name": "Jaren Jackson Jr.",
+    "first_name": "Jaren",
+    "last_name": "Jackson Jr.",
+    "team_name": "Memphis Grizzlies",
+    "team_abbreviation": "MEM",
+    "shot_count": 719
+  },
+  {
+    "id": 1630581,
+    "full_name": "Josh Giddey",
+    "first_name": "Josh",
+    "last_name": "Giddey",
+    "team_name": "Chicago Bulls",
+    "team_abbreviation": "CHI",
+    "shot_count": 717
+  },
+  {
+    "id": 1629656,
+    "full_name": "Quentin Grimes",
+    "first_name": "Quentin",
+    "last_name": "Grimes",
+    "team_name": "Philadelphia 76ers",
+    "team_abbreviation": "PHI",
+    "shot_count": 714
+  },
+  {
+    "id": 1630170,
+    "full_name": "Devin Vassell",
+    "first_name": "Devin",
+    "last_name": "Vassell",
+    "team_name": "San Antonio Spurs",
+    "team_abbreviation": "SAS",
+    "shot_count": 713
+  },
+  {
+    "id": 1630245,
+    "full_name": "Ayo Dosunmu",
+    "first_name": "Ayo",
+    "last_name": "Dosunmu",
+    "team_name": "Chicago Bulls",
+    "team_abbreviation": "CHI",
+    "shot_count": 711
+  },
+  {
+    "id": 1642377,
+    "full_name": "Jaylen Wells",
+    "first_name": "Jaylen",
+    "last_name": "Wells",
+    "team_name": "Memphis Grizzlies",
+    "team_abbreviation": "MEM",
+    "shot_count": 698
+  },
+  {
+    "id": 202691,
+    "full_name": "Klay Thompson",
+    "first_name": "Klay",
+    "last_name": "Thompson",
+    "team_name": "Dallas Mavericks",
+    "team_abbreviation": "DAL",
+    "shot_count": 693
+  },
+  {
+    "id": 1641716,
+    "full_name": "Jarace Walker",
+    "first_name": "Jarace",
+    "last_name": "Walker",
+    "team_name": "Indiana Pacers",
+    "team_abbreviation": "IND",
+    "shot_count": 693
+  },
+  {
+    "id": 1628398,
+    "full_name": "Kyle Kuzma",
+    "first_name": "Kyle",
+    "last_name": "Kuzma",
+    "team_name": "Milwaukee Bucks",
+    "team_abbreviation": "MIL",
+    "shot_count": 682
+  },
+  {
+    "id": 1631108,
+    "full_name": "Max Christie",
+    "first_name": "Max",
+    "last_name": "Christie",
+    "team_name": "Dallas Mavericks",
+    "team_abbreviation": "DAL",
+    "shot_count": 681
+  },
+  {
+    "id": 1642267,
+    "full_name": "Bub Carrington",
+    "first_name": "Bub",
+    "last_name": "Carrington",
+    "team_name": "Washington Wizards",
+    "team_abbreviation": "WAS",
+    "shot_count": 678
+  },
+  {
+    "id": 203954,
+    "full_name": "Joel Embiid",
+    "first_name": "Joel",
+    "last_name": "Embiid",
+    "team_name": "Philadelphia 76ers",
+    "team_abbreviation": "PHI",
+    "shot_count": 678
+  },
+  {
+    "id": 1629130,
+    "full_name": "Duncan Robinson",
+    "first_name": "Duncan",
+    "last_name": "Robinson",
+    "team_name": "Detroit Pistons",
+    "team_abbreviation": "DET",
+    "shot_count": 669
+  },
+  {
+    "id": 1629012,
+    "full_name": "Collin Sexton",
+    "first_name": "Collin",
+    "last_name": "Sexton",
+    "team_name": "Charlotte Hornets",
+    "team_abbreviation": "CHA",
+    "shot_count": 663
+  },
+  {
+    "id": 1630577,
+    "full_name": "Julian Champagnie",
+    "first_name": "Julian",
+    "last_name": "Champagnie",
+    "team_name": "San Antonio Spurs",
+    "team_abbreviation": "SAS",
+    "shot_count": 662
+  },
+  {
+    "id": 1642259,
+    "full_name": "Alex Sarr",
+    "first_name": "Alex",
+    "last_name": "Sarr",
+    "team_name": "Washington Wizards",
+    "team_abbreviation": "WAS",
+    "shot_count": 656
+  },
+  {
+    "id": 1628960,
+    "full_name": "Grayson Allen",
+    "first_name": "Grayson",
+    "last_name": "Allen",
+    "team_name": "Phoenix Suns",
+    "team_abbreviation": "PHX",
+    "shot_count": 654
+  },
+  {
+    "id": 201950,
+    "full_name": "Jrue Holiday",
+    "first_name": "Jrue",
+    "last_name": "Holiday",
+    "team_name": "Portland Trail Blazers",
+    "team_abbreviation": "POR",
+    "shot_count": 649
+  },
+  {
+    "id": 1629014,
+    "full_name": "Anfernee Simons",
+    "first_name": "Anfernee",
+    "last_name": "Simons",
+    "team_name": "Boston Celtics",
+    "team_abbreviation": "BOS",
+    "shot_count": 648
+  },
+  {
+    "id": 1629023,
+    "full_name": "P.J. Washington",
+    "first_name": "P.J.",
+    "last_name": "Washington",
+    "team_name": "Dallas Mavericks",
+    "team_abbreviation": "DAL",
+    "shot_count": 648
+  },
+  {
+    "id": 1642270,
+    "full_name": "Donovan Clingan",
+    "first_name": "Donovan",
+    "last_name": "Clingan",
+    "team_name": "Portland Trail Blazers",
+    "team_abbreviation": "POR",
+    "shot_count": 642
+  },
+  {
+    "id": 1642281,
+    "full_name": "Jaylon Tyson",
+    "first_name": "Jaylon",
+    "last_name": "Tyson",
+    "team_name": "Cleveland Cavaliers",
+    "team_abbreviation": "CLE",
+    "shot_count": 639
+  },
+  {
+    "id": 1631097,
+    "full_name": "Bennedict Mathurin",
+    "first_name": "Bennedict",
+    "last_name": "Mathurin",
+    "team_name": "Indiana Pacers",
+    "team_abbreviation": "IND",
+    "shot_count": 638
+  },
+  {
+    "id": 202699,
+    "full_name": "Tobias Harris",
+    "first_name": "Tobias",
+    "last_name": "Harris",
+    "team_name": "Detroit Pistons",
+    "team_abbreviation": "DET",
+    "shot_count": 634
+  },
+  {
+    "id": 1641730,
+    "full_name": "Noah Clowney",
+    "first_name": "Noah",
+    "last_name": "Clowney",
+    "team_name": "Brooklyn Nets",
+    "team_abbreviation": "BKN",
+    "shot_count": 631
+  },
+  {
+    "id": 1642271,
+    "full_name": "Kyle Filipowski",
+    "first_name": "Kyle",
+    "last_name": "Filipowski",
+    "team_name": "Utah Jazz",
+    "team_abbreviation": "UTA",
+    "shot_count": 623
+  },
+  {
+    "id": 1626167,
+    "full_name": "Myles Turner",
+    "first_name": "Myles",
+    "last_name": "Turner",
+    "team_name": "Milwaukee Bucks",
+    "team_abbreviation": "MIL",
+    "shot_count": 622
+  },
+  {
+    "id": 1642276,
+    "full_name": "Kel'el Ware",
+    "first_name": "Kel'el",
+    "last_name": "Ware",
+    "team_name": "Miami Heat",
+    "team_abbreviation": "MIA",
+    "shot_count": 620
+  },
+  {
+    "id": 1628370,
+    "full_name": "Malik Monk",
+    "first_name": "Malik",
+    "last_name": "Monk",
+    "team_name": "Sacramento Kings",
+    "team_abbreviation": "SAC",
+    "shot_count": 618
+  },
+  {
+    "id": 1630314,
+    "full_name": "Brandon Williams",
+    "first_name": "Brandon",
+    "last_name": "Williams",
+    "team_name": "Dallas Mavericks",
+    "team_abbreviation": "DAL",
+    "shot_count": 610
+  },
+  {
+    "id": 1628976,
+    "full_name": "Wendell Carter Jr.",
+    "first_name": "Wendell",
+    "last_name": "Carter Jr.",
+    "team_name": "Orlando Magic",
+    "team_abbreviation": "ORL",
+    "shot_count": 609
+  },
+  {
+    "id": 1629636,
+    "full_name": "Darius Garland",
+    "first_name": "Darius",
+    "last_name": "Garland",
+    "team_name": "Cleveland Cavaliers",
+    "team_abbreviation": "CLE",
+    "shot_count": 607
+  },
+  {
+    "id": 1628381,
+    "full_name": "John Collins",
+    "first_name": "John",
+    "last_name": "Collins",
+    "team_name": "Los Angeles Clippers",
+    "team_abbreviation": "LAC",
+    "shot_count": 602
+  },
+  {
+    "id": 1626220,
+    "full_name": "Royce O'Neale",
+    "first_name": "Royce",
+    "last_name": "O'Neale",
+    "team_name": "Phoenix Suns",
+    "team_abbreviation": "PHX",
+    "shot_count": 602
+  },
+  {
+    "id": 203471,
+    "full_name": "Dennis Schr\u00f6der",
+    "first_name": "Dennis",
+    "last_name": "Schr\u00f6der",
+    "team_name": "Sacramento Kings",
+    "team_abbreviation": "SAC",
+    "shot_count": 599
+  },
+  {
+    "id": 203507,
+    "full_name": "Giannis Antetokounmpo",
+    "first_name": "Giannis",
+    "last_name": "Antetokounmpo",
+    "team_name": "Milwaukee Bucks",
+    "team_abbreviation": "MIL",
+    "shot_count": 598
+  },
+  {
+    "id": 1630572,
+    "full_name": "Sandro Mamukelashvili",
+    "first_name": "Sandro",
+    "last_name": "Mamukelashvili",
+    "team_name": "Toronto Raptors",
+    "team_abbreviation": "TOR",
+    "shot_count": 598
+  },
+  {
+    "id": 1629632,
+    "full_name": "Coby White",
+    "first_name": "Coby",
+    "last_name": "White",
+    "team_name": "Chicago Bulls",
+    "team_abbreviation": "CHI",
+    "shot_count": 595
+  },
+  {
+    "id": 1630591,
+    "full_name": "Jalen Suggs",
+    "first_name": "Jalen",
+    "last_name": "Suggs",
+    "team_name": "Orlando Magic",
+    "team_abbreviation": "ORL",
+    "shot_count": 587
+  },
+  {
+    "id": 1641783,
+    "full_name": "Tristan da Silva",
+    "first_name": "Tristan",
+    "last_name": "da Silva",
+    "team_name": "Orlando Magic",
+    "team_abbreviation": "ORL",
+    "shot_count": 587
+  },
+  {
+    "id": 1629651,
+    "full_name": "Nic Claxton",
+    "first_name": "Nic",
+    "last_name": "Claxton",
+    "team_name": "Brooklyn Nets",
+    "team_abbreviation": "BKN",
+    "shot_count": 583
+  },
+  {
+    "id": 1631212,
+    "full_name": "Peyton Watson",
+    "first_name": "Peyton",
+    "last_name": "Watson",
+    "team_name": "Denver Nuggets",
+    "team_abbreviation": "DEN",
+    "shot_count": 581
+  },
+  {
+    "id": 1642273,
+    "full_name": "Kyshawn George",
+    "first_name": "Kyshawn",
+    "last_name": "George",
+    "team_name": "Washington Wizards",
+    "team_abbreviation": "WAS",
+    "shot_count": 577
+  },
+  {
+    "id": 1630643,
+    "full_name": "Jay Huff",
+    "first_name": "Jay",
+    "last_name": "Huff",
+    "team_name": "Indiana Pacers",
+    "team_abbreviation": "IND",
+    "shot_count": 573
+  },
+  {
+    "id": 1628404,
+    "full_name": "Josh Hart",
+    "first_name": "Josh",
+    "last_name": "Hart",
+    "team_name": "New York Knicks",
+    "team_abbreviation": "NYK",
+    "shot_count": 572
+  },
+  {
+    "id": 1630573,
+    "full_name": "Sam Hauser",
+    "first_name": "Sam",
+    "last_name": "Hauser",
+    "team_name": "Boston Celtics",
+    "team_abbreviation": "BOS",
+    "shot_count": 567
+  },
+  {
+    "id": 1628989,
+    "full_name": "Kevin Huerter",
+    "first_name": "Kevin",
+    "last_name": "Huerter",
+    "team_name": "Chicago Bulls",
+    "team_abbreviation": "CHI",
+    "shot_count": 567
+  },
+  {
+    "id": 1642349,
+    "full_name": "Ajay Mitchell",
+    "first_name": "Ajay",
+    "last_name": "Mitchell",
+    "team_name": "Oklahoma City Thunder",
+    "team_abbreviation": "OKC",
+    "shot_count": 566
+  },
+  {
+    "id": 1641717,
+    "full_name": "Cason Wallace",
+    "first_name": "Cason",
+    "last_name": "Wallace",
+    "team_name": "Oklahoma City Thunder",
+    "team_abbreviation": "OKC",
+    "shot_count": 564
+  },
+  {
+    "id": 1630541,
+    "full_name": "Moses Moody",
+    "first_name": "Moses",
+    "last_name": "Moody",
+    "team_name": "Golden State Warriors",
+    "team_abbreviation": "GSW",
+    "shot_count": 557
+  },
+  {
+    "id": 1629028,
+    "full_name": "Deandre Ayton",
+    "first_name": "Deandre",
+    "last_name": "Ayton",
+    "team_name": "Los Angeles Lakers",
+    "team_abbreviation": "LAL",
+    "shot_count": 555
+  },
+  {
+    "id": 1631260,
+    "full_name": "AJ Green",
+    "first_name": "AJ",
+    "last_name": "Green",
+    "team_name": "Milwaukee Bucks",
+    "team_abbreviation": "MIL",
+    "shot_count": 555
+  },
+  {
+    "id": 1641709,
+    "full_name": "Ausar Thompson",
+    "first_name": "Ausar",
+    "last_name": "Thompson",
+    "team_name": "Detroit Pistons",
+    "team_abbreviation": "DET",
+    "shot_count": 554
+  },
+  {
+    "id": 1642285,
+    "full_name": "Cam Spencer",
+    "first_name": "Cam",
+    "last_name": "Spencer",
+    "team_name": "Memphis Grizzlies",
+    "team_abbreviation": "MEM",
+    "shot_count": 551
+  },
+  {
+    "id": 1630173,
+    "full_name": "Precious Achiuwa",
+    "first_name": "Precious",
+    "last_name": "Achiuwa",
+    "team_name": "Sacramento Kings",
+    "team_abbreviation": "SAC",
+    "shot_count": 548
+  },
+  {
+    "id": 203084,
+    "full_name": "Harrison Barnes",
+    "first_name": "Harrison",
+    "last_name": "Barnes",
+    "team_name": "San Antonio Spurs",
+    "team_abbreviation": "SAS",
+    "shot_count": 548
+  },
+  {
+    "id": 1629111,
+    "full_name": "Jock Landale",
+    "first_name": "Jock",
+    "last_name": "Landale",
+    "team_name": "Memphis Grizzlies",
+    "team_abbreviation": "MEM",
+    "shot_count": 548
+  },
+  {
+    "id": 203897,
+    "full_name": "Zach LaVine",
+    "first_name": "Zach",
+    "last_name": "LaVine",
+    "team_name": "Sacramento Kings",
+    "team_abbreviation": "SAC",
+    "shot_count": 547
+  },
+  {
+    "id": 1630200,
+    "full_name": "Tre Jones",
+    "first_name": "Tre",
+    "last_name": "Jones",
+    "team_name": "Chicago Bulls",
+    "team_abbreviation": "CHI",
+    "shot_count": 545
+  },
+  {
+    "id": 1629060,
+    "full_name": "Rui Hachimura",
+    "first_name": "Rui",
+    "last_name": "Hachimura",
+    "team_name": "Los Angeles Lakers",
+    "team_abbreviation": "LAL",
+    "shot_count": 542
+  },
+  {
+    "id": 1630692,
+    "full_name": "Jordan Goodwin",
+    "first_name": "Jordan",
+    "last_name": "Goodwin",
+    "team_name": "Phoenix Suns",
+    "team_abbreviation": "PHX",
+    "shot_count": 536
+  },
+  {
+    "id": 1642450,
+    "full_name": "Daniss Jenkins",
+    "first_name": "Daniss",
+    "last_name": "Jenkins",
+    "team_name": "Detroit Pistons",
+    "team_abbreviation": "DET",
+    "shot_count": 535
+  },
+  {
+    "id": 1631106,
+    "full_name": "Tari Eason",
+    "first_name": "Tari",
+    "last_name": "Eason",
+    "team_name": "Houston Rockets",
+    "team_abbreviation": "HOU",
+    "shot_count": 534
+  },
+  {
+    "id": 1641796,
+    "full_name": "Pelle Larsson",
+    "first_name": "Pelle",
+    "last_name": "Larsson",
+    "team_name": "Miami Heat",
+    "team_abbreviation": "MIA",
+    "shot_count": 526
+  },
+  {
+    "id": 1630198,
+    "full_name": "Isaiah Joe",
+    "first_name": "Isaiah",
+    "last_name": "Joe",
+    "team_name": "Oklahoma City Thunder",
+    "team_abbreviation": "OKC",
+    "shot_count": 520
+  },
+  {
+    "id": 1642258,
+    "full_name": "Zaccharie Risacher",
+    "first_name": "Zaccharie",
+    "last_name": "Risacher",
+    "team_name": "Atlanta Hawks",
+    "team_abbreviation": "ATL",
+    "shot_count": 517
+  },
+  {
+    "id": 1642268,
+    "full_name": "Isaiah Collier",
+    "first_name": "Isaiah",
+    "last_name": "Collier",
+    "team_name": "Utah Jazz",
+    "team_abbreviation": "UTA",
+    "shot_count": 515
+  },
+  {
+    "id": 1641731,
+    "full_name": "Bilal Coulibaly",
+    "first_name": "Bilal",
+    "last_name": "Coulibaly",
+    "team_name": "Washington Wizards",
+    "team_abbreviation": "WAS",
+    "shot_count": 515
+  },
+  {
+    "id": 203114,
+    "full_name": "Khris Middleton",
+    "first_name": "Khris",
+    "last_name": "Middleton",
+    "team_name": "Washington Wizards",
+    "team_abbreviation": "WAS",
+    "shot_count": 514
+  },
+  {
+    "id": 1629645,
+    "full_name": "Kevin Porter Jr.",
+    "first_name": "Kevin",
+    "last_name": "Porter Jr.",
+    "team_name": "Milwaukee Bucks",
+    "team_abbreviation": "MIL",
+    "shot_count": 514
+  },
+  {
+    "id": 1641842,
+    "full_name": "Ronald Holland II",
+    "first_name": "Ronald",
+    "last_name": "Holland II",
+    "team_name": "Detroit Pistons",
+    "team_abbreviation": "DET",
+    "shot_count": 513
+  },
+  {
+    "id": 1628386,
+    "full_name": "Jarrett Allen",
+    "first_name": "Jarrett",
+    "last_name": "Allen",
+    "team_name": "Cleveland Cavaliers",
+    "team_abbreviation": "CLE",
+    "shot_count": 512
+  },
+  {
+    "id": 1630174,
+    "full_name": "Aaron Nesmith",
+    "first_name": "Aaron",
+    "last_name": "Nesmith",
+    "team_name": "Indiana Pacers",
+    "team_abbreviation": "IND",
+    "shot_count": 512
+  },
+  {
+    "id": 1630558,
+    "full_name": "Davion Mitchell",
+    "first_name": "Davion",
+    "last_name": "Mitchell",
+    "team_name": "Miami Heat",
+    "team_abbreviation": "MIA",
+    "shot_count": 507
+  },
+  {
+    "id": 1630598,
+    "full_name": "Aaron Wiggins",
+    "first_name": "Aaron",
+    "last_name": "Wiggins",
+    "team_name": "Oklahoma City Thunder",
+    "team_abbreviation": "OKC",
+    "shot_count": 507
+  },
+  {
+    "id": 1641713,
+    "full_name": "GG Jackson",
+    "first_name": "GG",
+    "last_name": "Jackson",
+    "team_name": "Memphis Grizzlies",
+    "team_abbreviation": "MEM",
+    "shot_count": 505
+  },
+  {
+    "id": 203903,
+    "full_name": "Jordan Clarkson",
+    "first_name": "Jordan",
+    "last_name": "Clarkson",
+    "team_name": "New York Knicks",
+    "team_abbreviation": "NYK",
+    "shot_count": 504
+  },
+  {
+    "id": 1626162,
+    "full_name": "Kelly Oubre Jr.",
+    "first_name": "Kelly",
+    "last_name": "Oubre Jr.",
+    "team_name": "Philadelphia 76ers",
+    "team_abbreviation": "PHI",
+    "shot_count": 503
+  },
+  {
+    "id": 1629631,
+    "full_name": "De'Andre Hunter",
+    "first_name": "De'Andre",
+    "last_name": "Hunter",
+    "team_name": "Cleveland Cavaliers",
+    "team_abbreviation": "CLE",
+    "shot_count": 501
+  },
+  {
+    "id": 1629652,
+    "full_name": "Luguentz Dort",
+    "first_name": "Luguentz",
+    "last_name": "Dort",
+    "team_name": "Oklahoma City Thunder",
+    "team_abbreviation": "OKC",
+    "shot_count": 494
+  },
+  {
+    "id": 1631222,
+    "full_name": "Jake LaRavia",
+    "first_name": "Jake",
+    "last_name": "LaRavia",
+    "team_name": "Los Angeles Lakers",
+    "team_abbreviation": "LAL",
+    "shot_count": 494
+  },
+  {
+    "id": 201572,
+    "full_name": "Brook Lopez",
+    "first_name": "Brook",
+    "last_name": "Lopez",
+    "team_name": "Los Angeles Clippers",
+    "team_abbreviation": "LAC",
+    "shot_count": 494
+  },
+  {
+    "id": 1628971,
+    "full_name": "Bruce Brown",
+    "first_name": "Bruce",
+    "last_name": "Brown",
+    "team_name": "Denver Nuggets",
+    "team_abbreviation": "DEN",
+    "shot_count": 492
+  },
+  {
+    "id": 1629001,
+    "full_name": "De'Anthony Melton",
+    "first_name": "De'Anthony",
+    "last_name": "Melton",
+    "team_name": "Golden State Warriors",
+    "team_abbreviation": "GSW",
+    "shot_count": 492
+  },
+  {
+    "id": 1629639,
+    "full_name": "Tyler Herro",
+    "first_name": "Tyler",
+    "last_name": "Herro",
+    "team_name": "Miami Heat",
+    "team_abbreviation": "MIA",
+    "shot_count": 486
+  },
+  {
+    "id": 1627826,
+    "full_name": "Ivica Zubac",
+    "first_name": "Ivica",
+    "last_name": "Zubac",
+    "team_name": "Los Angeles Clippers",
+    "team_abbreviation": "LAC",
+    "shot_count": 482
+  },
+  {
+    "id": 203110,
+    "full_name": "Draymond Green",
+    "first_name": "Draymond",
+    "last_name": "Green",
+    "team_name": "Golden State Warriors",
+    "team_abbreviation": "GSW",
+    "shot_count": 480
+  },
+  {
+    "id": 203497,
+    "full_name": "Rudy Gobert",
+    "first_name": "Rudy",
+    "last_name": "Gobert",
+    "team_name": "Minnesota Timberwolves",
+    "team_abbreviation": "MIN",
+    "shot_count": 477
+  },
+  {
+    "id": 1630583,
+    "full_name": "Santi Aldama",
+    "first_name": "Santi",
+    "last_name": "Aldama",
+    "team_name": "Memphis Grizzlies",
+    "team_abbreviation": "MEM",
+    "shot_count": 476
+  },
+  {
+    "id": 1630224,
+    "full_name": "Jalen Green",
+    "first_name": "Jalen",
+    "last_name": "Green",
+    "team_name": "Phoenix Suns",
+    "team_abbreviation": "PHX",
+    "shot_count": 475
+  },
+  {
+    "id": 1630529,
+    "full_name": "Herbert Jones",
+    "first_name": "Herbert",
+    "last_name": "Jones",
+    "team_name": "New Orleans Pelicans",
+    "team_abbreviation": "NOP",
+    "shot_count": 474
+  },
+  {
+    "id": 1629674,
+    "full_name": "Neemias Queta",
+    "first_name": "Neemias",
+    "last_name": "Queta",
+    "team_name": "Boston Celtics",
+    "team_abbreviation": "BOS",
+    "shot_count": 473
+  },
+  {
+    "id": 1642347,
+    "full_name": "Jamal Shead",
+    "first_name": "Jamal",
+    "last_name": "Shead",
+    "team_name": "Toronto Raptors",
+    "team_abbreviation": "TOR",
+    "shot_count": 473
+  },
+  {
+    "id": 1630241,
+    "full_name": "Sam Merrill",
+    "first_name": "Sam",
+    "last_name": "Merrill",
+    "team_name": "Cleveland Cavaliers",
+    "team_abbreviation": "CLE",
+    "shot_count": 465
+  },
+  {
+    "id": 202331,
+    "full_name": "Paul George",
+    "first_name": "Paul",
+    "last_name": "George",
+    "team_name": "Philadelphia 76ers",
+    "team_abbreviation": "PHI",
+    "shot_count": 464
+  },
+  {
+    "id": 203935,
+    "full_name": "Marcus Smart",
+    "first_name": "Marcus",
+    "last_name": "Smart",
+    "team_name": "Los Angeles Lakers",
+    "team_abbreviation": "LAL",
+    "shot_count": 464
+  },
+  {
+    "id": 202710,
+    "full_name": "Jimmy Butler III",
+    "first_name": "Jimmy",
+    "last_name": "Butler III",
+    "team_name": "Golden State Warriors",
+    "team_abbreviation": "GSW",
+    "shot_count": 462
+  },
+  {
+    "id": 1631323,
+    "full_name": "Simone Fontecchio",
+    "first_name": "Simone",
+    "last_name": "Fontecchio",
+    "team_name": "Miami Heat",
+    "team_abbreviation": "MIA",
+    "shot_count": 461
+  },
+  {
+    "id": 1630560,
+    "full_name": "Cam Thomas",
+    "first_name": "Cam",
+    "last_name": "Thomas",
+    "team_name": "Brooklyn Nets",
+    "team_abbreviation": "BKN",
+    "shot_count": 461
+  },
+  {
+    "id": 1629018,
+    "full_name": "Gary Trent Jr.",
+    "first_name": "Gary",
+    "last_name": "Trent Jr.",
+    "team_name": "Milwaukee Bucks",
+    "team_abbreviation": "MIL",
+    "shot_count": 461
+  },
+  {
+    "id": 1629661,
+    "full_name": "Cameron Johnson",
+    "first_name": "Cameron",
+    "last_name": "Johnson",
+    "team_name": "Denver Nuggets",
+    "team_abbreviation": "DEN",
+    "shot_count": 454
+  },
+  {
+    "id": 1630532,
+    "full_name": "Franz Wagner",
+    "first_name": "Franz",
+    "last_name": "Wagner",
+    "team_name": "Orlando Magic",
+    "team_abbreviation": "ORL",
+    "shot_count": 453
+  },
+  {
+    "id": 1627739,
+    "full_name": "Kris Dunn",
+    "first_name": "Kris",
+    "last_name": "Dunn",
+    "team_name": "Los Angeles Clippers",
+    "team_abbreviation": "LAC",
+    "shot_count": 452
+  },
+  {
+    "id": 204456,
+    "full_name": "T.J. McConnell",
+    "first_name": "T.J.",
+    "last_name": "McConnell",
+    "team_name": "Indiana Pacers",
+    "team_abbreviation": "IND",
+    "shot_count": 450
+  },
+  {
+    "id": 1642262,
+    "full_name": "Cody Williams",
+    "first_name": "Cody",
+    "last_name": "Williams",
+    "team_name": "Utah Jazz",
+    "team_abbreviation": "UTA",
+    "shot_count": 450
+  },
+  {
+    "id": 1630171,
+    "full_name": "Isaac Okoro",
+    "first_name": "Isaac",
+    "last_name": "Okoro",
+    "team_name": "Chicago Bulls",
+    "team_abbreviation": "CHI",
+    "shot_count": 442
+  },
+  {
+    "id": 1642272,
+    "full_name": "Jared McCain",
+    "first_name": "Jared",
+    "last_name": "McCain",
+    "team_name": "Philadelphia 76ers",
+    "team_abbreviation": "PHI",
+    "shot_count": 441
+  },
+  {
+    "id": 1630538,
+    "full_name": "Bones Hyland",
+    "first_name": "Bones",
+    "last_name": "Hyland",
+    "team_name": "Minnesota Timberwolves",
+    "team_abbreviation": "MIN",
+    "shot_count": 440
+  },
+  {
+    "id": 1642366,
+    "full_name": "Quinten Post",
+    "first_name": "Quinten",
+    "last_name": "Post",
+    "team_name": "Golden State Warriors",
+    "team_abbreviation": "GSW",
+    "shot_count": 439
+  },
+  {
+    "id": 1630533,
+    "full_name": "Ziaire Williams",
+    "first_name": "Ziaire",
+    "last_name": "Williams",
+    "team_name": "Brooklyn Nets",
+    "team_abbreviation": "BKN",
+    "shot_count": 433
+  },
+  {
+    "id": 1630611,
+    "full_name": "Gui Santos",
+    "first_name": "Gui",
+    "last_name": "Santos",
+    "team_name": "Golden State Warriors",
+    "team_abbreviation": "GSW",
+    "shot_count": 429
+  },
+  {
+    "id": 1630551,
+    "full_name": "Justin Champagnie",
+    "first_name": "Justin",
+    "last_name": "Champagnie",
+    "team_name": "Washington Wizards",
+    "team_abbreviation": "WAS",
+    "shot_count": 428
+  },
+  {
+    "id": 1630631,
+    "full_name": "Jose Alvarado",
+    "first_name": "Jose",
+    "last_name": "Alvarado",
+    "team_name": "New Orleans Pelicans",
+    "team_abbreviation": "NOP",
+    "shot_count": 427
+  },
+  {
+    "id": 1630249,
+    "full_name": "V\u00edt Krej\u010d\u00ed",
+    "first_name": "V\u00edt",
+    "last_name": "Krej\u010d\u00ed",
+    "team_name": "Atlanta Hawks",
+    "team_abbreviation": "ATL",
+    "shot_count": 426
+  },
+  {
+    "id": 1630172,
+    "full_name": "Patrick Williams",
+    "first_name": "Patrick",
+    "last_name": "Williams",
+    "team_name": "Chicago Bulls",
+    "team_abbreviation": "CHI",
+    "shot_count": 426
+  },
+  {
+    "id": 1631114,
+    "full_name": "Jalen Williams",
+    "first_name": "Jalen",
+    "last_name": "Williams",
+    "team_name": "Oklahoma City Thunder",
+    "team_abbreviation": "OKC",
+    "shot_count": 425
+  },
+  {
+    "id": 1631109,
+    "full_name": "Mark Williams",
+    "first_name": "Mark",
+    "last_name": "Williams",
+    "team_name": "Phoenix Suns",
+    "team_abbreviation": "PHX",
+    "shot_count": 419
+  },
+  {
+    "id": 1630702,
+    "full_name": "Jaden Hardy",
+    "first_name": "Jaden",
+    "last_name": "Hardy",
+    "team_name": "Dallas Mavericks",
+    "team_abbreviation": "DAL",
+    "shot_count": 415
+  },
+  {
+    "id": 1629673,
+    "full_name": "Jordan Poole",
+    "first_name": "Jordan",
+    "last_name": "Poole",
+    "team_name": "New Orleans Pelicans",
+    "team_abbreviation": "NOP",
+    "shot_count": 411
+  },
+  {
+    "id": 1630188,
+    "full_name": "Jalen Smith",
+    "first_name": "Jalen",
+    "last_name": "Smith",
+    "team_name": "Chicago Bulls",
+    "team_abbreviation": "CHI",
+    "shot_count": 404
+  },
+  {
+    "id": 1628379,
+    "full_name": "Luke Kennard",
+    "first_name": "Luke",
+    "last_name": "Kennard",
+    "team_name": "Atlanta Hawks",
+    "team_abbreviation": "ATL",
+    "shot_count": 395
+  },
+  {
+    "id": 1629750,
+    "full_name": "Javonte Green",
+    "first_name": "Javonte",
+    "last_name": "Green",
+    "team_name": "Detroit Pistons",
+    "team_abbreviation": "DET",
+    "shot_count": 393
+  },
+  {
+    "id": 1630311,
+    "full_name": "Pat Spencer",
+    "first_name": "Pat",
+    "last_name": "Spencer",
+    "team_name": "Golden State Warriors",
+    "team_abbreviation": "GSW",
+    "shot_count": 393
+  },
+  {
+    "id": 1641767,
+    "full_name": "Ben Sheppard",
+    "first_name": "Ben",
+    "last_name": "Sheppard",
+    "team_name": "Indiana Pacers",
+    "team_abbreviation": "IND",
+    "shot_count": 387
+  },
+  {
+    "id": 1630191,
+    "full_name": "Isaiah Stewart",
+    "first_name": "Isaiah",
+    "last_name": "Stewart",
+    "team_name": "Detroit Pistons",
+    "team_abbreviation": "DET",
+    "shot_count": 386
+  },
+  {
+    "id": 1627780,
+    "full_name": "Gary Payton II",
+    "first_name": "Gary",
+    "last_name": "Payton II",
+    "team_name": "Golden State Warriors",
+    "team_abbreviation": "GSW",
+    "shot_count": 385
+  },
+  {
+    "id": 1631230,
+    "full_name": "Dominick Barlow",
+    "first_name": "Dominick",
+    "last_name": "Barlow",
+    "team_name": "Philadelphia 76ers",
+    "team_abbreviation": "PHI",
+    "shot_count": 384
+  },
+  {
+    "id": 1628963,
+    "full_name": "Marvin Bagley III",
+    "first_name": "Marvin",
+    "last_name": "Bagley III",
+    "team_name": "Washington Wizards",
+    "team_abbreviation": "WAS",
+    "shot_count": 378
+  },
+  {
+    "id": 203932,
+    "full_name": "Aaron Gordon",
+    "first_name": "Aaron",
+    "last_name": "Gordon",
+    "team_name": "Denver Nuggets",
+    "team_abbreviation": "DEN",
+    "shot_count": 378
+  },
+  {
+    "id": 1630540,
+    "full_name": "Miles McBride",
+    "first_name": "Miles",
+    "last_name": "McBride",
+    "team_name": "New York Knicks",
+    "team_abbreviation": "NYK",
+    "shot_count": 378
+  },
+  {
+    "id": 1630557,
+    "full_name": "Corey Kispert",
+    "first_name": "Corey",
+    "last_name": "Kispert",
+    "team_name": "Atlanta Hawks",
+    "team_abbreviation": "ATL",
+    "shot_count": 377
+  },
+  {
+    "id": 1627747,
+    "full_name": "Caris LeVert",
+    "first_name": "Caris",
+    "last_name": "LeVert",
+    "team_name": "Detroit Pistons",
+    "team_abbreviation": "DET",
+    "shot_count": 377
+  },
+  {
+    "id": 1641711,
+    "full_name": "Gradey Dick",
+    "first_name": "Gradey",
+    "last_name": "Dick",
+    "team_name": "Toronto Raptors",
+    "team_abbreviation": "TOR",
+    "shot_count": 374
+  },
+  {
+    "id": 1631128,
+    "full_name": "Christian Braun",
+    "first_name": "Christian",
+    "last_name": "Braun",
+    "team_name": "Denver Nuggets",
+    "team_abbreviation": "DEN",
+    "shot_count": 372
+  },
+  {
+    "id": 1629611,
+    "full_name": "Terance Mann",
+    "first_name": "Terance",
+    "last_name": "Mann",
+    "team_name": "Brooklyn Nets",
+    "team_abbreviation": "BKN",
+    "shot_count": 368
+  },
+  {
+    "id": 1642266,
+    "full_name": "Ja'Kobe Walter",
+    "first_name": "Ja'Kobe",
+    "last_name": "Walter",
+    "team_name": "Toronto Raptors",
+    "team_abbreviation": "TOR",
+    "shot_count": 368
+  },
+  {
+    "id": 203484,
+    "full_name": "Kentavious Caldwell-Pope",
+    "first_name": "Kentavious",
+    "last_name": "Caldwell-Pope",
+    "team_name": "Memphis Grizzlies",
+    "team_abbreviation": "MEM",
+    "shot_count": 366
+  },
+  {
+    "id": 1641757,
+    "full_name": "Jordan Miller",
+    "first_name": "Jordan",
+    "last_name": "Miller",
+    "team_name": "Los Angeles Clippers",
+    "team_abbreviation": "LAC",
+    "shot_count": 366
+  },
+  {
+    "id": 204001,
+    "full_name": "Kristaps Porzi\u0146\u0123is",
+    "first_name": "Kristaps",
+    "last_name": "Porzi\u0146\u0123is",
+    "team_name": "Atlanta Hawks",
+    "team_abbreviation": "ATL",
+    "shot_count": 359
+  },
+  {
+    "id": 203994,
+    "full_name": "Jusuf Nurki\u0107",
+    "first_name": "Jusuf",
+    "last_name": "Nurki\u0107",
+    "team_name": "Utah Jazz",
+    "team_abbreviation": "UTA",
+    "shot_count": 358
+  },
+  {
+    "id": 1631165,
+    "full_name": "Keon Ellis",
+    "first_name": "Keon",
+    "last_name": "Ellis",
+    "team_name": "Sacramento Kings",
+    "team_abbreviation": "SAC",
+    "shot_count": 356
+  },
+  {
+    "id": 1630549,
+    "full_name": "Day'Ron Sharpe",
+    "first_name": "Day'Ron",
+    "last_name": "Sharpe",
+    "team_name": "Brooklyn Nets",
+    "team_abbreviation": "BKN",
+    "shot_count": 356
+  },
+  {
+    "id": 1629013,
+    "full_name": "Landry Shamet",
+    "first_name": "Landry",
+    "last_name": "Shamet",
+    "team_name": "New York Knicks",
+    "team_abbreviation": "NYK",
+    "shot_count": 351
+  },
+  {
+    "id": 1642265,
+    "full_name": "Rob Dillingham",
+    "first_name": "Rob",
+    "last_name": "Dillingham",
+    "team_name": "Minnesota Timberwolves",
+    "team_abbreviation": "MIN",
+    "shot_count": 350
+  },
+  {
+    "id": 1631217,
+    "full_name": "Moussa Diabat\u00e9",
+    "first_name": "Moussa",
+    "last_name": "Diabat\u00e9",
+    "team_name": "Charlotte Hornets",
+    "team_abbreviation": "CHA",
+    "shot_count": 349
+  },
+  {
+    "id": 1642345,
+    "full_name": "Oso Ighodaro",
+    "first_name": "Oso",
+    "last_name": "Ighodaro",
+    "team_name": "Phoenix Suns",
+    "team_abbreviation": "PHX",
+    "shot_count": 347
+  },
+  {
+    "id": 1627884,
+    "full_name": "Derrick Jones Jr.",
+    "first_name": "Derrick",
+    "last_name": "Jones Jr.",
+    "team_name": "Los Angeles Clippers",
+    "team_abbreviation": "LAC",
+    "shot_count": 347
+  },
+  {
+    "id": 202685,
+    "full_name": "Jonas Valan\u010di\u016bnas",
+    "first_name": "Jonas",
+    "last_name": "Valan\u010di\u016bnas",
+    "team_name": "Denver Nuggets",
+    "team_abbreviation": "DEN",
+    "shot_count": 347
+  },
+  {
+    "id": 1629004,
+    "full_name": "Svi Mykhailiuk",
+    "first_name": "Svi",
+    "last_name": "Mykhailiuk",
+    "team_name": "Utah Jazz",
+    "team_abbreviation": "UTA",
+    "shot_count": 346
+  },
+  {
+    "id": 1642346,
+    "full_name": "Ryan Dunn",
+    "first_name": "Ryan",
+    "last_name": "Dunn",
+    "team_name": "Phoenix Suns",
+    "team_abbreviation": "PHX",
+    "shot_count": 345
+  },
+  {
+    "id": 1641707,
+    "full_name": "Taylor Hendricks",
+    "first_name": "Taylor",
+    "last_name": "Hendricks",
+    "team_name": "Utah Jazz",
+    "team_abbreviation": "UTA",
+    "shot_count": 343
+  },
+  {
+    "id": 1631119,
+    "full_name": "Jaylin Williams",
+    "first_name": "Jaylin",
+    "last_name": "Williams",
+    "team_name": "Oklahoma City Thunder",
+    "team_abbreviation": "OKC",
+    "shot_count": 343
+  },
+  {
+    "id": 203076,
+    "full_name": "Anthony Davis",
+    "first_name": "Anthony",
+    "last_name": "Davis",
+    "team_name": "Dallas Mavericks",
+    "team_abbreviation": "DAL",
+    "shot_count": 334
+  },
+  {
+    "id": 1631172,
+    "full_name": "Ousmane Dieng",
+    "first_name": "Ousmane",
+    "last_name": "Dieng",
+    "team_name": "Oklahoma City Thunder",
+    "team_abbreviation": "OKC",
+    "shot_count": 334
+  },
+  {
+    "id": 1631321,
+    "full_name": "Sidy Cissoko",
+    "first_name": "Sidy",
+    "last_name": "Cissoko",
+    "team_name": "Portland Trail Blazers",
+    "team_abbreviation": "POR",
+    "shot_count": 331
+  },
+  {
+    "id": 1641765,
+    "full_name": "Olivier-Maxence Prosper",
+    "first_name": "Olivier-Maxence",
+    "last_name": "Prosper",
+    "team_name": "Memphis Grizzlies",
+    "team_abbreviation": "MEM",
+    "shot_count": 328
+  },
+  {
+    "id": 1630568,
+    "full_name": "Luka Garza",
+    "first_name": "Luka",
+    "last_name": "Garza",
+    "team_name": "Boston Celtics",
+    "team_abbreviation": "BOS",
+    "shot_count": 326
+  },
+  {
+    "id": 1630696,
+    "full_name": "Dru Smith",
+    "first_name": "Dru",
+    "last_name": "Smith",
+    "team_name": "Miami Heat",
+    "team_abbreviation": "MIA",
+    "shot_count": 325
+  },
+  {
+    "id": 1629630,
+    "full_name": "Ja Morant",
+    "first_name": "Ja",
+    "last_name": "Morant",
+    "team_name": "Memphis Grizzlies",
+    "team_abbreviation": "MEM",
+    "shot_count": 322
+  },
+  {
+    "id": 1641774,
+    "full_name": "Tristan Vukcevic",
+    "first_name": "Tristan",
+    "last_name": "Vukcevic",
+    "team_name": "Washington Wizards",
+    "team_abbreviation": "WAS",
+    "shot_count": 317
+  },
+  {
+    "id": 1631107,
+    "full_name": "Nikola Jovi\u0107",
+    "first_name": "Nikola",
+    "last_name": "Jovi\u0107",
+    "team_name": "Miami Heat",
+    "team_abbreviation": "MIA",
+    "shot_count": 314
+  },
+  {
+    "id": 1630194,
+    "full_name": "Paul Reed",
+    "first_name": "Paul",
+    "last_name": "Reed",
+    "team_name": "Detroit Pistons",
+    "team_abbreviation": "DET",
+    "shot_count": 313
+  },
+  {
+    "id": 1629655,
+    "full_name": "Daniel Gafford",
+    "first_name": "Daniel",
+    "last_name": "Gafford",
+    "team_name": "Dallas Mavericks",
+    "team_abbreviation": "DAL",
+    "shot_count": 312
+  },
+  {
+    "id": 203083,
+    "full_name": "Andre Drummond",
+    "first_name": "Andre",
+    "last_name": "Drummond",
+    "team_name": "Philadelphia 76ers",
+    "team_abbreviation": "PHI",
+    "shot_count": 311
+  },
+  {
+    "id": 201143,
+    "full_name": "Al Horford",
+    "first_name": "Al",
+    "last_name": "Horford",
+    "team_name": "Golden State Warriors",
+    "team_abbreviation": "GSW",
+    "shot_count": 311
+  },
+  {
+    "id": 1627741,
+    "full_name": "Buddy Hield",
+    "first_name": "Buddy",
+    "last_name": "Hield",
+    "team_name": "Golden State Warriors",
+    "team_abbreviation": "GSW",
+    "shot_count": 309
+  },
+  {
+    "id": 1630228,
+    "full_name": "Jonathan Kuminga",
+    "first_name": "Jonathan",
+    "last_name": "Kuminga",
+    "team_name": "Golden State Warriors",
+    "team_abbreviation": "GSW",
+    "shot_count": 301
+  },
+  {
+    "id": 1631099,
+    "full_name": "Keegan Murray",
+    "first_name": "Keegan",
+    "last_name": "Murray",
+    "team_name": "Sacramento Kings",
+    "team_abbreviation": "SAC",
+    "shot_count": 300
+  },
+  {
+    "id": 1630544,
+    "full_name": "Tre Mann",
+    "first_name": "Tre",
+    "last_name": "Mann",
+    "team_name": "Charlotte Hornets",
+    "team_abbreviation": "CHA",
+    "shot_count": 298
+  },
+  {
+    "id": 1642348,
+    "full_name": "Justin Edwards",
+    "first_name": "Justin",
+    "last_name": "Edwards",
+    "team_name": "Philadelphia 76ers",
+    "team_abbreviation": "PHI",
+    "shot_count": 296
+  },
+  {
+    "id": 1631246,
+    "full_name": "Vince Williams Jr.",
+    "first_name": "Vince",
+    "last_name": "Williams Jr.",
+    "team_name": "Memphis Grizzlies",
+    "team_abbreviation": "MEM",
+    "shot_count": 292
+  },
+  {
+    "id": 1627936,
+    "full_name": "Alex Caruso",
+    "first_name": "Alex",
+    "last_name": "Caruso",
+    "team_name": "Oklahoma City Thunder",
+    "team_abbreviation": "OKC",
+    "shot_count": 290
+  },
+  {
+    "id": 1630703,
+    "full_name": "Scoot Henderson",
+    "first_name": "Scoot",
+    "last_name": "Henderson",
+    "team_name": "Portland Trail Blazers",
+    "team_abbreviation": "POR",
+    "shot_count": 290
+  },
+  {
+    "id": 1627824,
+    "full_name": "Guerschon Yabusele",
+    "first_name": "Guerschon",
+    "last_name": "Yabusele",
+    "team_name": "New York Knicks",
+    "team_abbreviation": "NYK",
+    "shot_count": 290
+  },
+  {
+    "id": 1631248,
+    "full_name": "Baylor Scheierman",
+    "first_name": "Baylor",
+    "last_name": "Scheierman",
+    "team_name": "Boston Celtics",
+    "team_abbreviation": "BOS",
+    "shot_count": 289
+  },
+  {
+    "id": 1628392,
+    "full_name": "Isaiah Hartenstein",
+    "first_name": "Isaiah",
+    "last_name": "Hartenstein",
+    "team_name": "Oklahoma City Thunder",
+    "team_abbreviation": "OKC",
+    "shot_count": 285
+  },
+  {
+    "id": 1642274,
+    "full_name": "Yves Missi",
+    "first_name": "Yves",
+    "last_name": "Missi",
+    "team_name": "New Orleans Pelicans",
+    "team_abbreviation": "NOP",
+    "shot_count": 285
+  },
+  {
+    "id": 1641772,
+    "full_name": "Nae'Qwan Tomlin",
+    "first_name": "Nae'Qwan",
+    "last_name": "Tomlin",
+    "team_name": "Cleveland Cavaliers",
+    "team_abbreviation": "CLE",
+    "shot_count": 285
+  },
+  {
+    "id": 1628975,
+    "full_name": "Jevon Carter",
+    "first_name": "Jevon",
+    "last_name": "Carter",
+    "team_name": "Chicago Bulls",
+    "team_abbreviation": "CHI",
+    "shot_count": 283
+  },
+  {
+    "id": 1631243,
+    "full_name": "Mouhamed Gueye",
+    "first_name": "Mouhamed",
+    "last_name": "Gueye",
+    "team_name": "Atlanta Hawks",
+    "team_abbreviation": "ATL",
+    "shot_count": 282
+  },
+  {
+    "id": 1631213,
+    "full_name": "Tyrese Martin",
+    "first_name": "Tyrese",
+    "last_name": "Martin",
+    "team_name": "Brooklyn Nets",
+    "team_abbreviation": "BKN",
+    "shot_count": 277
+  },
+  {
+    "id": 1627751,
+    "full_name": "Jakob Poeltl",
+    "first_name": "Jakob",
+    "last_name": "Poeltl",
+    "team_name": "Toronto Raptors",
+    "team_abbreviation": "TOR",
+    "shot_count": 276
+  },
+  {
+    "id": 1629006,
+    "full_name": "Josh Okogie",
+    "first_name": "Josh",
+    "last_name": "Okogie",
+    "team_name": "Houston Rockets",
+    "team_abbreviation": "HOU",
+    "shot_count": 274
+  },
+  {
+    "id": 1629731,
+    "full_name": "Dean Wade",
+    "first_name": "Dean",
+    "last_name": "Wade",
+    "team_name": "Cleveland Cavaliers",
+    "team_abbreviation": "CLE",
+    "shot_count": 273
+  },
+  {
+    "id": 1631124,
+    "full_name": "Julian Strawther",
+    "first_name": "Julian",
+    "last_name": "Strawther",
+    "team_name": "Denver Nuggets",
+    "team_abbreviation": "DEN",
+    "shot_count": 272
+  },
+  {
+    "id": 1630534,
+    "full_name": "Ochai Agbaji",
+    "first_name": "Ochai",
+    "last_name": "Agbaji",
+    "team_name": "Toronto Raptors",
+    "team_abbreviation": "TOR",
+    "shot_count": 269
+  },
+  {
+    "id": 1630570,
+    "full_name": "Trendon Watford",
+    "first_name": "Trendon",
+    "last_name": "Watford",
+    "team_name": "Philadelphia 76ers",
+    "team_abbreviation": "PHI",
+    "shot_count": 267
+  },
+  {
+    "id": 1631245,
+    "full_name": "Quenton Jackson",
+    "first_name": "Quenton",
+    "last_name": "Jackson",
+    "team_name": "Indiana Pacers",
+    "team_abbreviation": "IND",
+    "shot_count": 266
+  },
+  {
+    "id": 1631200,
+    "full_name": "Kris Murray",
+    "first_name": "Kris",
+    "last_name": "Murray",
+    "team_name": "Portland Trail Blazers",
+    "team_abbreviation": "POR",
+    "shot_count": 265
+  },
+  {
+    "id": 1642461,
+    "full_name": "Spencer Jones",
+    "first_name": "Spencer",
+    "last_name": "Jones",
+    "team_name": "Denver Nuggets",
+    "team_abbreviation": "DEN",
+    "shot_count": 262
+  },
+  {
+    "id": 1628418,
+    "full_name": "Thomas Bryant",
+    "first_name": "Thomas",
+    "last_name": "Bryant",
+    "team_name": "Cleveland Cavaliers",
+    "team_abbreviation": "CLE",
+    "shot_count": 258
+  },
+  {
+    "id": 1628436,
+    "full_name": "Luke Kornet",
+    "first_name": "Luke",
+    "last_name": "Kornet",
+    "team_name": "San Antonio Spurs",
+    "team_abbreviation": "SAS",
+    "shot_count": 258
+  },
+  {
+    "id": 1631093,
+    "full_name": "Jaden Ivey",
+    "first_name": "Jaden",
+    "last_name": "Ivey",
+    "team_name": "Detroit Pistons",
+    "team_abbreviation": "DET",
+    "shot_count": 256
+  },
+  {
+    "id": 1641712,
+    "full_name": "Rayan Rupert",
+    "first_name": "Rayan",
+    "last_name": "Rupert",
+    "team_name": "Portland Trail Blazers",
+    "team_abbreviation": "POR",
+    "shot_count": 254
+  },
+  {
+    "id": 1629637,
+    "full_name": "Jaxson Hayes",
+    "first_name": "Jaxson",
+    "last_name": "Hayes",
+    "team_name": "Los Angeles Lakers",
+    "team_abbreviation": "LAL",
+    "shot_count": 252
+  },
+  {
+    "id": 1629026,
+    "full_name": "Kenrich Williams",
+    "first_name": "Kenrich",
+    "last_name": "Williams",
+    "team_name": "Oklahoma City Thunder",
+    "team_abbreviation": "OKC",
+    "shot_count": 252
+  },
+  {
+    "id": 1641724,
+    "full_name": "Jett Howard",
+    "first_name": "Jett",
+    "last_name": "Howard",
+    "team_name": "Orlando Magic",
+    "team_abbreviation": "ORL",
+    "shot_count": 251
+  },
+  {
+    "id": 1642278,
+    "full_name": "Tyler Kolek",
+    "first_name": "Tyler",
+    "last_name": "Kolek",
+    "team_name": "New York Knicks",
+    "team_abbreviation": "NYK",
+    "shot_count": 248
+  },
+  {
+    "id": 1641775,
+    "full_name": "Jordan Walsh",
+    "first_name": "Jordan",
+    "last_name": "Walsh",
+    "team_name": "Boston Celtics",
+    "team_abbreviation": "BOS",
+    "shot_count": 242
+  },
+  {
+    "id": 1642269,
+    "full_name": "Devin Carter",
+    "first_name": "Devin",
+    "last_name": "Carter",
+    "team_name": "Sacramento Kings",
+    "team_abbreviation": "SAC",
+    "shot_count": 241
+  },
+  {
+    "id": 1631169,
+    "full_name": "Josh Minott",
+    "first_name": "Josh",
+    "last_name": "Minott",
+    "team_name": "Boston Celtics",
+    "team_abbreviation": "BOS",
+    "shot_count": 241
+  },
+  {
+    "id": 1630695,
+    "full_name": "Micah Potter",
+    "first_name": "Micah",
+    "last_name": "Potter",
+    "team_name": "Indiana Pacers",
+    "team_abbreviation": "IND",
+    "shot_count": 240
+  },
+  {
+    "id": 1641738,
+    "full_name": "Kobe Brown",
+    "first_name": "Kobe",
+    "last_name": "Brown",
+    "team_name": "Los Angeles Clippers",
+    "team_abbreviation": "LAC",
+    "shot_count": 239
+  },
+  {
+    "id": 1641854,
+    "full_name": "Craig Porter Jr.",
+    "first_name": "Craig",
+    "last_name": "Porter Jr.",
+    "team_name": "Cleveland Cavaliers",
+    "team_abbreviation": "CLE",
+    "shot_count": 239
+  },
+  {
+    "id": 1631342,
+    "full_name": "Daeqwon Plowden",
+    "first_name": "Daeqwon",
+    "last_name": "Plowden",
+    "team_name": "Sacramento Kings",
+    "team_abbreviation": "SAC",
+    "shot_count": 238
+  },
+  {
+    "id": 1630543,
+    "full_name": "Isaiah Jackson",
+    "first_name": "Isaiah",
+    "last_name": "Jackson",
+    "team_name": "Indiana Pacers",
+    "team_abbreviation": "IND",
+    "shot_count": 237
+  },
+  {
+    "id": 1631121,
+    "full_name": "Bryce McGowens",
+    "first_name": "Bryce",
+    "last_name": "McGowens",
+    "team_name": "New Orleans Pelicans",
+    "team_abbreviation": "NOP",
+    "shot_count": 237
+  },
+  {
+    "id": 1631255,
+    "full_name": "Karlo Matkovi\u0107",
+    "first_name": "Karlo",
+    "last_name": "Matkovi\u0107",
+    "team_name": "New Orleans Pelicans",
+    "team_abbreviation": "NOP",
+    "shot_count": 235
+  },
+  {
+    "id": 1628369,
+    "full_name": "Jayson Tatum",
+    "first_name": "Jayson",
+    "last_name": "Tatum",
+    "team_name": "Boston Celtics",
+    "team_abbreviation": "BOS",
+    "shot_count": 235
+  },
+  {
+    "id": 1628988,
+    "full_name": "Aaron Holiday",
+    "first_name": "Aaron",
+    "last_name": "Holiday",
+    "team_name": "Houston Rockets",
+    "team_abbreviation": "HOU",
+    "shot_count": 234
+  },
+  {
+    "id": 1630592,
+    "full_name": "Jalen Wilson",
+    "first_name": "Jalen",
+    "last_name": "Wilson",
+    "team_name": "Brooklyn Nets",
+    "team_abbreviation": "BKN",
+    "shot_count": 233
+  },
+  {
+    "id": 1626156,
+    "full_name": "D'Angelo Russell",
+    "first_name": "D'Angelo",
+    "last_name": "Russell",
+    "team_name": "Dallas Mavericks",
+    "team_abbreviation": "DAL",
+    "shot_count": 232
+  },
+  {
+    "id": 1629057,
+    "full_name": "Robert Williams III",
+    "first_name": "Robert",
+    "last_name": "Williams III",
+    "team_name": "Portland Trail Blazers",
+    "team_abbreviation": "POR",
+    "shot_count": 232
+  },
+  {
+    "id": 1630175,
+    "full_name": "Cole Anthony",
+    "first_name": "Cole",
+    "last_name": "Anthony",
+    "team_name": "Milwaukee Bucks",
+    "team_abbreviation": "MIL",
+    "shot_count": 231
+  },
+  {
+    "id": 201587,
+    "full_name": "Nicolas Batum",
+    "first_name": "Nicolas",
+    "last_name": "Batum",
+    "team_name": "Los Angeles Clippers",
+    "team_abbreviation": "LAC",
+    "shot_count": 231
+  },
+  {
+    "id": 1629020,
+    "full_name": "Jarred Vanderbilt",
+    "first_name": "Jarred",
+    "last_name": "Vanderbilt",
+    "team_name": "Los Angeles Lakers",
+    "team_abbreviation": "LAL",
+    "shot_count": 223
   },
   {
     "id": 1627734,
@@ -429,24 +2661,42 @@
     "last_name": "Sabonis",
     "team_name": "Sacramento Kings",
     "team_abbreviation": "SAC",
-    "shot_count": 893
+    "shot_count": 221
   },
   {
-    "id": 1629012,
-    "full_name": "Collin Sexton",
-    "first_name": "Collin",
-    "last_name": "Sexton",
-    "team_name": "Utah Jazz",
-    "team_abbreviation": "UTA",
-    "shot_count": 867
+    "id": 1629660,
+    "full_name": "Ty Jerome",
+    "first_name": "Ty",
+    "last_name": "Jerome",
+    "team_name": "Memphis Grizzlies",
+    "team_abbreviation": "MEM",
+    "shot_count": 215
   },
   {
-    "id": 203952,
-    "full_name": "Andrew Wiggins",
-    "first_name": "Andrew",
-    "last_name": "Wiggins",
-    "team_name": "Golden State Warriors",
-    "team_abbreviation": "GSW",
-    "shot_count": 839
+    "id": 1641737,
+    "full_name": "Adem Bona",
+    "first_name": "Adem",
+    "last_name": "Bona",
+    "team_name": "Philadelphia 76ers",
+    "team_abbreviation": "PHI",
+    "shot_count": 213
+  },
+  {
+    "id": 1631133,
+    "full_name": "Jabari Walker",
+    "first_name": "Jabari",
+    "last_name": "Walker",
+    "team_name": "Philadelphia 76ers",
+    "team_abbreviation": "PHI",
+    "shot_count": 210
+  },
+  {
+    "id": 1629216,
+    "full_name": "Gabe Vincent",
+    "first_name": "Gabe",
+    "last_name": "Vincent",
+    "team_name": "Los Angeles Lakers",
+    "team_abbreviation": "LAL",
+    "shot_count": 209
   }
 ]
