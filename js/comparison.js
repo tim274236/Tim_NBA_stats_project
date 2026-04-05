@@ -12,7 +12,7 @@
 // ============================================================
 
 const MAX_PLAYERS = 4;
-const SEASON = "2024-25";
+const SEASON = "2025-26";
 
 // Each slot: { playerId, playerName, teamAbbr, courtSvg, shots }
 const slots = [null, null, null, null];

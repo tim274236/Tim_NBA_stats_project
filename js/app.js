@@ -46,9 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
  * Fetches a player's shot data JSON and plots it on the court.
  */
 function addPlayerToChart(player) {
-    // Determine the season folder — check what's available
-    // For now, hardcode 2024-25 (the data Tim pulled)
-    const season = "2024-25";
+    const season = "2025-26";
     const url = "data/shots/" + season + "/" + player.id + ".json";
 
     fetch(url)
