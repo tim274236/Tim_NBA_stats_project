@@ -433,6 +433,19 @@ function filterShotsData(shots, filters) {
 // ZONE OVERLAY
 // ============================================================
 
+/**
+ * Returns a solid color (Red/Yellow/Green) based on FG% thresholds
+ * - Red: < 28% (poor)
+ * - Yellow: 28-34% (average)
+ * - Green: >= 35% (good)
+ */
+function getZoneColor(fgPct) {
+    var pct = fgPct * 100;  // Convert to percentage
+    if (pct >= 35) return "#4ecca3";      // Green
+    if (pct >= 28) return "#f0c040";      // Yellow
+    return "#e94560";                     // Red
+}
+
 var ZONE_DEFS = [
     {
         name: "Restricted",
@@ -517,11 +530,6 @@ function plotZoneOverlay(courtSvg, shots) {
     var zoneLayer = courtGroup.append("g")
         .attr("class", "zone-overlay");
 
-    var zoneColorScale = d3.scaleLinear()
-        .domain([0.00, 0.28, 0.35, 1.00])
-        .range(["#e94560", "#f0c040", "#4ecca3", "#4ecca3"])
-        .clamp(true);
-
     ZONE_DEFS.forEach(function (zone) {
         var zoneShots = shots.filter(zone.filter);
         if (zoneShots.length < 3) return;
@@ -530,6 +538,7 @@ function plotZoneOverlay(courtSvg, shots) {
         var fgPct = made / zoneShots.length;
         var px = scales.x(zone.labelX);
         var py = scales.y(zone.labelY);
+        var zoneColor = getZoneColor(fgPct);
 
         zoneLayer.append("rect")
             .attr("x", px - zone.pillWidth / 2)
@@ -537,10 +546,10 @@ function plotZoneOverlay(courtSvg, shots) {
             .attr("width", zone.pillWidth)
             .attr("height", zone.pillHeight)
             .attr("rx", 8)
-            .attr("fill", zoneColorScale(fgPct))
-            .attr("fill-opacity", 0.85)
-            .attr("stroke", "rgba(255,255,255,0.3)")
-            .attr("stroke-width", 1);
+            .attr("fill", zoneColor)
+            .attr("fill-opacity", 0.75)
+            .attr("stroke", "rgba(255,255,255,0.4)")
+            .attr("stroke-width", 1.5);
 
         zoneLayer.append("text")
             .attr("x", px)
