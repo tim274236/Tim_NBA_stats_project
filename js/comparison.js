@@ -669,6 +669,12 @@ function updateAllStats() {
             return "poor";
         }
 
+        function threePointClass(val) {
+            if (val >= 35) return "good";
+            if (val >= 28) return "avg";
+            return "poor";
+        }
+
         var html =
             '<div class="panel-stats-grid">' +
             '  <div class="stat-box">' +
@@ -683,7 +689,7 @@ function updateAllStats() {
             '  </div>' +
             '  <div class="stat-box">' +
             '    <div class="stat-box-label">3PT%</div>' +
-            '    <div class="stat-box-value ' + pctClass(parseFloat(threePct)) + '">' + threePct + '%</div>' +
+            '    <div class="stat-box-value ' + threePointClass(parseFloat(threePct)) + '">' + threePct + '%</div>' +
             '    <div class="stat-box-detail">' + threesMade + '/' + threes.length + '</div>' +
             '  </div>' +
             '</div>';
