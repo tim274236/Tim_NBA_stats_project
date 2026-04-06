@@ -518,8 +518,8 @@ function plotZoneOverlay(courtSvg, shots) {
         .attr("class", "zone-overlay");
 
     var zoneColorScale = d3.scaleLinear()
-        .domain([0.30, 0.45, 0.60])
-        .range(["#e94560", "#f0c040", "#4ecca3"])
+        .domain([0.00, 0.28, 0.35, 1.00])
+        .range(["#e94560", "#f0c040", "#4ecca3", "#4ecca3"])
         .clamp(true);
 
     ZONE_DEFS.forEach(function (zone) {
