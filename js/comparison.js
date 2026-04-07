@@ -435,35 +435,184 @@ function filterShotsData(shots, filters) {
 
 /**
  * Returns a solid color (Red/Yellow/Green) based on FG% thresholds
- * - Red: < 28% (poor)
- * - Yellow: 28-34% (average)
- * - Green: >= 35% (good)
+ * - Red:    < 28%
+ * - Yellow: 28–34%
+ * - Green:  >= 35%
  */
 function getZoneColor(fgPct) {
-    var pct = fgPct * 100;  // Convert to percentage
-    if (pct >= 35) return "#4ecca3";      // Green
-    if (pct >= 28) return "#f0c040";      // Yellow
-    return "#e94560";                     // Red
+    var pct = fgPct * 100;
+    if (pct >= 35) return "#4ecca3";  // Green
+    if (pct >= 28) return "#f0c040";  // Yellow
+    return "#e94560";                 // Red
 }
 
+// Court coordinate constants (tenths of feet, basket at origin)
+var ZC = {
+    THREE_R:    237.5,
+    CORNER_X:   220,
+    CORNER_Y:   Math.sqrt(237.5 * 237.5 - 220 * 220), // ~89.5
+    ARC3_AT_80: Math.sqrt(237.5 * 237.5 - 80 * 80),   // ~223.6
+    PAINT_X:    80,
+    PAINT_TOP:  137.5,
+    BASELINE:   -47.5,
+    COURT_TOP:  415
+};
+
+// Convert court coords to "x,y" pixel string
+function zPt(xCoord, yCoord, scales) {
+    return scales.x(xCoord) + "," + scales.y(yCoord);
+}
+
+// Sample points along the 3PT arc between two x values (court coords)
+function sample3PTArc(xStart, xEnd, n, scales) {
+    var pts = [];
+    for (var i = 0; i <= n; i++) {
+        var xc = xStart + (xEnd - xStart) * (i / n);
+        var yc = Math.sqrt(237.5 * 237.5 - xc * xc);
+        pts.push(zPt(xc, yc, scales));
+    }
+    return pts;
+}
+
+// Sample points along the restricted area arc between two x values
+function sampleRestrictedArc(xStart, xEnd, n, scales) {
+    var pts = [];
+    for (var i = 0; i <= n; i++) {
+        var xc = xStart + (xEnd - xStart) * (i / n);
+        var yc = Math.sqrt(40 * 40 - xc * xc);
+        pts.push(zPt(xc, yc, scales));
+    }
+    return pts;
+}
+
+/**
+ * Build SVG path string for the filled court zone shape.
+ * Zones are drawn back-to-front: corners → 3PT → mid → paint → restricted.
+ */
+function buildZoneShapePath(zoneName, scales) {
+    var C = ZC;
+    var arcCornerL, arcCornerR, arc3L, arc3C, arc3R, arcML, arcLC, arcRC, arcMR, arcRA;
+
+    switch (zoneName) {
+        case "Corner L":
+            return "M" + zPt(-250,       C.BASELINE, scales) +
+                   "L" + zPt(-250,       C.CORNER_Y, scales) +
+                   "L" + zPt(-C.CORNER_X, C.CORNER_Y, scales) +
+                   "L" + zPt(-C.CORNER_X, C.BASELINE, scales) + "Z";
+
+        case "Corner R":
+            return "M" + zPt(C.CORNER_X, C.BASELINE, scales) +
+                   "L" + zPt(C.CORNER_X, C.CORNER_Y, scales) +
+                   "L" + zPt(250,        C.CORNER_Y, scales) +
+                   "L" + zPt(250,        C.BASELINE, scales) + "Z";
+
+        case "3PT (L)":
+            // Above the break, left wing: x=-220→-80, above 3PT arc up to court top
+            arc3L = sample3PTArc(-C.CORNER_X, -80, 20, scales);
+            return "M" + zPt(-C.CORNER_X, C.CORNER_Y,  scales) +
+                   "L" + arc3L.join("L") +
+                   "L" + zPt(-80,         C.COURT_TOP, scales) +
+                   "L" + zPt(-C.CORNER_X, C.COURT_TOP, scales) + "Z";
+
+        case "3PT (C)":
+            // Above the break, center: x=-80→80, above 3PT arc
+            arc3C = sample3PTArc(-80, 80, 30, scales);
+            return "M" + zPt(-80, C.ARC3_AT_80, scales) +
+                   "L" + arc3C.join("L") +
+                   "L" + zPt(80,  C.COURT_TOP,  scales) +
+                   "L" + zPt(-80, C.COURT_TOP,  scales) + "Z";
+
+        case "3PT (R)":
+            // Above the break, right wing: x=80→220, above 3PT arc
+            arc3R = sample3PTArc(80, C.CORNER_X, 20, scales);
+            return "M" + zPt(80,          C.ARC3_AT_80, scales) +
+                   "L" + arc3R.join("L") +
+                   "L" + zPt(C.CORNER_X,  C.COURT_TOP,  scales) +
+                   "L" + zPt(80,          C.COURT_TOP,  scales) + "Z";
+
+        case "Mid (L)":
+            // Left side mid-range: x=-220→-80, BASELINE up to 3PT arc
+            arcML = sample3PTArc(-C.CORNER_X, -80, 20, scales);
+            return "M" + zPt(-C.PAINT_X,  C.BASELINE, scales) +
+                   "L" + arcML.slice().reverse().join("L") +
+                   "L" + zPt(-C.CORNER_X, C.BASELINE, scales) + "Z";
+
+        case "Mid (LC)":
+            // Center-left mid-range: x=-80→0, PAINT_TOP up to 3PT arc
+            arcLC = sample3PTArc(-80, 0, 15, scales);
+            return "M" + zPt(-C.PAINT_X, C.PAINT_TOP, scales) +
+                   "L" + arcLC.join("L") +
+                   "L" + zPt(0,          C.PAINT_TOP, scales) + "Z";
+
+        case "Mid (RC)":
+            // Center-right mid-range: x=0→80, PAINT_TOP up to 3PT arc
+            arcRC = sample3PTArc(0, 80, 15, scales);
+            return "M" + zPt(0,         C.PAINT_TOP, scales) +
+                   "L" + arcRC.join("L") +
+                   "L" + zPt(C.PAINT_X, C.PAINT_TOP, scales) + "Z";
+
+        case "Mid (R)":
+            // Right side mid-range: x=80→220, BASELINE up to 3PT arc
+            arcMR = sample3PTArc(80, C.CORNER_X, 20, scales);
+            return "M" + zPt(C.PAINT_X,  C.BASELINE, scales) +
+                   "L" + arcMR.join("L") +
+                   "L" + zPt(C.CORNER_X, C.BASELINE, scales) + "Z";
+
+        case "Paint (L)":
+            return "M" + zPt(-C.PAINT_X, C.BASELINE,  scales) +
+                   "L" + zPt(-C.PAINT_X, C.PAINT_TOP, scales) +
+                   "L" + zPt(0,          C.PAINT_TOP, scales) +
+                   "L" + zPt(0,          C.BASELINE,  scales) + "Z";
+
+        case "Paint (R)":
+            return "M" + zPt(0,          C.BASELINE,  scales) +
+                   "L" + zPt(0,          C.PAINT_TOP, scales) +
+                   "L" + zPt(C.PAINT_X,  C.PAINT_TOP, scales) +
+                   "L" + zPt(C.PAINT_X,  C.BASELINE,  scales) + "Z";
+
+        case "Restricted":
+            // Semicircle arc r=40 around basket + rectangle to baseline
+            arcRA = sampleRestrictedArc(-40, 40, 20, scales);
+            return "M" + zPt(-40, C.BASELINE, scales) +
+                   "L" + arcRA.join("L") +
+                   "L" + zPt(40, C.BASELINE, scales) + "Z";
+
+        default:
+            return "";
+    }
+}
+
+// ZONE_DEFS — ordered back-to-front for correct layering when drawn
 var ZONE_DEFS = [
     {
-        name: "Restricted",
-        filter: function (s) { return s.SHOT_ZONE_BASIC === "Restricted Area"; },
-        labelX: 0, labelY: 20,
-        pillWidth: 70, pillHeight: 36
+        name: "Corner L",
+        filter: function (s) { return s.SHOT_ZONE_BASIC === "Left Corner 3"; },
+        labelX: -230, labelY: 10,
+        pillWidth: 60, pillHeight: 36
     },
     {
-        name: "Paint (L)",
-        filter: function (s) { return s.SHOT_ZONE_BASIC === "In The Paint (Non-RA)" && s.LOC_X < 0; },
-        labelX: -50, labelY: 90,
-        pillWidth: 65, pillHeight: 36
+        name: "Corner R",
+        filter: function (s) { return s.SHOT_ZONE_BASIC === "Right Corner 3"; },
+        labelX: 230, labelY: 10,
+        pillWidth: 60, pillHeight: 36
     },
     {
-        name: "Paint (R)",
-        filter: function (s) { return s.SHOT_ZONE_BASIC === "In The Paint (Non-RA)" && s.LOC_X >= 0; },
-        labelX: 50, labelY: 90,
-        pillWidth: 65, pillHeight: 36
+        name: "3PT (L)",
+        filter: function (s) { return s.SHOT_ZONE_BASIC === "Above the Break 3" && s.LOC_X < -80; },
+        labelX: -180, labelY: 250,
+        pillWidth: 60, pillHeight: 36
+    },
+    {
+        name: "3PT (C)",
+        filter: function (s) { return s.SHOT_ZONE_BASIC === "Above the Break 3" && s.LOC_X >= -80 && s.LOC_X <= 80; },
+        labelX: 0, labelY: 300,
+        pillWidth: 60, pillHeight: 36
+    },
+    {
+        name: "3PT (R)",
+        filter: function (s) { return s.SHOT_ZONE_BASIC === "Above the Break 3" && s.LOC_X > 80; },
+        labelX: 180, labelY: 250,
+        pillWidth: 60, pillHeight: 36
     },
     {
         name: "Mid (L)",
@@ -490,34 +639,22 @@ var ZONE_DEFS = [
         pillWidth: 60, pillHeight: 36
     },
     {
-        name: "3PT (L)",
-        filter: function (s) { return s.SHOT_ZONE_BASIC === "Above the Break 3" && s.LOC_X < -80; },
-        labelX: -180, labelY: 250,
-        pillWidth: 60, pillHeight: 36
+        name: "Paint (L)",
+        filter: function (s) { return s.SHOT_ZONE_BASIC === "In The Paint (Non-RA)" && s.LOC_X < 0; },
+        labelX: -50, labelY: 90,
+        pillWidth: 65, pillHeight: 36
     },
     {
-        name: "3PT (C)",
-        filter: function (s) { return s.SHOT_ZONE_BASIC === "Above the Break 3" && s.LOC_X >= -80 && s.LOC_X <= 80; },
-        labelX: 0, labelY: 300,
-        pillWidth: 60, pillHeight: 36
+        name: "Paint (R)",
+        filter: function (s) { return s.SHOT_ZONE_BASIC === "In The Paint (Non-RA)" && s.LOC_X >= 0; },
+        labelX: 50, labelY: 90,
+        pillWidth: 65, pillHeight: 36
     },
     {
-        name: "3PT (R)",
-        filter: function (s) { return s.SHOT_ZONE_BASIC === "Above the Break 3" && s.LOC_X > 80; },
-        labelX: 180, labelY: 250,
-        pillWidth: 60, pillHeight: 36
-    },
-    {
-        name: "Corner L",
-        filter: function (s) { return s.SHOT_ZONE_BASIC === "Left Corner 3"; },
-        labelX: -230, labelY: 10,
-        pillWidth: 60, pillHeight: 36
-    },
-    {
-        name: "Corner R",
-        filter: function (s) { return s.SHOT_ZONE_BASIC === "Right Corner 3"; },
-        labelX: 230, labelY: 10,
-        pillWidth: 60, pillHeight: 36
+        name: "Restricted",
+        filter: function (s) { return s.SHOT_ZONE_BASIC === "Restricted Area"; },
+        labelX: 0, labelY: 20,
+        pillWidth: 70, pillHeight: 36
     }
 ];
 
@@ -530,24 +667,43 @@ function plotZoneOverlay(courtSvg, shots) {
     var zoneLayer = courtGroup.append("g")
         .attr("class", "zone-overlay");
 
+    // Pass 1 — draw filled zone shapes (back-to-front via ZONE_DEFS order)
     ZONE_DEFS.forEach(function (zone) {
         var zoneShots = shots.filter(zone.filter);
         if (zoneShots.length < 3) return;
 
-        var made = zoneShots.filter(function (s) { return s.SHOT_MADE_FLAG === 1; }).length;
+        var made  = zoneShots.filter(function (s) { return s.SHOT_MADE_FLAG === 1; }).length;
         var fgPct = made / zoneShots.length;
-        var px = scales.x(zone.labelX);
-        var py = scales.y(zone.labelY);
+        var color = getZoneColor(fgPct);
+        var path  = buildZoneShapePath(zone.name, scales);
+        if (!path) return;
+
+        zoneLayer.append("path")
+            .attr("d", path)
+            .attr("fill", color)
+            .attr("fill-opacity", 0.60)
+            .attr("stroke", "none");
+    });
+
+    // Pass 2 — draw pill labels on top of all fills
+    ZONE_DEFS.forEach(function (zone) {
+        var zoneShots = shots.filter(zone.filter);
+        if (zoneShots.length < 3) return;
+
+        var made      = zoneShots.filter(function (s) { return s.SHOT_MADE_FLAG === 1; }).length;
+        var fgPct     = made / zoneShots.length;
+        var px        = scales.x(zone.labelX);
+        var py        = scales.y(zone.labelY);
         var zoneColor = getZoneColor(fgPct);
 
         zoneLayer.append("rect")
             .attr("x", px - zone.pillWidth / 2)
             .attr("y", py - zone.pillHeight / 2)
-            .attr("width", zone.pillWidth)
+            .attr("width",  zone.pillWidth)
             .attr("height", zone.pillHeight)
             .attr("rx", 8)
             .attr("fill", zoneColor)
-            .attr("fill-opacity", 0.75)
+            .attr("fill-opacity", 0.95)
             .attr("stroke", "rgba(255,255,255,0.4)")
             .attr("stroke-width", 1.5);
 
