@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Player Tool — NBA Shot Chart Explorer</title>
+    <link rel="stylesheet" href="css/fantasy-player-tool.css">
+</head>
+<body>
+
+    <!-- ============ TOP BAR ============ -->
+    <header class="top-bar">
+        <a href="index.html" class="back-link">&larr; Home</a>
+        <h1 class="app-title">Fantasy Player Tool</h1>
+        <p class="app-subtitle">Custom fantasy rankings for a selected season</p>
+    </header>
+
+    <!-- ============ SCORING SETTINGS ============ -->
+    <section class="panel" id="scoring-panel">
+        <button class="panel-toggle">
+            <span class="panel-label">Scoring Settings</span>
+            <span class="panel-arrow">&#9650;</span>
+        </button>
+        <div class="panel-body">
+            <div class="scoring-grid" id="scoring-grid">
+                <!-- Inputs built by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SEASON SELECTOR ============ -->
+    <div class="season-bar">
+        <span class="selector-label">Season</span>
+        <select id="season-select" class="season-select">
+            <!-- Options built by JS -->
+        </select>
+        <span class="player-count" id="player-count"></span>
+    </div>
+
+    <!-- ============ VISIBLE STATS ============ -->
+    <section class="panel" id="stats-panel">
+        <button class="panel-toggle">
+            <span class="panel-label">Visible Stats</span>
+            <span class="panel-arrow">&#9650;</span>
+        </button>
+        <div class="panel-body">
+            <div class="stats-checkboxes" id="stats-checkboxes">
+                <!-- Checkboxes built by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ LOADING STATE ============ -->
+    <div class="loading-state" id="loading-state">
+        <div class="loading-spinner"></div>
+        Loading player data&hellip;
+    </div>
+
+    <!-- ============ TABLE ============ -->
+    <div class="table-container" id="table-container" style="display:none;">
+        <table class="player-table">
+            <thead id="table-head"></thead>
+            <tbody id="table-body"></tbody>
+        </table>
+    </div>
+
+    <!-- ============ SCRIPT ============ -->
+    <script src="js/fantasy-player-tool.js"></script>
+
+</body>
+</html>
