@@ -177,6 +177,141 @@ body {
     color: #5a6a8a;
 }
 
+/* --- CARD-SPECIFIC HOVER ANIMATIONS --- */
+
+/* Card 1: Player Shooting Comparison — Dots animate across court */
+.feature-card.active:nth-child(1):hover .card-icon svg circle:nth-of-type(1) {
+    animation: dotMove1 1s ease-in-out infinite;
+}
+
+.feature-card.active:nth-child(1):hover .card-icon svg circle:nth-of-type(2) {
+    animation: dotMove2 1s ease-in-out infinite;
+}
+
+.feature-card.active:nth-child(1):hover .card-icon svg circle:nth-of-type(3) {
+    animation: dotMove3 1s ease-in-out infinite 0.2s;
+}
+
+.feature-card.active:nth-child(1):hover .card-icon svg circle:nth-of-type(4) {
+    animation: dotMove4 1s ease-in-out infinite 0.2s;
+}
+
+@keyframes dotMove1 {
+    0%, 100% { cx: 14; cy: 22; }
+    50% { cx: 20; cy: 26; }
+}
+
+@keyframes dotMove2 {
+    0%, 100% { cx: 14; cy: 30; }
+    50% { cx: 10; cy: 32; }
+}
+
+@keyframes dotMove3 {
+    0%, 100% { cx: 34; cy: 18; }
+    50% { cx: 28; cy: 20; }
+}
+
+@keyframes dotMove4 {
+    0%, 100% { cx: 34; cy: 28; }
+    50% { cx: 30; cy: 26; }
+}
+
+/* Card 2: Team Shot Analysis — Bars grow/shrink */
+.feature-card.active:nth-child(2):hover .card-icon svg rect:nth-of-type(1) {
+    animation: barGrow 0.8s ease-in-out infinite;
+}
+
+.feature-card.active:nth-child(2):hover .card-icon svg rect:nth-of-type(2) {
+    animation: barGrow 0.8s ease-in-out infinite 0.15s;
+}
+
+.feature-card.active:nth-child(2):hover .card-icon svg rect:nth-of-type(3) {
+    animation: barGrow 0.8s ease-in-out infinite 0.3s;
+}
+
+@keyframes barGrow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Card 3: Fantasy Player Tool — Clipboard icon writes */
+.feature-card.active:nth-child(3):hover .card-icon {
+    animation: clipboardGlow 1.2s ease-in-out infinite;
+}
+
+.feature-card.active:nth-child(3):hover .card-icon svg {
+    filter: drop-shadow(0 0 6px rgba(78, 204, 163, 0.4));
+}
+
+/* Add writing animation to the text elements in the icon */
+.feature-card.active:nth-child(3):hover .card-icon svg text:nth-of-type(1) {
+    animation: textWrite 1.2s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.feature-card.active:nth-child(3):hover .card-icon svg text:nth-of-type(2) {
+    animation: textWrite 1.2s ease-in-out infinite 0.3s;
+}
+
+.feature-card.active:nth-child(3):hover .card-icon svg text:nth-of-type(3) {
+    animation: textWrite 1.2s ease-in-out infinite 0.6s;
+}
+
+@keyframes clipboardGlow {
+    0%, 100% { filter: drop-shadow(0 0 2px rgba(78, 204, 163, 0.2)); }
+    50% { filter: drop-shadow(0 0 8px rgba(78, 204, 163, 0.6)); }
+}
+
+@keyframes textWrite {
+    0% { opacity: 0; }
+    30% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+/* Card 4: Heat Map Explorer — Color pulse through circles */
+.feature-card.active:nth-child(4):hover .card-icon svg circle:nth-of-type(1) {
+    animation: heatPulse 1s ease-in-out infinite;
+}
+
+.feature-card.active:nth-child(4):hover .card-icon svg circle:nth-of-type(2) {
+    animation: heatPulse 1s ease-in-out infinite 0.2s;
+}
+
+.feature-card.active:nth-child(4):hover .card-icon svg circle:nth-of-type(3) {
+    animation: heatPulse 1s ease-in-out infinite 0.4s;
+}
+
+@keyframes heatPulse {
+    0%, 100% { stroke: #4ecca3; opacity: 0.6; }
+    50% { stroke: #e94560; opacity: 1; }
+}
+
+/* Card 5: Data Sources — Cells highlight in sequence */
+.feature-card.active:nth-child(5):hover .card-icon svg circle:nth-of-type(1) {
+    animation: cellFlash 1s ease-in-out infinite;
+}
+
+.feature-card.active:nth-child(5):hover .card-icon svg circle:nth-of-type(2) {
+    animation: cellFlash 1s ease-in-out infinite 0.3s;
+}
+
+@keyframes cellFlash {
+    0%, 100% { fill: #4ecca3; opacity: 0.4; }
+    50% { fill: #ffc107; opacity: 0.8; }
+}
+
+/* --- MOTION ACCESSIBILITY --- */
+@media (prefers-reduced-motion: reduce) {
+    .feature-card.active:hover {
+        animation: none !important;
+    }
+
+    .feature-card.active:hover .card-icon svg * {
+        animation: none !important;
+    }
+}
+
 /* --- RESPONSIVE --- */
 @media (max-width: 768px) {
     .feature-grid {
